@@ -4,3 +4,6 @@ body {
     font-family: "BD-Medium", sans-serif;
     
 }
+section {
+    position: relative;
+}

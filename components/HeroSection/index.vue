@@ -1,53 +1,67 @@
 <script setup>
-    import './style.css'
+import './style.css'
+import TypoHeading from '~/componentCommon/Typo/TypoHeading.vue';
 
-    defineProps({
-        content: Object
-    })
+import TypoParagraph from '~/componentCommon/Typo/TypoParagraph.vue';
+
+defineProps({
+    content: Object
+})
 </script>
 
 <template>
     <section class='hero_section'>
         <div class="container">
             <div class="text_1">
-                <p v-if="!content.disableParaIntro" class="intro">
+                <TypoParagraph v-if="!content.disableParaIntro" tag="p" font="BS-Regular" className="intro">
                     <span v-for="(item, index) in content.paraIntro" :key="index">
                         <span class="ip">{{ item }}</span>
                     </span>
-                </p>
-
-                <h1 class="title">
+                </TypoParagraph>
+                <TypoHeading tag="h1" font="BD-Bold" className="title">
                     <span v-for="(item, index) in content.tit" :key="index">
                         <span class="tp">{{ item }}</span>
                     </span>
-                </h1>
+                </TypoHeading>
+
             </div>
             <div class='text_2'>
-                <div class='body'>
-                    <p><span class="">{{ content.morePara }}</span></p>
+                <TypoParagraph tag="p" font="BS-Regular" className="body">
+                    {{ content.morePara }}
+                </TypoParagraph>
 
-                </div>
 
-           <!--      <ul class='list1'>
+                <ul class='list1'>
                     <li v-for="(item, index) in content.listBtn" :key="index" class="list_item">
-                        <NuxtLink class="list_link" :to="content.listBtnUrl[item]">
-                            {{ item }}
+                        <NuxtLink :to="content.listBtnUrl[item]">
+                            <TypoParagraph tag="p" font="BS-Medium">
+                                {{ item }}
+                            </TypoParagraph>
                         </NuxtLink>
                     </li>
 
-                </ul> -->
+                </ul>
 
                 <ul class='list2'>
 
                     <li class='list_item'>
-                        <a class='list_link'>
-                            {{ content.infoContact.mail.text }}
-                        </a>
+
+                        <NuxtLink>
+                            <TypoParagraph tag="span" font="BS-Medium">
+                                {{ content.infoContact.mail.text }}
+                            </TypoParagraph>
+                        </NuxtLink>
+
+
+
                     </li>
                     <li class='list_item'>
-                        <a class='list_link'>
-                            {{ content.infoContact.phone.text }}
-                        </a>
+                        <NuxtLink>
+                            <TypoParagraph tag="span" font="BS-Medium">
+                                {{ content.infoContact.phone.text }}
+                            </TypoParagraph>
+                        </NuxtLink>
+
                     </li>
                 </ul>
             </div>

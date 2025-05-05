@@ -9,7 +9,7 @@ import { Footer, Navbar } from '#components';
     <div class="main-layout">
         <NuxtPage />
     </div>
-    <Footer></Footer>
+    <!-- <Footer></Footer> -->
 </template>
 
 <style>

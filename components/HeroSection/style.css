@@ -1,7 +1,7 @@
 .hero_section {
     position: relative;
-    /* height: 136.6666666667vw; */
-    height:fit-content;
+    height: 136.6666666667vw;
+    
     padding-bottom: 25vh;
     overflow: hidden;
    
@@ -35,17 +35,7 @@
     flex-direction: column;
 }
  .intro {
-    font-family: BS-Regular;
-    font-family: var(--font-f-para-300);
     position: relative;
-
-
-    font-size: 4.8vw;
-    font-size: var(--font-s-h4);
-    letter-spacing: 0;
-    letter-spacing: var(--font-ls-h4);
-    line-height: 6.4vw;
-    line-height: var(--font-lh-h4);
 
 }
 
@@ -56,10 +46,6 @@
  .intro .ip {
 
     display: inline-block;
-    transform: translateY(110%) rotateZ(5deg);
-    transform-origin: left center;
-    opacity: 0;
-    will-change: transform,opacity;
  
  
    
@@ -68,37 +54,13 @@
 
     display: flex;
     flex-direction: column;
-    font-family: "BD-Bold";
-    font-family: var(--font-f-lausanne-500);
-    font-size: 16vw;
-    font-size: var(--font-s-h1);
     grid-column: 1 / 13;
-    letter-spacing: -.4vw;
-    letter-spacing: var(--font-ls-h1);
-    line-height: 16vw;
-    line-height: var(--font-lh-h1);
     margin: 6.6666666667vw 0;
-    transform: translateX(-1.0666666667vw);
-}
- .title > span {
-    overflow: hidden;
-  
-}
- .title .tp {
-    display: inline-block;
+
 }
 
- .body > p > span{
 
-    font-family: BS-Regular;
-    font-family: var(--font-f-para-300);
-    font-size: 4.8vw;
-    font-size: var(--font-s-h4);
-    letter-spacing: 0;
-    letter-spacing: var(--font-ls-h4);
-    line-height: 6.4vw;
-    line-height: var(--font-lh-h4);
-}
+
  .list_item {
     line-height: 2.2222222222vw;
 }

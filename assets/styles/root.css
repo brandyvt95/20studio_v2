@@ -89,21 +89,19 @@ ul {
     --color-sand: #e0ccbb;
     --color-sand-06: hsla(28,37%,81%,.6);
     --color-sand-08: hsla(28,37%,81%,.8);
+
     --font-f-lausanne-300: "BD-Regular";
     --font-f-lausanne-400: "BD-Medium";
     --font-f-lausanne-500: "BD-Bold";
-
     --font-f-para-300: "BS-Regular";
     --font-f-para-400: "BS-Medium";
     --font-f-para-500: "BS-Bold";
 
 
+
     --font-s-h0: 25.6vw;
     --font-lh-h0: 25.6vw;
     --font-ls-h0: -1.2vw;
-    --font-s-h1: 16vw;
-    --font-lh-h1: 16vw;
-    --font-ls-h1: -0.4vw;
     --font-s-h2: 7.7333333333vw;
     --font-lh-h2: 9.0666666667vw;
     --font-ls-h2: .1266666667vw;
@@ -127,13 +125,23 @@ ul {
     --font-ls-cta: 0vw;
     --font-s-label: 3.7333333333vw;
     --font-lh-label: 3.7333333333vw;
-    --font-ls-label: 0vw
+    --font-ls-label: 0vw;
 
 
 
-    /* let go */
-    /* index */
-    --navbar_height: 10vh;
+
+    --BD-Regular: "BD-Regular";
+    --BD-Medium: "BD-Medium";
+    --BD-Bold: "BD-Bold";
+    --BS-Regular: "BS-Regular";
+    --BS-Medium: "BS-Medium";
+    --BS-Bold: "BS-Bold";
+
+    --font-s-h1: 16vw;
+    --font-lh-h1: 16vw;
+    --font-ls-h1: -0.4vw;
+
+ 
 }
 
 @media(min-width: 601px) {

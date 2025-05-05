@@ -70,5 +70,6 @@ onUnmounted(() => {
   user-select: none;
   pointer-events: auto;
   z-index: 5;
+  will-change: transform,scale;
 }
 </style>

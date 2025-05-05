@@ -1,0 +1,65 @@
+
+.BD-Regular {
+    font-family: var(--BD-Regular);
+    font-weight:300;
+}
+.BD-Medium {
+    font-family: var(--BD-Medium);
+    font-weight:300;
+}
+.BD-Bold {
+    font-family: var(--BD-Bold);
+    font-weight:300;
+}
+.BS-Regular {
+    font-family: var(--BS-Regular);
+    font-weight:300;
+}
+.BS-Medium {
+    font-family: var(--BS-Medium);
+    font-weight:300;
+}
+.BS-Bold {
+    font-family: var(--BS-Bold);
+    font-weight:300;
+}
+
+.p,.span {
+    font-size: var(--font-s-p);
+    letter-spacing: var(--font-ls-p);
+    line-height: var(--font-lh-p);
+}
+.psmall,.spansmall {
+    font-size: var(--font-s-p-small);
+    letter-spacing: var(--font-ls-p-small);
+    line-height: var(--font-lh-p-small);
+}
+.h0 {
+    font-size: var(--font-s-h0);
+    letter-spacing: var(--font-ls-h0);
+    line-height: var(--font-lh-h0);
+}
+
+.h1 {
+    font-size: var(--font-s-h1);
+    letter-spacing: var(--font-ls-h1);
+    line-height: var(--font-lh-h1);
+}
+
+.h2 {
+    font-size: var(--font-s-h2);
+    letter-spacing: var(--font-ls-h2);
+    line-height: var(--font-lh-h2);
+}
+
+.h3 {
+    font-size: var(--font-s-h3);
+    letter-spacing: var(--font-ls-h3);
+    line-height: var(--font-lh-h3);
+}
+
+.h4 {
+    font-size: var(--font-s-h4);
+    letter-spacing: var(--font-ls-h4);
+    line-height: var(--font-lh-h4);
+}

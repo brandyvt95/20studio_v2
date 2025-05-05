@@ -17,7 +17,7 @@ onMounted(async () => {
 
     await nextTick()
     if (maskRef.value?.el) {
-      motionFirstLoadPage({ el: maskRef.value.el })
+      //motionFirstLoadPage({ el: maskRef.value.el })
       activeStateUi({ param: 'active-page' })
     }
   }

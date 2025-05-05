@@ -2,12 +2,12 @@
 
 
 export const common = {
-    infoContact:{
+    infoContact: {
         phone: {
             display: "0969.168.629",
             href: "tel:0969168629"
         },
-        mail : {
+        mail: {
             display: "20studio.contact@gmail.com",
             href: "mailto:20studio.contact@gmail.com"
         }
@@ -18,7 +18,7 @@ export const common = {
         "Project": '/work',
         "Service": '/service',
         "Contact": '/contact',
-        "Sustainability":'/sustainability'
+        "Sustainability": '/sustainability'
     }
 }
 
@@ -29,7 +29,7 @@ export const about_page = {
         delayForBehindComponent: 1,
     },
     content: {
-  
+
         heroSection: {
             scrollerRef: "#aboutpage",
             classAdd: "dark_background",
@@ -37,19 +37,19 @@ export const about_page = {
                 url: "/images/about/banner.webp",
                 size: { width: "100%", height: "auto" }
             },
-            moreStyle:{ },
-            disableParaInro : false,
-            paraIntro:["We are a global creative fashion studio base in","Ho Chi Minh city. We work with artist, designer and manufactures","on clients projects to produce outstanding works."],
-            tit : ["Fashion","Creative","Production"],
-            morePara:"Beside designing and fashion production, 20Studio work on projects of all types including brand and product development, digital experience design, social media design, production management and fashion business solutions.",
-            listBtn:['Home','Project','Sustainability','Service','Contact'],
-            btnMore: ['Our service','/service'],
-            infoContact:{
+            moreStyle: {},
+            disableParaInro: false,
+            paraIntro: ["We are a global creative fashion studio base in", "Ho Chi Minh city. We work with artist, designer and manufactures", "on clients projects to produce outstanding works."],
+            tit: ["Fashion", "Creative", "Production"],
+            morePara: "Beside designing and fashion production, 20Studio work on projects of all types including brand and product development, digital experience design, social media design, production management and fashion business solutions.",
+            listBtn: ['Home', 'Project', 'Sustainability', 'Service', 'Contact'],
+            btnMore: ['Our service', '/service'],
+            infoContact: {
                 phone: {
                     text: "0969.168.629",
                     link: "tel:0969168629"
                 },
-                mail : {
+                mail: {
                     text: "20studio.contact@gmail.com",
                     link: "mailto:20studio.contact@gmail.com"
                 }
@@ -60,9 +60,9 @@ export const about_page = {
                 "Project": '/work',
                 "Service": '/service',
                 "Contact": '/contact',
-                "Sustainability":'/sustainability'
+                "Sustainability": '/sustainability'
             }
-            
+
         },
         advantage: {
             disableIndex: false,
@@ -82,11 +82,11 @@ export const about_page = {
             disableTit: false,
             disableBtn: false,
             tag: "Contact us",
-            tit: ["From" ,"vision","to reality"],
+            tit: ["From", "vision", "to reality"],
             more: "Let's make dream come true.",
             btn: "Lett&apos;s touch!"
         },
-        
+
 
     }
 }
@@ -103,27 +103,27 @@ export const home_page = {
         scrollerRef: "#homepage"
     },
     content: {
-       
+
         heroSection: {
             scrollerRef: "#homepage",
             classAdd: "dark_background",
-            moreStyle:{},
+            moreStyle: {},
             backgroundImage: {
                 url: "/images/home/banner.png",
                 size: { width: "100%", height: "auto" }
             },
-            disableParaInro : false,
-            paraIntro:["We are a global creative fashion studio base in","Ho Chi Minh city. We work with artist, designer and manufactures","on clients projects to produce outstanding works."],
-            tit : ["Fashion","Creative","Production"],
-            morePara:"Beside designing and fashion production, 20Studio work on projects of all types including brand and product development, digital experience design, social media design, production management and fashion business solutions.",
-            listBtn:['About us','Sustainability','Project','Service','Contact'],
-            btnMore: ['Explore our services','/service'],
-            infoContact:{
+            disableParaInro: true,
+            paraIntro: ["We are a global creative fashion studio base in", "Ho Chi Minh city. We work with artist, designer and manufactures", "on clients projects to produce outstanding works."],
+            tit: ["Fashion", "Creative", "Production"],
+            morePara: "Beside designing and fashion production, 20Studio work on projects of all types including brand and product development, digital experience design, social media design, production management and fashion business solutions.",
+            listBtn: ['About us', 'Sustainability', 'Project', 'Service', 'Contact'],
+            btnMore: ['Explore our services', '/service'],
+            infoContact: {
                 phone: {
                     text: "0969.168.629",
                     link: "tel:0969168629"
                 },
-                mail : {
+                mail: {
                     text: "20studio.contact@gmail.com",
                     link: "mailto:20studio.contact@gmail.com"
                 }
@@ -134,35 +134,55 @@ export const home_page = {
                 "Project": '/work',
                 "Service": '/service',
                 "Contact": '/contact',
-                "Sustainability":'/sustainability'
+                "Sustainability": '/sustainability'
             }
         },
-        serviceSection:{
-            content:{
+        serviceSection: {
+            content: {
                 title: "Project",
                 tag: "Project list",
-                des:"Projects are pleased to accompany customers in the past year."
+                des: "Projects are pleased to accompany customers in the past year."
             },
             works: [
                 {
-                    clientName:"Chinh’s Major Project",
-                    jobDes:"Sample Development",
-                    img:"/clone/services1.webp"
+                    clientName: "Chinh’s Major Project",
+                    jobDes: "Sample Development",
+                    img: "/images/clone/services1.webp"
                 },
                 {
-                    clientName:"Nét Project",
-                    jobDes:"Sample Development",
-                    img:"/clone/services2.webp"
+                    clientName: "Nét Project",
+                    jobDes: "Sample Development",
+                    img: "/images/clone/services2.webp"
                 },
                 {
-                    clientName:"Lung Tung",
-                    jobDes:"Fashion Design",
-                    img:"/clone/services3.webp"
+                    clientName: "Lung Tung",
+                    jobDes: "Fashion Design",
+                    img: "/images/clone/services3.webp"
                 },
                 {
-                    clientName:"20Studio",
-                    jobDes:"Website Development",
-                    img:"/clone/services4.webp"
+                    clientName: "20Studio",
+                    jobDes: "Website Development",
+                    img: "/images/clone/services4.webp"
+                }
+            ]
+        },
+        faqSection: {
+            content: [
+                {
+                    ques: "What is the lead time of sample develop?",
+                    ans: "Sample preparation time will depend on the complexity of the sample, but will usually last from 2 to 5 days."
+                },
+                {
+                    ques: "What is the production leadtime?",
+                    ans: "It depend on the quantity and complexity of the order. Normally takes 5 to 14 working days to be done."
+                },
+                {
+                    ques: "What information do I need to provide?",
+                    ans: "You will be provide a form to fill in, the information will be on quality, quantity, specs and construction details."
+                },
+                {
+                    ques: "What are services that 20Studio provide?",
+                    ans: "We focus on providing fashion design, fashion mass production, image production, website development, marketing strategies and fashion business solutions."
                 }
             ]
         },
@@ -171,7 +191,7 @@ export const home_page = {
             disableTit: false,
             disableBtn: false,
             tag: "Contact us",
-            tit: ["From" ,"vision","to reality"],
+            tit: ["From", "vision", "to reality"],
             more: "Let's make dream come true.",
             btn: "Lett&apos;s touch!"
         }
@@ -188,7 +208,7 @@ export const service_page = {
             disableTit: false,
             disableBtn: false,
             tag: "Contact us",
-            tit: ["From" ,"vision","to reality"],
+            tit: ["From", "vision", "to reality"],
             more: "Let's make dream come true.",
             btn: "Lett&apos;s touch!"
         }
@@ -216,9 +236,9 @@ export const sustainability_page = {
             disableTit: false,
             disableBtn: true,
             tag: "Sustainability",
-            tit:["Sustainability","in","every attemps"] ,
+            tit: ["Sustainability", "in", "every attemps"],
             more: "Sustainable is hard, especially for those who not have deep pocket. At 20Studio, we understand the concern toward sustainability of our customer and strive to make it accessible without compromising on quality or style. We believe that sustainability shouldn't be a luxury, but a standard that everyone can afford.",
-        
+
         },
         letContact: {
             disableImg: true,
@@ -236,9 +256,9 @@ export const project1_page = {
         scrollerRef: "#work1page"
     },
     content: {
-        
+
         introWorkPage: {
-            mission:["Sample management"],
+            mission: ["Sample management"],
             scrollerRef: "#work1page",
             img: [
                 "/clone/services1.webp",
@@ -251,7 +271,7 @@ export const project1_page = {
             date: "Jan 2023 - 3 weeks",
             client: "Fashion Designer Bui Dong Duy",
             infoProject: "Personal Prject of Bui Dong Duy",
-            desProject : "Personal Prject of Bui Dong Duy"
+            desProject: "Personal Prject of Bui Dong Duy"
         },
         gridImageSlider: {
             img: [
@@ -264,7 +284,7 @@ export const project1_page = {
                 "/work1/7.png",
                 "/work1/8.png",
             ],
-            img2:[
+            img2: [
                 "/work1/4.png",
                 "/work1/7.png",
                 "/work1/5.png",
@@ -288,7 +308,7 @@ export const project2_page = {
     },
     content: {
         introWorkPage: {
-            mission:["Sample management"],
+            mission: ["Sample management"],
             scrollerRef: "#work2page",
             img: [
                 "/clone/services2.webp",
@@ -300,8 +320,8 @@ export const project2_page = {
             role: ["Fashion Develop", "Prototyping", "Sourcing", "Consulting"],
             date: "Jan 2023 - 3 weeks",
             client: "Fashion Designer Huynh Anh Thu",
-               infoProject: "Personal Prject of Huynh Anh Thu",
-            desProject : "Personal Prject of Huynh Anh Thu"
+            infoProject: "Personal Prject of Huynh Anh Thu",
+            desProject: "Personal Prject of Huynh Anh Thu"
         },
         gridImageSlider: {
             img: [
@@ -311,9 +331,9 @@ export const project2_page = {
                 "/work2/4.png",
                 "/work2/1.png",
                 "/work2/2.png",
-                
+
             ],
-            img2:[
+            img2: [
                 "/work2/7.png",
                 "/work2/8.png",
                 "/work2/9.png",
@@ -337,7 +357,7 @@ export const project3_page = {
     },
     content: {
         introWorkPage: {
-            mission:["Production management"],
+            mission: ["Production management"],
             scrollerRef: "#work3page",
             img: [
                 "/clone/services3.webp",
@@ -349,8 +369,8 @@ export const project3_page = {
             role: ["Fashion Develop", "Prototyping", "Sourcing", "Consulting"],
             date: "Jan 2023 - 3 weeks",
             client: "Lungtung Studio",
-              infoProject: "Lungtung Second Collection",
-            desProject : "Spring Summer 2024"
+            infoProject: "Lungtung Second Collection",
+            desProject: "Spring Summer 2024"
         },
         gridImageSlider: {
             img: [
@@ -361,7 +381,7 @@ export const project3_page = {
                 "/work3/5.png",
                 "/work3/6.png",
             ],
-            img2:[
+            img2: [
                 "/work3/7.png",
                 "/work3/8.png",
                 "/work3/9.png",
@@ -385,7 +405,7 @@ export const project4_page = {
     },
     content: {
         introWorkPage: {
-            mission:["Web Development"],
+            mission: ["Web Development"],
             scrollerRef: "#work4page",
             img: [
                 "/clone/services4.webp",

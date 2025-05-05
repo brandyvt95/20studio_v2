@@ -63,21 +63,9 @@
 .nav_item {
     width: 6vw;
     text-align: center;
-    will-change: transform;
-    
- 
 }
 .nav_item a {
-    transform-origin: top left;
-}
-.nav_item a {
-    font-family: "BD-Medium";
-    font-size: 3.7333333333vw;
-    font-size: var(--font-s-p-small);
-    letter-spacing: .0266666667vw;
-    letter-spacing: var(--font-ls-p-small);
-    line-height: 5.6vw;
-    line-height: var(--font-lh-p-small);
+
     position: relative;
     color:var(--white);
   
