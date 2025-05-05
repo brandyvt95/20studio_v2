@@ -1,7 +1,7 @@
 let timeoutStateAppId: ReturnType<typeof setTimeout> | null = null;
 
 
-const DELAY = 500
+const DELAY = 720
 export const activeStateUi = ({ param }: any): void => {
 
   switch (param) {

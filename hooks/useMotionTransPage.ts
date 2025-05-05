@@ -1,6 +1,6 @@
 import gsap from 'gsap'
-import { transitionConfig } from '~/constants/transition'
-import type { IHandleMotionTransPage } from '~/types/transitionPage'
+import { transitionConfig } from '../constants/config_transitionPage'
+import type { IHandleMotionTransPage } from '../types/transitionPage'
 
 export const motionFirstLoadPage = ({ el }: { el: Element }) => {
     gsap.fromTo(el, transitionConfig.mask.start, transitionConfig.mask.end)

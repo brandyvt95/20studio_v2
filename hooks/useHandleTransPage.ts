@@ -1,6 +1,6 @@
 import { activeStateUi } from './useStateUi'
 import { motionEnterPage, motionLeavePage } from './useMotionTransPage';
-import type { IHandleMotionTransPage } from '~/types/transitionPage';
+import type { IHandleMotionTransPage } from '../types/transitionPage';
 
 
 const pageState: {
@@ -10,6 +10,10 @@ const pageState: {
 } = {
     '/': { visible: false },
     '/about': { visible: false },
+    '/projects': { visible: false },
+    '/services': { visible: false },
+    '/contact': { visible: false },
+    '/sustainability': { visible: false },
 };
 
 

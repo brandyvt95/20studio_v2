@@ -1,53 +1,19 @@
 <script setup>
-import { ref, onMounted,nextTick } from 'vue'
-import { gsap } from 'gsap'
-import HomePage from '~/components/large/HomePage/index.vue'
-import { home_page } from '~/constants/content'
-import { transitionConfig } from '~/constants/transition'
-import MaskOverlay from './MaskOverlay.vue'
-import { handlePageEnter, handlePageLeave } from '~/hooks/useHandleTransPage'
-import { motionFirstLoadPage } from '~/hooks/useMotionTransPage'
-import { activeStateUi } from '~/hooks/useStateUi'
+  import HomePage from '../components/page/HomePage/index.vue'
+  import { home_page } from '~/constants/content'
+  import WrapperPage from '~/components/wrapper/WrapperPage.vue'
+  import {defaultPageTransition} from '~/constants/config_transitionPage'
 
-const maskRef = ref(null)
-
-onMounted(async () => {
-  if (!stateUiGlobal.isPageFirstLoad) {
-    stateUiGlobal.isPageFirstLoad = true
-
-    await nextTick()
-    if (maskRef.value?.el) {
-      //motionFirstLoadPage({ el: maskRef.value.el })
-      activeStateUi({ param: 'active-page' })
-    }
-  }
-})
-
-
-definePageMeta({
-  pageTransition: {
-    name: 'page',
-    mode: 'default',
-    css: false,
-    onEnter: (el, done) => {
-    
-      handlePageEnter({ el, done}) 
-    },
-    onLeave(el, done) {
- 
-      handlePageLeave({el,done})
-    }
-  }
-})
-
+  definePageMeta({
+    pageTransition: defaultPageTransition
+  })
+  
 </script>
 
 <template>
-  <MaskOverlay ref="maskRef">
-    <LenisWrapper>
-      <HomePage :content="home_page.content" />
-    </LenisWrapper>
-  </MaskOverlay>
+  <WrapperPage>
+    <HomePage :content="home_page.content" />
+  </WrapperPage>
 </template>
 
 <style scoped>

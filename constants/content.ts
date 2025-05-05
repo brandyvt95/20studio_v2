@@ -13,12 +13,12 @@ export const common = {
         }
     },
     listBtnUrl: {
-        "Home": '/home',
-        "About us": '/about',
-        "Project": '/work',
-        "Service": '/service',
-        "Contact": '/contact',
-        "Sustainability": '/sustainability'
+        "Home": '/',
+                "About us": '/about',
+                "Project": '/projects',
+                "Service": '/services',
+                "Contact": '/contact',
+                "Sustainability": '/sustainability'
     }
 }
 
@@ -55,14 +55,21 @@ export const about_page = {
                 }
             },
             listBtnUrl: {
-                "Home": '/home',
+                "Home": '/',
                 "About us": '/about',
-                "Project": '/work',
-                "Service": '/service',
+                "Project": '/projects',
+                "Service": '/services',
                 "Contact": '/contact',
                 "Sustainability": '/sustainability'
             }
 
+        },
+        intro:{
+            title: "Our mission",
+            des: "20Studio is a fashion creative agency providing fashion business solutions, including Creative develop, Fashion management, Web develop and Digital design.",
+            jobDes: [ 
+                "Fashion Design","Fashion Production","Digital fashion development","IT","Visual Digital","Photographic"
+            ]
         },
         advantage: {
             disableIndex: false,
@@ -76,7 +83,30 @@ export const about_page = {
             ]
 
         },
-
+        minded:{
+            tag: "How we work",
+            title:["A Fashion","Agency"],
+            para:[
+                `We’ve assembled a bespoke team of designers, innovators, manufactures and suppliers to work with
+                    teams across a client’s organization to help them find new sources of growth, whether that’s
+                    repositioning for new target audiences, innovating to create new products and services, improving
+                    the core product or removing the barriers to growth that stand in way of long-term success.`,
+                    `Partnering with clients on their journey to develop fashion brands, we assist in creating and
+                    producing collections as well as supporting brand image management, business, and production.`
+            ],
+            qoute:`“With our market expertise and technology application, we can help clients turn their designs into
+                reality”`
+        },
+        us:{
+            tag:"The 20Studio",
+            title:[
+                "Design,",
+                "Technology and",
+                "Experimenttation"
+            ],
+            para:"We are a team* of like-minded design enthusiasts and tech aficionados that explore the digital frontier with grit and dedication. Intrigued by beauty, fascinated by technology and fuelled with an everlasting devotion to digital craftsmanship and meaningful aesthetics.",
+            qoute:"*We believe in a fluid team approach that allows us to bring together the best designers, developers and agencies in the world in order to serve the needs of today’s clients."
+        },
         letContact: {
             disableImg: true,
             disableTit: false,
@@ -95,7 +125,18 @@ export const contact_page = {
         scrollerRef: "#contactpage"
     },
     content: {
-
+        intro : {
+            tag:"Contact",
+            des:"Ready to take off? Message, tweet, or text us, and we will get back to you as soon as possible.",
+            mail:"20studio.contact@gmail.com",
+            phone:"0969.168.629",
+            location:[
+                "340D Hoang Van Thu Street,",
+                "Ward 4, Tan Binh District,",
+                "Ho Chi Minh City, Viet Nam."
+            ],
+            more:"Xem bản đồ"
+        }
     }
 }
 export const home_page = {
@@ -129,10 +170,10 @@ export const home_page = {
                 }
             },
             listBtnUrl: {
-                "Home": '/home',
+                "Home": '/',
                 "About us": '/about',
-                "Project": '/work',
-                "Service": '/service',
+                "Project": '/projects',
+                "Service": '/services',
                 "Contact": '/contact',
                 "Sustainability": '/sustainability'
             }
@@ -203,6 +244,14 @@ export const service_page = {
         scrollerRef: "#servicepage"
     },
     content: {
+        intro:{
+            tag:"Service",
+            des:"We transform Fashion businesses by solving upstream challenges to unlock new growth opportunities.",
+            jobDes:[
+                "Design","Develop","Direct","Digital","Production"
+            ]
+
+        },
         letContact: {
             disableImg: true,
             disableTit: false,
