@@ -28,14 +28,14 @@
 
                 </div>
 
-                <ul class='list1'>
+           <!--      <ul class='list1'>
                     <li v-for="(item, index) in content.listBtn" :key="index" class="list_item">
                         <NuxtLink class="list_link" :to="content.listBtnUrl[item]">
                             {{ item }}
                         </NuxtLink>
                     </li>
 
-                </ul>
+                </ul> -->
 
                 <ul class='list2'>
 

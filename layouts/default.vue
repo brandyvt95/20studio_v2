@@ -1,20 +1,17 @@
 <script setup>
 import { Footer, Navbar } from '#components';
+
+
 </script>
 
 <template>
-    <div class="relative w-screen h-screen overflow-hidden">
-
-        <Navbar />
-
-        <div class="page-container">
-            <NuxtPage />
-        </div>
-
-        <Footer />
+    <Navbar />
+    <div class="main-layout">
+        <NuxtPage />
     </div>
+    <Footer></Footer>
 </template>
 
 <style>
-
+.main-layout {}
 </style>

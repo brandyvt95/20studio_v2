@@ -13,9 +13,7 @@
 </script>
 
 <template>
-  <div class="page-content">
     <HeroSection :content="props.content.heroSection"/>
-    <ServicesSection :content="props.content.serviceSection"/>
-    <SampleSection  />
-  </div>
+    <!-- <ServicesSection :content="props.content.serviceSection"/>
+    <SampleSection  /> -->
 </template>

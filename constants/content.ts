@@ -34,7 +34,7 @@ export const about_page = {
             scrollerRef: "#aboutpage",
             classAdd: "dark_background",
             backgroundImage: {
-                url: "/about/banner.webp",
+                url: "/images/about/banner.webp",
                 size: { width: "100%", height: "auto" }
             },
             moreStyle:{ },
@@ -44,7 +44,24 @@ export const about_page = {
             morePara:"Beside designing and fashion production, 20Studio work on projects of all types including brand and product development, digital experience design, social media design, production management and fashion business solutions.",
             listBtn:['Home','Project','Sustainability','Service','Contact'],
             btnMore: ['Our service','/service'],
-          
+            infoContact:{
+                phone: {
+                    text: "0969.168.629",
+                    link: "tel:0969168629"
+                },
+                mail : {
+                    text: "20studio.contact@gmail.com",
+                    link: "mailto:20studio.contact@gmail.com"
+                }
+            },
+            listBtnUrl: {
+                "Home": '/home',
+                "About us": '/about',
+                "Project": '/work',
+                "Service": '/service',
+                "Contact": '/contact',
+                "Sustainability":'/sustainability'
+            }
             
         },
         advantage: {
@@ -68,7 +85,8 @@ export const about_page = {
             tit: ["From" ,"vision","to reality"],
             more: "Let's make dream come true.",
             btn: "Lett&apos;s touch!"
-        }
+        },
+        
 
     }
 }

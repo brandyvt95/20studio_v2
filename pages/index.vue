@@ -1,28 +1,41 @@
 <script setup>
+import { ref, onMounted,nextTick } from 'vue'
 import { gsap } from 'gsap'
-import HomePage from '~/components/HomePage/index.vue'
-import { useUiStore } from '~/stores/ui'
+import HomePage from '~/components/large/HomePage/index.vue'
 import { home_page } from '~/constants/content'
+import { transitionConfig } from '~/constants/transition'
+import MaskOverlay from './MaskOverlay.vue'
+import { handlePageEnter, handlePageLeave } from '~/hooks/useHandleTransPage'
+import { motionFirstLoadPage } from '~/hooks/useMotionTransPage'
+import { activeStateUi } from '~/hooks/useStateUi'
+
+const maskRef = ref(null)
+
+onMounted(async () => {
+  if (!stateUiGlobal.isPageFirstLoad) {
+    stateUiGlobal.isPageFirstLoad = true
+
+    await nextTick()
+    if (maskRef.value?.el) {
+      motionFirstLoadPage({ el: maskRef.value.el })
+      activeStateUi({ param: 'active-page' })
+    }
+  }
+})
+
+
 definePageMeta({
   pageTransition: {
     name: 'page',
     mode: 'default',
     css: false,
-
+    onEnter: (el, done) => {
+    
+      handlePageEnter({ el, done}) 
+    },
     onLeave(el, done) {
-      const ui = useUiStore()
-      ui.showComponent = false
-      gsap.to(el, {
-        y: 100,
-        duration: 1.2,
-        ease: 'power3.out',
-        onComplete: () => {
-          setTimeout(() => {
-            ui.showComponent = true
-          }, 3000)  
-          done()
-        }
-      })
+ 
+      handlePageLeave({el,done})
     }
   }
 })
@@ -30,12 +43,13 @@ definePageMeta({
 </script>
 
 <template>
-   <HomePage :content="home_page.content" />
+  <MaskOverlay ref="maskRef">
+    <LenisWrapper>
+      <HomePage :content="home_page.content" />
+    </LenisWrapper>
+  </MaskOverlay>
 </template>
 
 <style scoped>
-.page-content {
-  width: 100%;
-  height: 100%;
-}
+
 </style>

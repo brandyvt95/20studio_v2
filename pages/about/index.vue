@@ -1,55 +1,51 @@
-<!-- pages/index.vue và các trang khác -->
 <script setup>
 import { gsap } from 'gsap';
-import { useUiStore } from '~/stores/ui'
+import { about_page } from '~/constants/content'
+import AboutPage from '~/components/large/AboutPage/index.vue'
+import { transitionConfig } from '~/constants/transition'
+
+import MaskOverlay from '../MaskOverlay.vue'
+import { handlePageLeave, handlePageEnter } from '~/hooks/useHandleTransPage';
+import { motionFirstLoadPage } from '~/hooks/useMotionTransPage'
+import { activeStateUi } from '~/hooks/useStateUi'
+const maskRef = ref(null)
+
+onMounted(async () => {
+  if (!stateUiGlobal.isPageFirstLoad) {
+    stateUiGlobal.isPageFirstLoad = true
+
+    await nextTick()
+    if (maskRef.value?.el) {
+      motionFirstLoadPage({ el: maskRef.value.el })
+      activeStateUi({ param: 'active-page' })
+    }
+  }
+})
+
+
 
 definePageMeta({
   pageTransition: {
     name: 'page',
-    mode: 'default', // Quan trọng: mode "default" sẽ giữ cả hai trang trên DOM
-    css: false, // Tắt CSS transition để dùng JS (GSAP)
-
+    mode: 'default',
+    css: false,
     onEnter: (el, done) => {
-      // Animation cho trang mới đi vào
-      // gsap.fromTo(el, 
-      //   { clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)' },
-      //   { 
-      //     clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)', 
-      //     duration: 1.2,
-      //     ease: 'power3.out',
-      //     onComplete: done
-      //   }
-      // );
+   
+      handlePageEnter({ el, done}) 
     },
-
-    onLeave: (el, done) => {
-      const ui = useUiStore()
-      ui.showComponent = false
-      gsap.to(el, {
-        y: 100,
-        duration: 1.2,
-        ease: 'power3.out',
-        onComplete: () => {
-          setTimeout(() => {
-            ui.showComponent = true
-          }, 3000)  
-          done()
-        }
-      })
+    onLeave(el, done) {
+      handlePageLeave({el,done})
     }
   }
-});
+})
 </script>
 
 <template>
-  <div class="page-content">
-    Aboutus
-  </div>
+  <MaskOverlay ref="maskRef">
+    <LenisWrapper>
+      <AboutPage :content="about_page.content" />
+    </LenisWrapper>
+  </MaskOverlay>
 </template>
 
-<style scoped>
-.page-content {
-  width: 100%;
-  height: 100%;
-}
-</style>
+<style scoped></style>
