@@ -2,8 +2,8 @@
 import { ref, onMounted,nextTick } from 'vue'
 import MaskOverlay from './MaskOverlay.vue'
 import LenisWrapper from './LenisWrapper.vue'
-import { motionFirstLoadPage } from '~/hooks/useMotionTransPage'
-import { activeStateUi } from '../composables/controls/useStateUi'
+import { motionFirstLoadPage } from '~/composables/hooks/transitionpage/useMotionTransPage'
+import { activeStateUi } from '~/composables/controls/useStateUi'
 
 
 const maskRef = ref(null)

@@ -17,7 +17,7 @@
         default: '',
       },
       tag: {
-        type: String as PropType<'p' | 'span'>,
+        type: String as PropType<'p' | 'span' | 'div'>,
         default: 'p',
       },
       font: {

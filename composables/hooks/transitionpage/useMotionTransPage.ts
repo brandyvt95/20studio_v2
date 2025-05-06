@@ -1,6 +1,6 @@
 import gsap from 'gsap'
-import { transitionConfig } from '../constants/config_transitionPage'
-import type { IHandleMotionTransPage } from '../types/transitionPage'
+import { transitionConfig } from '../../../constants/config_transitionPage'
+import type { IHandleMotionTransPage } from '~types/transitionPage'
 
 export const motionFirstLoadPage = ({ el }: { el: Element }) => {
     gsap.fromTo(el, transitionConfig.mask.start, transitionConfig.mask.end)
@@ -16,7 +16,7 @@ export const motionEnterPage = ({ el, onCompleteCallback }: IHandleMotionTransPa
     const ctx = gsap.context(() => {
         const lenisWrapper = el.children[0]
         gsap.timeline()
-            .set(el, { zIndex: setupZIndex() })
+           //.set(el, { zIndex: setupZIndex() })
             .fromTo(el,
                 transitionConfig.mask.start,
                 {

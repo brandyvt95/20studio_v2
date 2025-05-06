@@ -1,6 +1,6 @@
-import { activeStateUi } from '../composables/controls/useStateUi'
+import { activeStateUi } from '../../controls/useStateUi'
 import { motionEnterPage, motionLeavePage } from './useMotionTransPage';
-import type { IHandleMotionTransPage } from '../types/transitionPage';
+import type { IHandleMotionTransPage } from '~types/transitionPage';
 
 
 const pageState: {

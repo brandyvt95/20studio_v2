@@ -3,7 +3,19 @@ body {
     padding: 0;
     font-family: "BD-Medium", sans-serif;
     overflow: hidden;
+    background-color:var(--color-story);
 }
 section {
     position: relative;
+    pointer-events: none;
 }
+.willChangeTranform {
+    will-change: tranform;
+}
+.willChangeScale {
+    will-change: tranform;
+}
+.willChangeBoth {
+    will-change: tranform,scale;
+}
+

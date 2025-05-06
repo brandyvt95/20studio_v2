@@ -1,18 +1,18 @@
 import { shallowRef } from 'vue'
 import gsap from 'gsap'
-
+import { transitionMotion,transitionConfig } from '../../../constants/config_transitionPage'
 export const motion = {
   toggleModalNavbar:{
       start: {
           clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
       },end:{
           clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
-          duration: 1.36,
-          ease:'power3.out'
+          duration: transitionMotion.duration,
+          ease:transitionMotion.ease,
       }
   }
 }
-export function useModalNavbarGsap(modalRef: Ref<HTMLElement | null>) {
+export function useModalNavbar(modalRef: Ref<HTMLElement | null>) {
   const tl = shallowRef<gsap.core.Timeline | null>(null)
 
   const init = () => {

@@ -1,5 +1,6 @@
 <script setup>
 import TypoParagraph from '~/components/common/Typo/TypoParagraph.vue';
+import ButtonBasic from '~/components/animation/Button/Basic/index.vue';
 import s from './style.module.css'
 import gsap from 'gsap'
 import { useRoute } from 'vue-router'
@@ -11,8 +12,8 @@ const route = useRoute()
 const isModalMenuOpen = stateModalNavbar()
 const modalRef = ref(null)
 const tlRef = shallowRef(null)
-const { useModalNavbarGsap } = useGsap()
-const { init, play, reverse } = useModalNavbarGsap(modalRef)
+const { useModalNavbar} = useGsap()
+const { init, play, reverse } = useModalNavbar(modalRef)
 
 onMounted(() => {
     init()
@@ -42,50 +43,50 @@ watch(() => route.path, (newPath, oldPath) => {
 
                 <ul :class="s.main" id='main_navbar'>
                     <li :class="s.main_link">
-                        <NuxtLink to='/' :class="s.main_line">
+                        <ButtonBasic to='/' :customClass="s.main_line">
                             Home
-                        </NuxtLink>
+                        </ButtonBasic>
                     </li>
                     <li :class="s.main_link">
-                        <NuxtLink to='/sustainability' :class="s.main_line">
+                        <ButtonBasic to='/sustainability' :customClass="s.main_line">
                             Sustainability
-                        </NuxtLink>
+                        </ButtonBasic>
                     </li>
                     <li :class="s.main_link">
-                        <NuxtLink to='/projects' :class="s.main_line">
+                        <ButtonBasic to='/projects' :customClass="s.main_line">
                             Project
-                        </NuxtLink>
+                        </ButtonBasic>
 
                     </li>
                     <li :class="s.main_link">
-                        <NuxtLink to='/about' :class="s.main_line">
+                        <ButtonBasic to='/about' :customClass="s.main_line">
                             About us
-                        </NuxtLink>
+                        </ButtonBasic>
 
                     </li>
                     <li :class="s.main_link">
-                        <NuxtLink to='/services' :class="s.main_line">
+                        <ButtonBasic to='/services' :customClass="s.main_line">
                             Service
-                        </NuxtLink>
+                        </ButtonBasic>
 
                     </li>
                     <li :class="s.main_link">
-                        <NuxtLink to='/contact' :class="s.main_line">
+                        <ButtonBasic to='/contact' :customClass="s.main_line">
                             Contact
-                        </NuxtLink>
+                        </ButtonBasic>
 
                     </li>
                     <li :class="s.social_link">
-                        <a :class="s.link_item">Linked</a>
+                        <ButtonBasic  to='/'  :customClass="s.link_item">Linked</ButtonBasic>
                     </li>
                     <li :class="s.social_link">
-                        <a :class="s.link_item">Facebook</a>
+                        <ButtonBasic  to='/'  :customClass="s.link_item">Facebook</ButtonBasic>
                     </li>
                     <li :class="s.social_link">
 
-                        <NuxtLink to='https://www.instagram.com/20studio.vn/' :class="s.main_line">
+                        <ButtonBasic to='https://www.instagram.com/20studio.vn/' :customClass="s.link_item">
                             Instagram
-                        </NuxtLink>
+                        </ButtonBasic>
                     </li>
                 </ul>
                 <ul :class="s.social">
@@ -102,9 +103,9 @@ watch(() => route.path, (newPath, oldPath) => {
 
                 <div :class="s.link_about">
 
-                    <NuxtLink to='/services' :class="s.link">
+                    <ButtonBasic to='/services' :customClass="s.link">
                         Our service
-                    </NuxtLink>
+                    </ButtonBasic>
                 </div>
 
 
