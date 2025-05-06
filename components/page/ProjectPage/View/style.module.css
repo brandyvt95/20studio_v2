@@ -1,0 +1,30 @@
+.projects_section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 10;
+    background-color: black;
+    overflow: hidden;
+}
+.items {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.item {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.item_background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.items * {
+    color: white;
+}

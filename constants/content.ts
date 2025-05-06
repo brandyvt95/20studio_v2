@@ -43,7 +43,7 @@ export const about_page = {
             tit: ["Fashion", "Creative", "Production"],
             morePara: "Beside designing and fashion production, 20Studio work on projects of all types including brand and product development, digital experience design, social media design, production management and fashion business solutions.",
             listBtn: ['Home', 'Project', 'Sustainability', 'Service', 'Contact'],
-            btnMore: ['Our service', '/service'],
+            btnMore: ['Our service', '/services'],
             infoContact: {
                 phone: {
                     text: "0969.168.629",
@@ -158,7 +158,7 @@ export const home_page = {
             tit: ["Fashion", "Creative", "Production"],
             morePara: "Beside designing and fashion production, 20Studio work on projects of all types including brand and product development, digital experience design, social media design, production management and fashion business solutions.",
             listBtn: ['About us', 'Sustainability', 'Project', 'Service', 'Contact'],
-            btnMore: ['Explore our services', '/service'],
+            btnMore: ['Explore our services', '/services'],
             infoContact: {
                 phone: {
                     text: "0969.168.629",
@@ -468,4 +468,34 @@ export const project4_page = {
             client: "20Studio Brand"
         }
     }
+}
+
+export const projects_page = {
+    content : [
+        {
+            brand:"Unwanted Project",
+            jobDes:"Sample management",
+            thumb:"/images/clone/services1.webp",
+            background:"/images/clone/services1.webp",
+        },
+        {
+            brand:"Nét Collection",
+            jobDes:"Sample management",
+            thumb:"/images/clone/services2.webp",
+            background:"/images/clone/services2.webp",
+        },
+        {
+            brand:"Lung Tung Collection 2",
+             jobDes:"Production management",
+            thumb:"/images/clone/services3.webp",
+            background:"/images/clone/services3.webp",
+        },
+        {
+            brand:"20 Studio Website",
+            jobDes:"Web development",
+            thumb:"/images/clone/services4.webp",
+            background:"/images/clone/services4.webp",
+            
+        }
+    ]
 }

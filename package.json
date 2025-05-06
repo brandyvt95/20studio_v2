@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxtjs/sitemap": "^7.2.10",
     "@pinia/nuxt": "^0.11.0",
     "@storyblok/js": "^3.4.0",
     "@storyblok/nuxt": "^6.2.4",
@@ -22,6 +23,7 @@
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
+    "@types/node": "^22.15.3",
     "vite-tsconfig-paths": "^5.1.4"
   }
 }

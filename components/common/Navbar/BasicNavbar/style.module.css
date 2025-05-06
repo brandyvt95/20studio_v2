@@ -1,5 +1,5 @@
 
-@media (max-width: 601px) {
+@media (max-width: 1024px) {
     #button_menu {
         opacity: 1;
         visibility: visible;
@@ -9,7 +9,7 @@
         visibility: hidden;
     }
 }
-@media (min-width: 601px) {
+@media (min-width: 1024px) {
     #button_menu {
         opacity: 0;
       
@@ -61,17 +61,12 @@
 }
 
 .nav_item {
-    width: 6vw;
-    text-align: center;
+    width:fit-content;
+    padding: 0 1rem;
 }
 .nav_item a {
-
-    position: relative;
     color:var(--white);
   
-}
-.nav_item a:hover {
-    color:var(--white) !important;
 }
 
 

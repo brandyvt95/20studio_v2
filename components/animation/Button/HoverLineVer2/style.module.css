@@ -1,0 +1,6 @@
+.wrapper {
+    position: relative;
+    cursor: pointer;
+    pointer-events: auto;
+    width: fit-content;
+}

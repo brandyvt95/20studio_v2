@@ -1,16 +1,17 @@
 <script setup>
-import Navbar from '~/components/common/Navbar/index.vue'
-
+import BasicNavbar from '../components/common/Navbar/BasicNavbar/index.vue'
+import ModalNavbar from '../components/common/Navbar/ModalNavbar/index.vue'
+import Footer from '../components/common/Footer/index.vue'
 </script>
 
 <template>
-    <Navbar />
+    <header>
+        <BasicNavbar />
+        <ModalNavbar/>
+    </header>
+  
     <div class="main-layout">
         <NuxtPage />
     </div>
-    <!-- <Footer></Footer> -->
+    <Footer />
 </template>
-
-<style>
-.main-layout {}
-</style>

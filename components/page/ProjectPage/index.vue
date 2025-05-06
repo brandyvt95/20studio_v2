@@ -1,9 +1,9 @@
 <script setup>
-  import SampleSection from '~/components/section/SampleSection/index.vue';
+  import View from './View/index.vue'
   import './style.css'
-
+  import { projects_page } from '~/constants/content'
 </script>
 
 <template>
-    <SampleSection />
+    <View :content="projects_page.content"/>
 </template>
