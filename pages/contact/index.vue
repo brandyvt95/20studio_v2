@@ -1,6 +1,5 @@
 <script setup>
-import ContactPage from '~/components/page/ContactPage/index.vue'
-import WrapperPage from '~/components/wrapper/WrapperPage.vue'
+
 import {defaultPageTransition} from '~/constants/config_transitionPage'
 import { contact_page } from '~/constants/content'
 import { meta } from '../constants/meta'
@@ -17,7 +16,7 @@ definePageMeta({
 
 <template>
   <WrapperPage>
-    <ContactPage :content="contact_page.content" />
+    <PageContactPage :content="contact_page.content" />
     <Space/>
   </WrapperPage>
 </template>

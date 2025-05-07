@@ -1,30 +1,22 @@
 import { activeStateUi } from '../../controls/useStateUi'
 import { motionEnterPage, motionLeavePage } from './useMotionTransPage';
 import type { IHandleMotionTransPage } from '~types/transitionPage';
+import {routesList} from '../../../constants/routerList'
 
+const routerState: {
+  [key: string]: { visible: boolean }
+} = Object.fromEntries(routesList.map(route => [route, { visible: false }]));
 
-const pageState: {
-    [key: string]: {
-        visible: boolean;
-    };
-} = {
-    '/': { visible: false },
-    '/about': { visible: false },
-    '/projects': { visible: false },
-    '/services': { visible: false },
-    '/contact': { visible: false },
-    '/sustainability': { visible: false },
-};
 
 
 export const handlePageEnter = ({ el, done }: IHandleMotionTransPage): void => {
     const currentPath = useRouter().currentRoute.value.fullPath;
-    pageState[`${currentPath}`].visible = true;
+    routerState[`${currentPath}`].visible = true;
     
     motionEnterPage({
         el,
         onCompleteCallback: () => {
-            if (pageState[`${currentPath}`].visible) {
+            if (routerState[`${currentPath}`].visible) {
                 console.log(`>>>>>> Starting app state for ${currentPath}`);
                 activeStateUi({param:'active-page'});
             } else {
@@ -38,7 +30,7 @@ export const handlePageEnter = ({ el, done }: IHandleMotionTransPage): void => {
 export const handlePageLeave = ({ el, done }: IHandleMotionTransPage): void => {
     activeStateUi({param:'disable-page'});
     const currentPath = useRoute().fullPath
-    pageState[`${currentPath}`].visible = false;
+    routerState[`${currentPath}`].visible = false;
 
     motionLeavePage({
         el,

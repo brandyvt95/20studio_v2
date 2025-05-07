@@ -1,7 +1,5 @@
 <script setup>
-import AboutPage from '~/components/page/AboutPage/index.vue'
 import { about_page } from '~/constants/content'
-import WrapperPage from '~/components/wrapper/WrapperPage.vue'
 import {defaultPageTransition} from '~/constants/config_transitionPage'
 import { meta } from '../constants/meta'
 import Space from '../components/common/Space/index.vue'
@@ -17,7 +15,7 @@ definePageMeta({
 
 <template>
   <WrapperPage>
-    <AboutPage :content="about_page.content" />
+    <PageAboutPage :content="about_page.content" />
     <Space/>
   </WrapperPage>
 </template>

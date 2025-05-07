@@ -2,6 +2,12 @@
     <section :class="s.projects_section">
         <div :class="s.items">
             <ul>
+                <li v-for="(item, index) in grouped.slug" :key="index">
+                    <ButtonBasic :to="`/projects/${item}`">{{ item }}</ButtonBasic>
+                </li>
+            </ul>
+            <br/>
+            <ul>
                 <li v-for="(item, index) in grouped.brand" :key="index">
                     {{ item }}
                 </li>
@@ -26,7 +32,7 @@
 </template>
 
 <script setup>
-
+import ButtonBasic from '~/components/animation/Button/Basic/index.vue'
 import TypoHeading from '~/components/common/Typo/TypoHeading.vue';
 import TypoParagraph from '~/components/common/Typo/TypoParagraph.vue';
 import s from './style.module.css'

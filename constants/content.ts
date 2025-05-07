@@ -470,32 +470,182 @@ export const project4_page = {
     }
 }
 
-export const projects_page = {
-    content : [
-        {
-            brand:"Unwanted Project",
-            jobDes:"Sample management",
-            thumb:"/images/clone/services1.webp",
-            background:"/images/clone/services1.webp",
+export const projects_page = [
+    {
+        slug:'uwanted',
+        brand:"Unwanted Project",
+        jobDes:"Sample management",
+        thumb:"/images/clone/services1.webp",
+        background:"/images/clone/services1.webp",
+        detail: {
+            mission: ["Sample management"],
+            scrollerRef: "#work1page",
+            img: [
+                "/images/clone/services1.webp",
+                "image_cache_services1"
+            ],
+            name: ["Unwanted", "Project"],
+            des: "The beauty of Vietnamese calligraphy is expressed in fashion through techniques like hand-embellishment, deconstructing the traditional male áo dài, reassembling with metal rings, and multi-material weaving, creating a unique story in each outfit.",
+            challenge: "We believe that all good things are achieved by those who are willing to put in passion, courage and craftsmanship.",
+            role: ["Fashion Develop", "Prototyping", "Sourcing", "Consulting"],
+            date: "Jan 2023 - 3 weeks",
+            client: "Fashion Designer Bui Dong Duy",
+          
         },
-        {
-            brand:"Nét Collection",
-            jobDes:"Sample management",
-            thumb:"/images/clone/services2.webp",
-            background:"/images/clone/services2.webp",
-        },
-        {
-            brand:"Lung Tung Collection 2",
-             jobDes:"Production management",
-            thumb:"/images/clone/services3.webp",
-            background:"/images/clone/services3.webp",
-        },
-        {
-            brand:"20 Studio Website",
-            jobDes:"Web development",
-            thumb:"/images/clone/services4.webp",
-            background:"/images/clone/services4.webp",
-            
+        gallery: {
+              infoProject: "Personal Prject of Bui Dong Duy",
+            desProject: "Personal Prject of Bui Dong Duy",
+            img: [
+                "/images/work1/1.png",
+                "/images/work1/2.png",
+                "/images/work1/3.png",
+                "/images/work1/4.png",
+                "/images/work1/5.png",
+                "/images/work1/6.png",
+                "/images/work1/7.png",
+                "/images/work1/8.png",
+            ],
+            img2: [
+                "/images/work1/4.png",
+                "/images/work1/7.png",
+                "/images/work1/5.png",
+                "/images/work1/8.png",
+                "/images/work1/2.png",
+            ],
+            imgOrigin: [
+                "/images/work1/origin/1.png",
+                "/images/work1/origin/2.png",
+                "/images/work1/origin/3.png",
+                "/images/work1/origin/4.png",
+                "/images/work1/origin/5.png",
+                "/images/work1/origin/6.png",
+            ]
         }
-    ]
-}
+    },
+    {
+        slug:'net-collection',
+        brand:"Nét Collection",
+        jobDes:"Sample management",
+        thumb:"/images/clone/services2.webp",
+        background:"/images/clone/services2.webp",
+        detail: {
+            mission: ["Sample management"],
+            scrollerRef: "#work2page",
+            img: [
+                "/images/clone/services2.webp",
+                "image_cache_services2"
+            ],
+            name: ["Nét", "Collection"],
+            des: "The beauty of Vietnamese calligraphy is expressed in fashion through techniques like hand-embellishment, deconstructing the traditional male áo dài, reassembling with metal rings, and multi-material weaving, creating a unique story in each outfit.",
+            challenge: "We believe that all good things are achieved by those who are willing to put in passion, courage and craftsmanship.",
+            role: ["Fashion Develop", "Prototyping", "Sourcing", "Consulting"],
+            date: "Jan 2023 - 3 weeks",
+            client: "Fashion Designer Huynh Anh Thu",
+            infoProject: "Personal Prject of Huynh Anh Thu",
+            desProject: "Personal Prject of Huynh Anh Thu"
+        },
+        gallery: {
+            img: [
+                "/images/work2/5.png",
+                "/images/work2/3.png",
+                "/images/work2/6.png",
+                "/images/work2/4.png",
+                "/images/work2/1.png",
+                "/images/work2/2.png",
+
+            ],
+            img2: [
+                "/images/work2/7.png",
+                "/images/work2/8.png",
+                "/images/work2/9.png",
+                "/images/work2/10.png",
+                "/images/work2/12.png",
+            ],
+            imgOrigin: [
+                "/images/work2/origin/1.png",
+                "/images/work2/origin/2.png",
+                "/images/work2/origin/3.png",
+                "/images/work2/origin/4.png",
+                "/images/work2/origin/5.png",
+                "/images/work2/origin/6.png",
+            ]
+        }
+    },
+    {
+        slug:"lungtung-collection",
+        brand:"Lung Tung Collection 2",
+         jobDes:"Production management",
+        thumb:"/images/clone/services3.webp",
+        background:"/images/clone/services3.webp",
+        detail:{
+            mission: ["Production management"],
+            scrollerRef: "#work3page",
+            img: [
+                "/images/clone/services3.webp",
+                "image_cache_services3"
+            ],
+            name: ["Lungtung", "Collection 2"],
+            des: "The beauty of Vietnamese calligraphy is expressed in fashion through techniques like hand-embellishment, deconstructing the traditional male áo dài, reassembling with metal rings, and multi-material weaving, creating a unique story in each outfit.",
+            challenge: "We believe that all good things are achieved by those who are willing to put in passion, courage and craftsmanship.",
+            role: ["Fashion Develop", "Prototyping", "Sourcing", "Consulting"],
+            date: "Jan 2023 - 3 weeks",
+            client: "Lungtung Studio",
+            infoProject: "Lungtung Second Collection",
+            desProject: "Spring Summer 2024"
+        },
+        gallery: {
+            img: [
+                "/images/work3/1.png",
+                "/images/work3/2.png",
+                "/images/work3/3.png",
+                "/images/work3/4.png",
+                "/images/work3/5.png",
+                "/images/work3/6.png",
+            ],
+            img2: [
+                "/images/work3/7.png",
+                "/images/work3/8.png",
+                "/images/work3/9.png",
+                "/images/work3/12.png",
+                "/images/work3/10.png",
+            ],
+            imgOrigin: [
+                "/images/work3/origin/1.png",
+                "/images/work3/origin/2.png",
+                "/images/work3/origin/3.png",
+                "/images/work3/origin/4.png",
+                "/images/work3/origin/5.png",
+                "/images/work3/origin/6.png",
+            ]
+        }
+    },
+    {
+        slug:"20studio-website",
+        brand:"20 Studio Website",
+        jobDes:"Web development",
+        thumb:"/images/clone/services4.webp",
+        background:"/images/clone/services4.webp",
+        detail: {
+            mission: ["Web Development"],
+            scrollerRef: "#work4page",
+            img: [
+                "/images/clone/services4.webp",
+                "image_cache_services4"
+            ],
+            name: ["20Studio", "Website"],
+            des: "The beauty of Vietnamese calligraphy is expressed in fashion through techniques like hand-embellishment, deconstructing the traditional male áo dài, reassembling with metal rings, and multi-material weaving, creating a unique story in each outfit.",
+            challenge: "We believe that all good things are achieved by those who are willing to put in passion, courage and craftsmanship.",
+            role: ["Fashion Develop", "Prototyping", "Sourcing", "Consulting"],
+            date: "Jan 2023 - 123 weeks",
+            client: "20Studio Brand"
+        },
+        gallery:{
+            img: [
+            ],
+            img2: [
+            ],
+            imgOrigin: [
+            ]
+        }
+    }
+]
