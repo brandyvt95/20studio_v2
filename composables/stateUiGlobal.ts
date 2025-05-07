@@ -5,3 +5,9 @@ export const stateUiGlobal = reactive({
   isPageFirstLoad:false,
   isRunningTransitionPage:false
 });
+
+
+
+export const stateMouseGlobal = reactive({
+  isExpend:true
+});

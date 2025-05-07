@@ -1,5 +1,5 @@
 <template>
-  <section :class="s.section">
+  <section :class="s.section" data-scopeCursor="close">
     <div :class="s.container">
       <TypoHeading tag="h2" size="h1" font="BD-Regular" :class="s.title">
         FAQ’S
@@ -12,7 +12,7 @@
             d="M7.41908 4.56679L6.13722 0L4.85418 4.92566L0 6L4.85418 7.25435L6.13722 12L7.3276 7.25435L12 6L7.41908 4.56679Z"
             fill="currentColor"></path>
         </svg>
-        <div>FAQs</div>
+        <span>FAQs</span>
       </TypoParagraph>
 
 

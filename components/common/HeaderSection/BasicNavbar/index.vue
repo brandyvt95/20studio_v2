@@ -1,56 +1,22 @@
 <script setup>
 import TypoParagraph from '~/components/common/Typo/TypoParagraph.vue';
 import Button from './Button/index.vue'
+import Icon from './Icon/index.vue'
 import ButtonBasic from '~/components/animation/Button/Basic/index.vue'
 import s from './style.module.css'
+const data = defineProps({
+  content: Object
+})
 </script>
 <template>
     <Button />
-    <nav :class='s.nav' :id="s.navbar_deskop">
-        <span :class='s.this_icon'>
-            <img src='/images/icon/star.svg' />
-        </span>
+    <nav :class='s.nav' :id="s.navbar_deskop" data-scopeCursor="close">
+        <Icon :content="data.content.menuDeskop"/>
         <ul :class='s.nav_list'>
-            <li :class='s.nav_item'>
-
-                <ButtonBasic to="/">
-                    <TypoParagraph tag="p" size="small" font="BD-Medium">
-                        Home
-                    </TypoParagraph>
-                </ButtonBasic>
-            </li>
-            <li :class='s.nav_item'>
-                <ButtonBasic to="/sustainability">
-                    <TypoParagraph tag="p" size="small" font="BD-Medium">
-                        Sustain
-                    </TypoParagraph>
-                </ButtonBasic>
-            </li>
-            <li :class='s.nav_item'>
-                <ButtonBasic to="/projects">
-                    <TypoParagraph tag="p" size="small" font="BD-Medium">
-                        Project
-                    </TypoParagraph>
-                </ButtonBasic>
-            </li>
-            <li :class='s.nav_item'>
-                <ButtonBasic to="/about">
-                    <TypoParagraph tag="p" size="small" font="BD-Medium">
-                        About us
-                    </TypoParagraph>
-                </ButtonBasic>
-            </li>
-            <li :class='s.nav_item'>
-                <ButtonBasic to="/services">
-                    <TypoParagraph tag="p" size="small" font="BD-Medium">
-                        Service
-                    </TypoParagraph>
-                </ButtonBasic>
-            </li>
-            <li :class='s.nav_item'>
-                <ButtonBasic to="/contact">
-                    <TypoParagraph tag="p" size="small" font="BD-Medium">
-                        Contact
+            <li :class='s.nav_item' v-for="(url, label) in data.content.menuDeskop" :key="label">
+                <ButtonBasic :to="url">
+                    <TypoParagraph tag="p" size="psmall" font="BD-Medium">
+                        {{ label }}
                     </TypoParagraph>
                 </ButtonBasic>
             </li>

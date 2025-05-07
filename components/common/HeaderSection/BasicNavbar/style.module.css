@@ -1,5 +1,5 @@
 
-@media (max-width: 1024px) {
+@media (max-width:601px) {
     #button_menu {
         opacity: 1;
         visibility: visible;
@@ -9,7 +9,7 @@
         visibility: hidden;
     }
 }
-@media (min-width: 1024px) {
+@media (min-width: 601px) {
     #button_menu {
         opacity: 0;
       
@@ -31,6 +31,8 @@
     z-index: 999;
     will-change: opacity;
     mix-blend-mode: difference;
+    padding: .5rem 0;
+    pointer-events: auto;
  
 }
 .logo {
@@ -46,23 +48,27 @@
 .nav_list {
     position: relative;
     display: flex;
-    overflow: hidden;
+    pointer-events: none;
 }
 .this_icon {
+    pointer-events: none;
     position: absolute;
-    bottom:-.7vw;
-    left: calc(calc(6vw  /  2) - .35vw);
+    bottom:0;
+    left: 0;
     width: .7vw;
     height: .7vw;
     color: white;
+    opacity:0;
     will-change: transform,opacity;
-    opacity: 0;
     transform-origin: center center;
+    svg {
+        position: absolute;
+    }
 }
 
 .nav_item {
-    width:fit-content;
-    padding: 0 1rem;
+    width:7vw;
+    text-align: center;
 }
 .nav_item a {
     color:var(--white);

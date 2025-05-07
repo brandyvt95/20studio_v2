@@ -3,9 +3,11 @@
     padding: 21.3333333333vw 0;
     height: fit-content;
     background-color: white;
+    pointer-events: auto;
 }
 
 .container {
+    pointer-events: none;
     margin: 0 8.3333333333vw;
 }
 

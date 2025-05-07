@@ -19,6 +19,14 @@ export const common = {
                 "Service": '/services',
                 "Contact": '/contact',
                 "Sustainability": '/sustainability'
+    },
+    menuDeskop: {
+        "Home": '/',
+        "Sustain": '/sustainability',
+        "Project": '/projects',
+        "About us": '/about',
+        "Service": '/services',
+        "Contact": '/contact',
     }
 }
 

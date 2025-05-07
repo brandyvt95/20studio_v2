@@ -1,5 +1,5 @@
 <template>
-  <section :class="s.section">
+  <section :class="s.section" data-scopeCursor="close">
     <div :class="s.container">
       <!--    <ul :class={s.s.media_wrapper} ref={triggleSection}>
             <li :class={s.s.media}>

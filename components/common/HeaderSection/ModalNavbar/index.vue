@@ -1,31 +1,36 @@
 <script setup>
 import TypoParagraph from '~/components/common/Typo/TypoParagraph.vue';
 import ButtonBasic from '~/components/animation/Button/Basic/index.vue';
+import Icon from './Icon/index.vue'
+import MotionToggle from './MotionToggle/index.vue'
+
 import s from './style.module.css'
 import gsap from 'gsap'
 import { useRoute } from 'vue-router'
 import { activeStateUi } from '../composables/controls/useStateUi'
 import { useGsap } from '~/composables/hooks/useGsap'
-
+const data = defineProps({
+    content: Object
+})
 
 const route = useRoute()
 const isModalMenuOpen = stateModalNavbar()
 const modalRef = ref(null)
 const tlRef = shallowRef(null)
-const { useModalNavbar} = useGsap()
+const { useModalNavbar } = useGsap()
 const { init, play, reverse } = useModalNavbar(modalRef)
 
 onMounted(() => {
     init()
 })
 watch(isModalMenuOpen, (val) => {
-  val ? play() : reverse()
+    val ? play() : reverse()
 })
 
 watch(() => route.path, (newPath, oldPath) => {
-  if (newPath !== oldPath) {
-    isModalMenuOpen.value = false
-  }
+    if (newPath !== oldPath) {
+        isModalMenuOpen.value = false
+    }
 })
 
 
@@ -33,64 +38,34 @@ watch(() => route.path, (newPath, oldPath) => {
 <template>
     <section :class="s.navbar_modal_section" ref="modalRef">
         <div :class="s.wrapper">
-
-
             <div :class="s.container">
-
                 <div :class="s.logo">
                     20 STUDIO
                 </div>
-
                 <ul :class="s.main" id='main_navbar'>
-                    <li :class="s.main_link">
-                        <ButtonBasic to='/' :customClass="s.main_line">
-                            Home
-                        </ButtonBasic>
+                    <li :class='s.main_link' v-for="(url, label) in data.content.menuDeskop" :key="label">
+                        <MotionToggle :url="url">
+                            <Icon />
+                            <ButtonBasic :to="url" :customClass="s.main_line">
+                                <TypoParagraph tag="p" size="small" font="BD-Medium">
+                                    {{ label }}
+                                </TypoParagraph>
+                            </ButtonBasic>
+                        </MotionToggle>
                     </li>
-                    <li :class="s.main_link">
-                        <ButtonBasic to='/sustainability' :customClass="s.main_line">
-                            Sustainability
-                        </ButtonBasic>
-                    </li>
-                    <li :class="s.main_link">
-                        <ButtonBasic to='/projects' :customClass="s.main_line">
-                            Project
-                        </ButtonBasic>
-
-                    </li>
-                    <li :class="s.main_link">
-                        <ButtonBasic to='/about' :customClass="s.main_line">
-                            About us
-                        </ButtonBasic>
-
-                    </li>
-                    <li :class="s.main_link">
-                        <ButtonBasic to='/services' :customClass="s.main_line">
-                            Service
-                        </ButtonBasic>
-
-                    </li>
-                    <li :class="s.main_link">
-                        <ButtonBasic to='/contact' :customClass="s.main_line">
-                            Contact
-                        </ButtonBasic>
-
+                </ul>
+                <ul :class="s.social">
+                    <li :class="s.social_link">
+                        <ButtonBasic to='/' :customClass="s.link_item">Linked</ButtonBasic>
                     </li>
                     <li :class="s.social_link">
-                        <ButtonBasic  to='/'  :customClass="s.link_item">Linked</ButtonBasic>
-                    </li>
-                    <li :class="s.social_link">
-                        <ButtonBasic  to='/'  :customClass="s.link_item">Facebook</ButtonBasic>
+                        <ButtonBasic to='/' :customClass="s.link_item">Facebook</ButtonBasic>
                     </li>
                     <li :class="s.social_link">
 
                         <ButtonBasic to='https://www.instagram.com/20studio.vn/' :customClass="s.link_item">
                             Instagram
                         </ButtonBasic>
-                    </li>
-                </ul>
-                <ul :class="s.social">
-                    <li :class="s.social_link">
                     </li>
                 </ul>
                 <ul :class="s.sub">

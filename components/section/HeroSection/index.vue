@@ -29,7 +29,7 @@ defineProps({
                 </SplitText>
 
 
-                <ul :class='s.menu'>
+                <ul :class='s.menu' data-scopeCursor="close">
                     <li v-for="(item, index) in content.listBtn" :key="index" :class="s.item">
                         <ButtonBasic :to="content.listBtnUrl[item]">
                             <TypoParagraph tag="p" font="BS-Medium">
@@ -38,7 +38,7 @@ defineProps({
                         </ButtonBasic>
                     </li>
                 </ul>
-                <ul :class='s.contact'>
+                <ul :class='s.contact' data-scopeCursor="close">
                     <li :class='s.item'>
                         <ButtonBasic to="/">
                             <TypoParagraph tag="span" font="BS-Medium">

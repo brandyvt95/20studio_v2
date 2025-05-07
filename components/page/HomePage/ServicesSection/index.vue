@@ -9,8 +9,8 @@ const data = defineProps({
 
 </script>
 <template>
-    <section :class="s.section">
-        <div :class="s.container">
+    <section :class="s.section" data-scopeCursor="close"> 
+        <div :class="s.container" >
             <div :class="s.head">
                 <TypoHeading tag="p" size="psmall" font="BS-Regular" :className="s.lable">
                     {{ content.content.tag }}
@@ -23,7 +23,7 @@ const data = defineProps({
                 </TypoParagraph>
             </div>
             <div :class="s.services">
-                <div :class="s.service" v-for="(work, index) in content.works" :key="index">
+                <div data-scopeCursor="View" :class="s.service" v-for="(work, index) in content.works" :key="index">
                     <div :class="s.block">
                         <!--  <img :src="work.img" width={0} height={0}  alt="image_cache_services1" /> -->
                     </div>

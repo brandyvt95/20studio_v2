@@ -1,8 +1,10 @@
 .section{
     overflow: hidden;
     background-color: white;
+    pointer-events: auto;
 }
 .media_wrapper {
+    pointer-events: none;
     height: 89.3333333333vw;
     margin: 0 0 21.3333333333vw;
     position: relative;

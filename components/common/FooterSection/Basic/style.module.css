@@ -4,8 +4,10 @@
     height: 100vh;
     background-color: blue;
     overflow: hidden;
+    pointer-events: auto;
 }
 .footer_section {
+    
     background: #070707;
     background: var(--color-story);
     color: #e0ccbb;
