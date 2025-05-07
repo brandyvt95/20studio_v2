@@ -7,20 +7,7 @@
 }
 
 .label {
-
     display: inline-flex;
-    font-family: "BS-Medium";
-    font-size: 3.7333333333vw;
-    font-size: var(--font-s-label);
-    height: 7.7333333333vw;
-    justify-self: flex-start;
-    letter-spacing: 0;
-    letter-spacing: var(--font-ls-label);
-    line-height: 3.7333333333vw;
-    line-height: var(--font-lh-label);
-    line-height: 8.2666666667vw;
-    padding-left: 5.8666666667vw;
-    position: relative;
 }
 .icon {
     height: 3.2vw;
@@ -30,44 +17,13 @@
     z-index: 1;
 }
 .title {
-    font-family: "BD-Medium";
-    font-size: 16vw;
- 
-    font-size:var(--font-s-h1);
-    letter-spacing: -.4vw;
-    letter-spacing: var(--font-ls-h1);
-    line-height: 16vw;
-    line-height: var(--font-lh-h1);
+   display: flex;
+   flex-direction: column;
     margin: 10.6666666667vw 0 6.9333333333vw;
 
 }
-.title .title_line {
-    /* font-weight: 300;
-    font-family: Lausanne-300;
-    font-size: 3rem;
-    letter-spacing: .2vw;
-  
-    line-height: 130%;
-   */
-   
-}
-.title .title-mask {
-    /* height: 15.2vw;
-    line-height: 12vw; */
-}
-.text {
 
-}
-.body p {
-
-    font-family: "BS-Regular";
-    font-size: 4.8vw;
-    font-size: var(--font-s-h4);
-    letter-spacing: 0;
-    letter-spacing: var(--font-ls-h4);
-    line-height: 6.4vw;
-    line-height: var(--font-lh-h4);
-
+.body {
     color:var(--color-off-white-06);
 }
 .image {
@@ -75,16 +31,7 @@
     overflow: hidden;
 }
 .quote {
-    color: hsla(33, 14%, 88%, .8);
     color: var(--color-light-grey-08);
-    font-family: "BS-Regular";
-    font-size: 3.2vw;
-    font-size: var(--font-s-subtitle);
-    letter-spacing: .0266666667vw;
-    letter-spacing: var(--font-ls-subtitle);
-    line-height: 4.2666666667vw;
-    line-height: var(--font-lh-subtitle);
-    position: relative;
 }
 @media (max-width: 601px) {
     .container {

@@ -24,9 +24,9 @@ const motion = {
     markers: true,
 };
 
-useSplitText({
-    refContent: domRef,
-    optionSplit: { typeSplit: 'lines' },
-    motion: motion
-});
+// useSplitText({
+//     refContent: domRef,
+//     optionSplit: { typeSplit: 'lines' },
+//     motion: motion
+// });
 </script>

@@ -2,7 +2,7 @@
 
 
 
-.ContactPageIntro {
+.section {
     background: #fff;
     background: var(--color-white);
     overflow: hidden;
@@ -25,15 +25,13 @@
     z-index: 1;
     aspect-ratio: 248 / 371;
     overflow:hidden;
+    background-color: gray;
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
-.h1 {
-    height: 1px;
-    left: 0;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    width: 1px;
-}
+
 .title {
     display: flex;
     position: absolute;
@@ -77,8 +75,6 @@
     }
     .body {
         margin: 2rem 0 !important;
-        font-size: 2rem !important;
-        line-height: 100% !important;
     }
     .contact_item {
         margin-bottom:.5rem !important;
@@ -97,7 +93,7 @@
 }
 @media (min-width: 601px) {
     
-.ContactPageIntro  {
+.section  {
         display: flex;
         flex-direction: column;
         height: 100vh;
@@ -145,16 +141,7 @@
         margin-bottom: 6.25vw;
         width: 21.3888888889vw;
     }
-    .body p {
-        font-family: 'BS-Regular';
-        font-family: var(--font-f-para-300);
-        font-size: 3.7333333333vw;
-        font-size: var(--font-s-p-small);
-        letter-spacing: .0266666667vw;
-        letter-spacing: var(--font-ls-p-small);
-        line-height: 5.6vw;
-        line-height: var(--font-lh-p-small);
-    }
+    
     .contact-item:first-child {
         margin-bottom: 1.3888888889vw;
     }

@@ -1,5 +1,5 @@
 <template>
-  <section :class="[s.letcontact_section, s.light_background]">
+  <section :class="s.section">
     <div :class="s.container">
       <!--    <ul :class={s.s.media_wrapper} ref={triggleSection}>
             <li :class={s.s.media}>
@@ -21,7 +21,6 @@
 
       <div :class="s.text">
         <h2 :class="s.lable">
-
           <!--   <IconSVG src='/icon/star.svg' :class={s.s.icon} /> -->
           {{ content.tag }}
         </h2>
@@ -42,6 +41,8 @@
   </section>
 </template>
 <script setup>
+import TypoHeading from '~/components/common/Typo/TypoHeading.vue';
+import TypoParagraph from '~/components/common/Typo/TypoParagraph.vue';
 import s from './style.module.css'
 const data = defineProps({
   content: Object

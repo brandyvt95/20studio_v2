@@ -1,6 +1,8 @@
 <template>
-  <footer v-if="isRenderFooter">
-    <component :is="isShowRedirectStyle ? RedirectProject : Basic" />
+  <footer>
+    <template v-if="isRenderFooter">
+      <component :is="isShowRedirectStyle ? RedirectProject : Basic" />
+    </template>
   </footer>
 </template>
 
@@ -11,9 +13,6 @@ import RedirectProject from './RedirectProject/index.vue'
 import {routesListIgnoreFooter}  from '../../../constants/routerList'
 const route = useRoute()
 
-nextTick(() => {
-  console.log("goet",stateUiGlobal.isActivePage)
-})
 const isIgnoredPath = computed(() => {
   return routesListIgnoreFooter.includes(route.path)
 })

@@ -1,20 +1,23 @@
 <template>
-    <section :class="s.projects_section">
+    <section :class="s.section">
         <div :class="s.items">
             <ul>
                 <li v-for="(item, index) in grouped.slug" :key="index">
                     <ButtonBasic :to="`/projects/${item}`">{{ item }}</ButtonBasic>
                 </li>
             </ul>
-            <br/>
             <ul>
                 <li v-for="(item, index) in grouped.brand" :key="index">
-                    {{ item }}
+                    <TypoHeading tag="h3" size="h2" font="BD-Regular">
+                        {{ item }}
+                    </TypoHeading>
                 </li>
             </ul>
             <ul>
                 <li v-for="(item, index) in grouped.jobDes" :key="index">
-                    {{ item }}
+                    <TypoParagraph tag="p" font="BS-Regular">
+                        {{ item }}
+                    </TypoParagraph>
                 </li>
             </ul>
             <ul>

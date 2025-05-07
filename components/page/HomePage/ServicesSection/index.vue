@@ -9,34 +9,34 @@ const data = defineProps({
 
 </script>
 <template>
-    <section :class="[s.servcies_section, s.light_background]">
+    <section :class="s.section">
         <div :class="s.container">
-            <div className="text">
-                <TypoHeading tag="p" font="BS-Regular" :className="s.lable">
+            <div :class="s.head">
+                <TypoHeading tag="p" size="psmall" font="BS-Regular" :className="s.lable">
                     {{ content.content.tag }}
                 </TypoHeading>
-                <TypoHeading tag="h1" font="BD-Medium" :className="s.title">
+                <TypoHeading tag="h2" size="h1" font="BD-Medium" :className="s.title">
                     {{ content.content.title }}
                 </TypoHeading>
-                <TypoParagraph tag="p" font="BS-Regular" :className="s.body">
+                <TypoParagraph tag="p"  font="BS-Regular" :className="s.body">
                     {{ content.content.des }}
                 </TypoParagraph>
             </div>
-        </div>
-        <div :class="s.services">
-            <div :class="s.service" v-for="(work, index) in content.works" :key="index">
-                <div :class="s.block">
-                    <!--  <img :src="work.img" width={0} height={0}  alt="image_cache_services1" /> -->
-                </div>
-                <div :class="s.w_info">
-                    <p :class="s.info">
-                        <TypoParagraph tag="span" font="BS-Medium">
-                            {{ work.clientName }} - 
-                        </TypoParagraph>
-                        <TypoParagraph tag="span" font="BD-Medium">
-                            {{ work.jobDes }} - 
-                        </TypoParagraph>
-                    </p>
+            <div :class="s.services">
+                <div :class="s.service" v-for="(work, index) in content.works" :key="index">
+                    <div :class="s.block">
+                        <!--  <img :src="work.img" width={0} height={0}  alt="image_cache_services1" /> -->
+                    </div>
+                    <div :class="s.w_info">
+                        <p :class="s.info">
+                            <TypoParagraph tag="span" font="BS-Medium">
+                                {{ work.clientName }} - 
+                            </TypoParagraph>
+                            <TypoParagraph tag="span" font="BD-Medium">
+                                {{ work.jobDes }} - 
+                            </TypoParagraph>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

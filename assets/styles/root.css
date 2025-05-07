@@ -117,16 +117,18 @@ ul {
     --font-s-p-small: 3.7333333333vw;
     --font-lh-p-small: 5.6vw;
     --font-ls-p-small: 0.0266666667vw;
+
     --font-s-subtitle: 3.2vw;
     --font-lh-subtitle: 4.2666666667vw;
     --font-ls-subtitle: 0.0266666667vw;
+
     --font-s-cta: 4.2666666667vw;
     --font-lh-cta: 4.2666666667vw;
     --font-ls-cta: 0vw;
+
     --font-s-label: 3.7333333333vw;
     --font-lh-label: 3.7333333333vw;
     --font-ls-label: 0vw;
-
 
 
 
@@ -142,7 +144,6 @@ ul {
     --font-ls-h1: -0.4vw;
 
 
-    --margin-lr-deskop : 0 8.3333333333vw  0 8.3333333333vw;
  
 }
 

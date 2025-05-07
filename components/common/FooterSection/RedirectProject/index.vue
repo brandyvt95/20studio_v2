@@ -39,6 +39,7 @@
   
   <script setup>
   import { ref, onMounted, onUnmounted, nextTick } from 'vue'
+  import {preserveStyleAndRevert} from '../../../../composables/hooks/utils/preserveStyleAndRevert'
   import s from './style.module.css'
   const {$gsap} = useNuxtApp() 
   const wrapper = ref(null)
@@ -49,30 +50,28 @@
     nextTick(() => {
       if (!wrapper.value || !content.value) return
   
-      ctx = gsap.context(() => {
-        $gsap.to(content.value, {
-          x: -700,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: wrapper.value,
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: true,
-            markers:true,
-            once:false
-          }
-        })
-      })
+      // ctx =  $gsap.context(() => {
+      //   $gsap.to(content.value, {
+      //     x: -700,
+      //     ease: 'none',
+      //     scrollTrigger: {
+      //       trigger: wrapper.value,
+      //       start: 'top bottom',
+      //       end: 'bottom top',
+      //       scrub: true,
+      //       markers:true,
+      //       once:false
+      //     }
+      //   })
+      // })
     })
   })
   
   onUnmounted(() => {
-    if (ctx ) {
-    // const el = content.value
-    // const currentTransform = getComputedStyle(el).transform
-    // el.style.transform = currentTransform
-    ctx.revert()
-  }
+    preserveStyleAndRevert({
+      ctx:ctx,
+      el:content.value
+    })
 })
 
   </script>

@@ -1,6 +1,6 @@
 <!-- LenisWrapper.vue -->
 <template>
-  <div ref="wrapperRef" class="lenis-wrapper">
+  <div ref="wrapperRef" class="lenis-wrapper" id="lenisWrapper">
     <slot />
   </div>
 </template>

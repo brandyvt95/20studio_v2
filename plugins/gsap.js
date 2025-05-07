@@ -7,10 +7,10 @@ gsap.registerPlugin(ScrollTrigger,SplitText);
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.provide('gsap', gsap);
-  nuxtApp.provide('scrollTrigger', ScrollTrigger);
+  nuxtApp.provide('ScrollTrigger', ScrollTrigger);
   nuxtApp.provide('SplitText', SplitText);
   ScrollTrigger.defaults({
-    scroller: '.lenis',  
+    scroller: '#lenisWrapper',  
   })
 
 });
