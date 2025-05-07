@@ -2,29 +2,76 @@
     width: 100%;
     height: 100vh;
     position: relative;
-    z-index: 10;
     background-color: black;
+    color: white;
     overflow: hidden;
+    pointer-events: auto;
 }
 .items {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    bottom:0;
+    left:0;
+    top:0;
+    right:0
+}
+.detailGr {
+    left: 16.1805555556vw;
+    position: absolute;
+    z-index: 5;
+    opacity: 0;
+}
+.brandGr {
     position: relative;
-    width: 100%;
-    height: 100%;
 }
-.item {
+.backgroundGr {
     position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.item_background {
-    position: absolute;
-    inset: 0;
+    inset:0;
     width: 100%;
     height: 100%;
     z-index: 0;
 }
-.items * {
-    color: white;
+.thumb, .background, .brand, .jobDes {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;  
+      object-position: center;
+    }
+  }
+  
+
+.thumbGr{
+    height: 27.5vw;
+    overflow: hidden;
+    pointer-events: none;
+    position: relative;
+    width: 22.0833333333vw;
+    z-index: 5;
+
+}
+
+.indi {
+    bottom: 3.6805555556vw;
+    display: flex;
+    position: absolute;
+    right: 3.4722222222vw;
+    z-index: 9;
+}
+.cur {
+    position: absolute;
+}
+.total {
+    margin-left: 1.3rem;
 }
