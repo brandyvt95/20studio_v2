@@ -1,9 +1,5 @@
 import { shallowRef } from 'vue'
-import gsap from 'gsap'
-import { SplitText } from 'gsap/SplitText';
 import { useAnimateTypo } from './useAnimateTypo';
-
-gsap.registerPlugin(SplitText);
 
 type SplitTextOptions = {
   typeSplit: 'lines' | 'chars' | 'words';
@@ -21,10 +17,10 @@ export function useSplitText({
   motion
 }: UseSplitTextParams) {
   const tl = shallowRef<gsap.core.Timeline | null>(null);
-
+  const {$gsap} = useNuxtApp() as any
   const animate = (gsapVars: gsap.TweenVars, splitInstance: any) => {
     if (splitInstance) {
-      gsap.from(splitInstance.lines, {
+      $gsap.from(splitInstance.lines, {
         duration: 1,
         opacity: 1,
         y: '-100%',

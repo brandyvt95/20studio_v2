@@ -18,7 +18,6 @@ definePageMeta({
 <template>
   <WrapperPage>
     <PageServicePage :content="service_page.content" />
-    <Space/>
   </WrapperPage>
 </template>
 

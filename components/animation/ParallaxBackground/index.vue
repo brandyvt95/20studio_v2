@@ -4,27 +4,22 @@
     </div>
   </template>
   
-  <script setup lang="ts">
+  <script setup>
   import { onMounted, ref } from 'vue';
-  import gsap from 'gsap';
-  import { ScrollTrigger } from 'gsap/ScrollTrigger';
-  
-  gsap.registerPlugin(ScrollTrigger);
-  
-  const bgRef = ref<HTMLElement | null>(null);
+
+  const { $gsap } = useNuxtApp()
+  const bgRef = ref(null);
   
   watch(
   () => stateUiGlobal.isActivePage,
   (isActive) => {
     if (isActive && bgRef.value) {
       console.log('Init ScrollTrigger background');
-
-      gsap.to(bgRef.value.children[0], {
+      $gsap.to(bgRef.value.children[0], {
         y: -200,
         ease: 'power3.out',
         scrollTrigger: {
           trigger: bgRef.value,
-          scroller: '.lenis', 
           start: 'top bottom',
           end: 'bottom top',
           scrub: true,

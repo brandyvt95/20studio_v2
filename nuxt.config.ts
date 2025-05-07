@@ -2,6 +2,9 @@
 
 export default defineNuxtConfig({
   modules: ['@storyblok/nuxt','@pinia/nuxt','@nuxtjs/sitemap','@nuxt/image'],
+  plugins: [
+    '~/plugins/gsap.js'  
+  ],
   storyblok: {
     accessToken: process.env.ACCESS_TOKEN_STORYBLOK,
     apiOptions: {

@@ -4,7 +4,7 @@ import MaskOverlay from './MaskOverlay.vue'
 import LenisWrapper from './LenisWrapper.vue'
 import { motionFirstLoadPage } from '~/composables/hooks/transitionpage/useMotionTransPage'
 import { activeStateUi } from '~/composables/controls/useStateUi'
-
+import FooterSection from '../common/FooterSection/index.vue'
 
 const maskRef = ref(null)
 
@@ -26,6 +26,7 @@ onMounted(async () => {
   <MaskOverlay ref="maskRef">
     <LenisWrapper>
       <slot/>
+      <FooterSection/>
     </LenisWrapper>
   </MaskOverlay>
 </template>

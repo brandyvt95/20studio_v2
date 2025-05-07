@@ -1,5 +1,4 @@
 import { shallowRef } from 'vue'
-import gsap from 'gsap'
 import { transitionMotion,transitionConfig } from '../../../constants/config_transitionPage'
 export const motion = {
   toggleModalNavbar:{
@@ -13,11 +12,11 @@ export const motion = {
   }
 }
 export function useModalNavbar(modalRef: Ref<HTMLElement | null>) {
-  const tl = shallowRef<gsap.core.Timeline | null>(null)
-
+  const tl = shallowRef<any>(null)
+  const {$gsap} = useNuxtApp() as any
   const init = () => {
     if (modalRef.value) {
-      tl.value = gsap.timeline({ paused: true })
+      tl.value = $gsap.timeline({ paused: true })
       tl.value.fromTo(modalRef.value, motion.toggleModalNavbar.start, motion.toggleModalNavbar.end)
     }
   }

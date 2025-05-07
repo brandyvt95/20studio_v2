@@ -1,7 +1,8 @@
 <template>
 
-    <section :class="s.footer_section">
-        <div :class="s.container">
+    <section :class="s.wrapper" ref="wrapper">
+        <div :class="s.footer_section" ref="content">
+            <div :class="s.container">
             <div :class="s.title">
                 <div>Our</div>
                 <div>Mission</div>
@@ -60,9 +61,47 @@
                 Our service
             </NuxtLink>
         </div>
+        </div>
+     
     </section>
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 import s from './style.module.css'
+
+const {$gsap} = useNuxtApp() 
+const wrapper = ref(null)
+const content = ref(null)
+
+let ctx 
+onMounted(() => {
+  nextTick(() => {
+    if (!wrapper.value || !content.value) return
+
+    ctx = $gsap.context(() => {
+      $gsap.to(content.value, {
+        y: -700,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: wrapper.value,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: true,
+          markers:true,
+          once:false
+        }
+      })
+    })
+  })
+})
+
+onUnmounted(() => {
+    if (ctx ) {
+    // const el = content.value
+    // const currentTransform = getComputedStyle(el).transform
+    // el.style.transform = currentTransform
+    ctx.revert()
+  }
+})
 </script>

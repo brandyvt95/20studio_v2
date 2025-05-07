@@ -16,7 +16,6 @@ definePageMeta({
 <template>
   <WrapperPage>
     <PageAboutPage :content="about_page.content" />
-    <Space/>
   </WrapperPage>
 </template>
 

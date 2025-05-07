@@ -1,10 +1,5 @@
 import { shallowRef, onMounted } from 'vue';
 import type { Ref } from 'vue'
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-import { SplitText } from 'gsap/SplitText';
-
-gsap.registerPlugin(SplitText, ScrollTrigger);
 
 export function useAnimateTypo({
     types,
@@ -23,9 +18,10 @@ export function useAnimateTypo({
     };
     animate: (gsapWars: gsap.TweenVars, splitInstance: any) => void;
 }): void {
+    const {$SplitText} = useNuxtApp() as any
     const getSplitType = () => {
         if (refContent.value) {
-            const splitInstance = SplitText.create(refContent.value, {
+            const splitInstance = $SplitText.create(refContent.value, {
                 type: types,
                 mask: "lines"
             });
@@ -40,7 +36,6 @@ export function useAnimateTypo({
 
         return {
             scrollTrigger: {
-                scroller:'.lenis',
                 trigger: refContent.value,
                 start: motion?.start || `top+=${topStart}% bottom`,
                 once: false,
