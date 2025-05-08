@@ -2,7 +2,7 @@
 
 import { home_page } from '~/constants/content'
 import WrapperPage from '~/components/wrapper/WrapperPage.vue'
-import { defaultPageTransition } from '~/constants/config_transitionPage'
+import { defaultPageTransition } from '../composables/hooks/transitionpage/useHandleTransPage'
 import { meta } from '../constants/meta'
 import Space from '../components/common/Space/index.vue'
 useHead({

@@ -7,7 +7,7 @@
 
 <script setup>
 import { projects_page } from '~/constants/content'
-import { defaultPageTransition } from '~/constants/config_transitionPage'
+import { defaultPageTransition } from '../composables/hooks/transitionpage/useHandleTransPage'
 import WrapperPage from '~/components/wrapper/WrapperPage.vue'
 const route = useRoute()
 const slug = route.params.slug

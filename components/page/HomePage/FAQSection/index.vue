@@ -1,9 +1,12 @@
 <template>
   <section :class="s.section" data-scopeCursor="close">
     <div :class="s.container">
-      <TypoHeading tag="h2" size="h1" font="BD-Regular" :class="s.title">
+      <SlideMotion :direction="1" :rotate="7" :duration="1" :className="s.title">
+        <TypoHeading tag="h2" size="h1" font="BD-Regular" >
         FAQ’S
       </TypoHeading>
+      </SlideMotion>
+
    
       <TypoParagraph tag="p" font="BD-Regular" :class="s.label">
 
@@ -32,6 +35,7 @@
 </template>
 <script setup>
 import s from './style.module.css'
+import SlideMotion from '~/components/animation/Text/SlideMotion/index.vue';
 import TypoHeading from '~/components/common/Typo/TypoHeading.vue';
 import TypoParagraph from '~/components/common/Typo/TypoParagraph.vue';
 const data = defineProps({

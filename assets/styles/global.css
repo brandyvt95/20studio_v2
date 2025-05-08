@@ -26,3 +26,55 @@ h1,h2,h3,h4,h5,p {
     display: block !important;
     
 }
+
+:root {
+    --ease-all: cubic-bezier(.17,.67,.3,.94);
+    --duration: 2s;
+    --targetYEnter : -500px;
+    --targetYLeave : 500px;
+    --targetRotEnter: 7deg;
+    --targetRotLeave: -7deg;
+    --targetScale: 1.5;
+    --targetBrightness:16%;
+    --maskStart:polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    --maskEnd:polygon(0% -2%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.mask-enter {
+    animation: maskEnterAnimation var(--duration) forwards var(--ease-all);
+}
+
+@keyframes maskEnterAnimation {
+    0% {
+        clip-path: var(--maskStart);
+    }
+    100% {
+        clip-path: var(--maskEnd);
+    }
+}
+
+.page-enter {
+    animation: pageEnterAnimation var(--duration) forwards var(--ease-all);
+    filter: brightness(var(--targetBrightness));
+    transform: rotate(var(--targetRotEnter)) translateY(var(--targetYLeave)) scale(var(--targetScale));
+}
+
+@keyframes pageEnterAnimation {
+    to {
+        filter: brightness(100%);
+        transform: rotate(0deg) translateY(0) scale(1);
+    }
+}
+
+.page-leave {
+    animation: pageLeaveAnimation var(--duration) forwards var(--ease-all);
+    filter: brightness(100%);
+    transform: rotate(0deg) translateY(0) scale(1);
+}
+
+@keyframes pageLeaveAnimation {
+    to {
+        filter: brightness(16%);
+        transform: rotate(var(--targetRotLeave)) translateY(var(--targetYEnter)) scale(var(--targetScale));
+    }
+}

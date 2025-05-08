@@ -3,21 +3,25 @@ import TypoHeading from '~/components/common/Typo/TypoHeading.vue';
 import s from './style.module.css'
 import TypoParagraph from '~/components/common/Typo/TypoParagraph.vue';
 import ButtonBasic from '~/components/animation/Button/Basic/index.vue';
+import SlideMotion from '~/components/animation/Text/SlideMotion/index.vue';
 const data = defineProps({
     content: Object
 })
-console.log(data.content.works)
+
 </script>
 <template>
     <section :class="s.section" data-scopeCursor="close"> 
         <div :class="s.container" >
             <div :class="s.head">
+                <SlideMotion :direction="1" :rotate="7" :duration="1" :className="s.title">
+                    <TypoHeading tag="h2" size="h1" font="BD-Medium">
+                        {{ content.content.title }}
+                    </TypoHeading>
+                </SlideMotion>
                 <TypoHeading tag="p" size="psmall" font="BS-Regular" :className="s.lable">
                     {{ content.content.tag }}
                 </TypoHeading>
-                <TypoHeading tag="h2" size="h1" font="BD-Medium" :className="s.title">
-                    {{ content.content.title }}
-                </TypoHeading>
+              
                 <TypoParagraph tag="p"  font="BS-Regular" :className="s.body">
                     {{ content.content.des }}
                 </TypoParagraph>

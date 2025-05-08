@@ -1,7 +1,7 @@
 <script setup>
 
 
-import {defaultPageTransition} from '~/constants/config_transitionPage'
+import { defaultPageTransition } from '../../composables/hooks/transitionpage/useHandleTransPage'
 import { sustainability_page } from '~/constants/content'
 
 import { meta } from '../constants/meta'

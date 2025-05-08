@@ -14,10 +14,10 @@ const props = defineProps({
 <template>
 
   <HeroSection :content="props.content.heroSection" />
-  <!-- <template v-if="stateUiGlobal.isActivePage"> -->
+  <template v-if="stateUiGlobal.isActivePage">
     <ServicesSection :content="props.content.serviceSection" />
     <FAQSection :content="props.content.faqSection" />
     <LetContactSection :content="props.content.letContact" />
-  <!-- </template> -->
+  </template>
 
 </template>

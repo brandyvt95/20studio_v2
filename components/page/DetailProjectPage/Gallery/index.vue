@@ -35,7 +35,7 @@ let ctx
 onMounted(() => {
     nextTick(() => {
         if (!wrapper.value || !listTop.value || !listBot.value) return
-
+        console.log("InitScrollS")
         ctx = $gsap.context(() => {
           $gsap.timeline({
             scrollTrigger: {

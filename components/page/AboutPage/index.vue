@@ -15,8 +15,11 @@
 
 <template>
     <HeroSection :content="props.content.heroSection"/>
-    <Intro :content="props.content.intro"/>
-    <Advantage :content="props.content.advantage"/>
-    <Minded :content="props.content.minded"/>
-    <Us :content="props.content.us"/>
+    <template v-if="stateUiGlobal.isActivePage">
+      <Intro :content="props.content.intro"/>
+      <Advantage :content="props.content.advantage"/>
+      <Minded :content="props.content.minded"/>
+      <Us :content="props.content.us"/>
+    </template>
+
 </template>

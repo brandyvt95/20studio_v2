@@ -1,17 +1,4 @@
 // ~/constants/pageTransitionConfig.ts
-import { handlePageEnter, handlePageLeave } from '../composables/hooks/transitionpage/useHandleTransPage'
-
-export const defaultPageTransition = {
-  name: 'page',
-  mode: 'default',
-  css: false,
-  onEnter: (el:Element, done:any) => {
-    handlePageEnter({ el, done } as any)
-  },
-  onLeave: (el:Element, done:any) => {
-    handlePageLeave({ el, done } as any)
-  }
-}
 
 export const transitionMotion = {
   mask: { x: 0, y: '-2%' },

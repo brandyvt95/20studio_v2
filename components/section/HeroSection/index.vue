@@ -22,9 +22,9 @@ defineProps({
                 </TypoHeading>
 
             </div>
-            <div :class='s.detail'>
+            <div :class='s.detail' v-if="stateUiGlobal.isActivePage">
 
-                <SplitText v-if="stateUiGlobal.isActivePage" tag="p" font="BS-Regular" :className="s.paragraph"
+                <SplitText  tag="p" font="BS-Regular" :className="s.paragraph"
                     type="lines">
                     {{ content.morePara }}
                 </SplitText>

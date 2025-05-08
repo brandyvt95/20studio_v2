@@ -9,5 +9,7 @@
 
 <template>
     <Intro :content="props.content.intro" />
+  
     <Advantage :content="props.content.advantage" />
+
 </template>
