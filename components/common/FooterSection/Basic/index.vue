@@ -1,8 +1,7 @@
 <template>
 
     <section :class="s.wrapper" ref="wrapper" data-scopeCursor="close">
-        <div :class="s.footer_section" ref="content">
-            <div :class="s.container">
+        <div :class="s.container" ref="content">
                 <div :class="s.title">
                     <div>Our</div>
                     <div>Mission</div>
@@ -26,43 +25,42 @@
                 </ul>
                 <ul :class="s.nav_footer">
                     <li :class="s.item">
-                        <ButtonBasic to='/sustainability'>
+                        <ButtonHoverLineVer1 to='/sustainability'>
                             Sustain
-                        </ButtonBasic>
+                        </ButtonHoverLineVer1>
                     </li>
                     <li :class="s.item">
-                        <ButtonBasic to='/'>
+                        <ButtonHoverLineVer1 to='/'>
                             Home
-                        </ButtonBasic>
+                        </ButtonHoverLineVer1>
                     </li>
                     <li :class="s.item">
-                        <ButtonBasic to='/about'>
+                        <ButtonHoverLineVer1 to='/about'>
                             About us
-                        </ButtonBasic>
+                        </ButtonHoverLineVer1>
                     </li>
                     <li :class="s.item">
-                        <ButtonBasic to='/contact'>
+                        <ButtonHoverLineVer1 to='/contact'>
                             Contact
-                        </ButtonBasic>
+                        </ButtonHoverLineVer1>
                     </li>
                 </ul>
                 <ul :class="s.social">
                     <li :class="s.item">
-                        <ButtonBasic to='/' :class="s.main_line">
+                        <ButtonHoverLineVer1 to='/' :class="s.main_line">
                             Facebook
-                        </ButtonBasic>
+                        </ButtonHoverLineVer1>
                     </li>
                     <li :class="s.item">
-                        <ButtonBasic to='/' :class="s.main_line">
+                        <ButtonHoverLineVer1 to='/' :class="s.main_line">
                             Instagram
-                        </ButtonBasic>
+                        </ButtonHoverLineVer1>
                     </li>
                 </ul>
-                <ButtonBasic to="/services" classAdd="link wrap circle">
+                <ButtonHoverLineVer1 to="/services" :class="[s.link]">
                     Our service
-                </ButtonBasic>
+                </ButtonHoverLineVer1>
             </div>
-        </div>
 
     </section>
 </template>
@@ -70,6 +68,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 import ButtonBasic from '~/components/animation/Button/Basic/index.vue'
+import ButtonHoverLineVer1 from '~/components/animation/Button/HoverLineVer1/index.vue'
 import { preserveStyleAndRevert } from '../../../../composables/hooks/utils/preserveStyleAndRevert'
 import s from './style.module.css'
 const { $gsap } = useNuxtApp()
@@ -80,21 +79,26 @@ let ctx
 onMounted(() => {
     nextTick(() => {
         if (!wrapper.value || !content.value) return
-
-        // ctx = $gsap.context(() => {
-        //   $gsap.to(content.value, {
-        //     y: -700,
-        //     ease: 'none',
-        //     scrollTrigger: {
-        //       trigger: wrapper.value,
-        //       start: 'top bottom',
-        //       end: 'bottom top',
-        //       scrub: true,
-        //       markers:true,
-        //       once:false
-        //     }
-        //   })
-        // })
+        const rectH = wrapper.value.getBoundingClientRect().height;
+        let target = rectH - window.innerHeight
+        //NEEDFIX > REPONSIVE NOT GOOD
+        ctx = $gsap.context(() => {
+          $gsap.fromTo(content.value,{
+            y:-200
+          },
+           {
+            y: 0,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: wrapper.value,
+              start: 'top bottom',
+              end: `${target} top`,
+              scrub: true,
+            //  markers:true,
+              once:false
+            }
+          })
+        })
     })
 })
 

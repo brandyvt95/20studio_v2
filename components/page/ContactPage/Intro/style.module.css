@@ -6,9 +6,10 @@
     background: #fff;
     background: var(--color-white);
     overflow: hidden;
-
+    pointer-events: auto;
 }
 .container {
+    pointer-events: none;
   /*   margin: 0 8vw; */
     position: relative;
     height:fit-content;
@@ -27,8 +28,8 @@
     overflow:hidden;
     background-color: gray;
     img {
-        width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: cover;
     }
 }
 

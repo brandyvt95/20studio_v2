@@ -79,25 +79,25 @@ const animateChange = (newIndex: number, direction: number) => {
     tl.clear()
 
     const nextIndex = newIndex
-    const moveY = direction * props.yTarget
     const rotate = direction * (props.yTarget * .1)
     // Animation
     tl.to(titleSplitEl.words, {
-        y: moveY,
+        y: `${direction * 100}%`,
         opacity: 0,
         rotate: rotate,
         duration: props.duration,
         ease: props.easeIn,
+        stagger: 0.072,
         onComplete: () => {
             updateText(nextIndex)
-            $gsap.set(titleSplitEl.words, { y: -moveY })
+            $gsap.set(titleSplitEl.words, { y: `${-direction * 100}%`, })
             tl.to(titleSplitEl.words, {
                 y: 0,
                 stagger: 0.072,
                 opacity: 1,
                 rotate: 0,
                 duration: props.duration,
-                ease: props.easeOut
+                ease: props.easeIn
             }).to(paragraphEl, {
                 opacity: 1,
                 duration: props.duration,

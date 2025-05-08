@@ -2,6 +2,7 @@
 import s from './style.module.css'
 import TypoHeading from '~/components/common/Typo/TypoHeading.vue';
 import ButtonBasic from '~/components/animation/Button/Basic/index.vue';
+import ButtonHoverLineVer1 from '~/components/animation/Button/HoverLineVer1/index.vue';
 import ParallaxBackground from '~/components/animation/ParallaxBackground/index.vue';
 import TypoParagraph from '~/components/common/Typo/TypoParagraph.vue';
 import SplitText from '~/components/animation/Text/Split/index.vue';
@@ -31,11 +32,11 @@ defineProps({
 
                 <ul :class='s.menu' data-scopeCursor="close">
                     <li v-for="(item, index) in content.listBtn" :key="index" :class="s.item">
-                        <ButtonBasic :to="content.listBtnUrl[item]">
+                        <ButtonHoverLineVer1 :to="content.listBtnUrl[item]">
                             <TypoParagraph tag="p" font="BS-Medium">
                                 {{ item }}
                             </TypoParagraph>
-                        </ButtonBasic>
+                        </ButtonHoverLineVer1>
                     </li>
                 </ul>
                 <ul :class='s.contact' data-scopeCursor="close">

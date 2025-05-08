@@ -1,6 +1,6 @@
 .wrapper {
     position: relative;
-    cursor: pointer;
     pointer-events: auto;
+    cursor: pointer;
     width: fit-content;
 }

@@ -194,21 +194,25 @@ export const home_page = {
             },
             works: [
                 {
+                    slug:"uwanted",
                     clientName: "Chinh’s Major Project",
                     jobDes: "Sample Development",
                     img: "/images/clone/services1.webp"
                 },
                 {
+                    slug:"net-collection",
                     clientName: "Nét Project",
                     jobDes: "Sample Development",
                     img: "/images/clone/services2.webp"
                 },
                 {
+                    slug:"lungtung-collection",
                     clientName: "Lung Tung",
                     jobDes: "Fashion Design",
                     img: "/images/clone/services3.webp"
                 },
                 {
+                    slug:"20studio-website",
                     clientName: "20Studio",
                     jobDes: "Website Development",
                     img: "/images/clone/services4.webp"

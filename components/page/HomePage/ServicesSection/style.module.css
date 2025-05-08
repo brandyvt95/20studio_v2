@@ -64,6 +64,10 @@
     pointer-events: none;
     background-color: gray;
     height: 100%;
+    img {
+        object-fit: cover;
+        width: 100%;
+    }
 }
 
 .info {

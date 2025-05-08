@@ -2,6 +2,9 @@
     position: relative;
     cursor: pointer;
     pointer-events: auto;
+    user-select: none;
+    width: fit-content;
+    display: block;
     width: fit-content;
 }
 

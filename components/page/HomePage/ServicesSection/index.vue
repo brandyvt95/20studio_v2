@@ -2,11 +2,11 @@
 import TypoHeading from '~/components/common/Typo/TypoHeading.vue';
 import s from './style.module.css'
 import TypoParagraph from '~/components/common/Typo/TypoParagraph.vue';
-
+import ButtonBasic from '~/components/animation/Button/Basic/index.vue';
 const data = defineProps({
     content: Object
 })
-
+console.log(data.content.works)
 </script>
 <template>
     <section :class="s.section" data-scopeCursor="close"> 
@@ -23,9 +23,9 @@ const data = defineProps({
                 </TypoParagraph>
             </div>
             <div :class="s.services">
-                <div data-scopeCursor="View" :class="s.service" v-for="(work, index) in content.works" :key="index">
+                <ButtonBasic :to="`/projects/${work.slug}`" data-scopeCursor="View" :class="s.service" v-for="(work, index) in content.works" :key="index">
                     <div :class="s.block">
-                        <!--  <img :src="work.img" width={0} height={0}  alt="image_cache_services1" /> -->
+                         <img :src="work.img"  alt="" />
                     </div>
                     <div :class="s.w_info">
                         <p :class="s.info">
@@ -37,7 +37,7 @@ const data = defineProps({
                             </TypoParagraph>
                         </p>
                     </div>
-                </div>
+                </ButtonBasic>
             </div>
         </div>
     </section>

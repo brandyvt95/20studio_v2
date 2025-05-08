@@ -8,8 +8,8 @@
     width: 5.9722222222vw;
     z-index: 999;
     will-change: transform,scale;
-
-    transform: translate(90vw,80vh) scale(1);
+    opacity: 0;
+    scale: 0;
 }
 
 .innerY{
