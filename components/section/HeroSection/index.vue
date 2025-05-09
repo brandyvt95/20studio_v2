@@ -12,7 +12,7 @@ defineProps({
 </script>
 
 <template>
-    <section :class="s.section">
+    <section :class="[s.section,'clr-white']">
         <div :class="s.container">
             <div :class="s.intro">
                 <TypoHeading tag="h2" size="h1" font="BD-Bold" :className="s.title">
@@ -24,7 +24,7 @@ defineProps({
             </div>
             <div :class='s.detail' v-if="stateUiGlobal.isActivePage">
 
-                <SplitText  tag="p" font="BS-Regular" :className="s.paragraph"
+                <SplitText  tag="p" font="BS-Regular"  :className="s.paragraph"
                     type="lines">
                     {{ content.morePara }}
                 </SplitText>
@@ -33,7 +33,7 @@ defineProps({
                 <ul :class='s.menu' data-scopeCursor="close">
                     <li v-for="(item, index) in content.listBtn" :key="index" :class="s.item">
                         <ButtonHoverLineVer1 :to="content.listBtnUrl[item]">
-                            <TypoParagraph tag="p" font="BS-Medium">
+                            <TypoParagraph tag="p" font="BS-Medium" >
                                 {{ item }}
                             </TypoParagraph>
                         </ButtonHoverLineVer1>
@@ -42,14 +42,14 @@ defineProps({
                 <ul :class='s.contact' data-scopeCursor="close">
                     <li :class='s.item'>
                         <ButtonBasic to="/">
-                            <TypoParagraph tag="span" font="BS-Medium">
+                            <TypoParagraph tag="p" font="BS-Medium" >
                                 {{ content.infoContact.mail.text }}
                             </TypoParagraph>
                         </ButtonBasic>
                     </li>
                     <li :class='s.item'>
                         <ButtonBasic to="/">
-                            <TypoParagraph tag="span" font="BS-Medium">
+                            <TypoParagraph tag="p" font="BS-Medium" >
                                 {{ content.infoContact.phone.text }}
                             </TypoParagraph>
                         </ButtonBasic>

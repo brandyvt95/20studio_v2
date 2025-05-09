@@ -10,7 +10,7 @@ const data = defineProps({
 
 </script>
 <template>
-    <section :class="s.section" data-scopeCursor="close"> 
+    <section :class="[s.section,'bgclr-white']" data-scopeCursor="close"> 
         <div :class="s.container" >
             <div :class="s.head">
                 <SlideMotion :direction="1" :rotate="7" :duration="1" :className="s.title">

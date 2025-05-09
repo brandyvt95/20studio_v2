@@ -15,7 +15,7 @@ const data = defineProps({
         <ul :class='s.nav_list'>
             <li :class='s.nav_item' v-for="(url, label) in data.content.menuDeskop" :key="label">
                 <ButtonBasic :to="url">
-                    <TypoParagraph tag="p" size="psmall" font="BD-Medium">
+                    <TypoParagraph tag="p" size="psmall" font="BD-Medium" color="clr-white">
                         {{ label }}
                     </TypoParagraph>
                 </ButtonBasic>

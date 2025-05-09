@@ -2,8 +2,6 @@
     position: relative;
     width: 100%;
     height: fit-content;
-    background: #070707;
-    color: var(--color-sand);
     overflow: hidden;
     pointer-events: auto;
     padding: 5.8888888889vw 0 5.5555555556vw;
@@ -16,26 +14,7 @@
     
 }
 
-.title > div {
-    font-family: Lausanne-300;
-    font-family: var(--font-f-lausanne-300);
-    font-size: 16vw;
-    font-size: var(--font-s-h1);
-    letter-spacing: -.4vw;
-    letter-spacing: var(--font-ls-h1);
-    line-height: 16vw;
-    line-height: var(--font-lh-h1);
-}
-.body  {
-    color: hsla(28, 37%, 81%, .8);
-    color: var(--color-sand-08);
-    font-family: "BS-Medium";
-    font-size: 1.6666666667vw;
-    letter-spacing: 0;
-    letter-spacing: var(--font-ls-h4);
-    line-height: 6.4vw;
-    line-height: var(--font-lh-h4);
-}
+
  .divider {
     background: hsla(28, 37%, 81%, .6);
     background: var(--color-sand-06);
@@ -121,22 +100,7 @@
     color: var(--color-sand-08);
     position: relative;
 }
-.item a{
-  
-    color: var(--color-sand-08);
-    font-family: "BS-Medium";
-    font-size: 3.7333333333vw;
-    font-size: var(--font-s-p);
-    letter-spacing: .0266666667vw;
-    letter-spacing: var(--font-ls-p);
-    line-height: 5.6vw;
-    line-height: var(--font-lh-p);
-    line-height: 8vw;
 
-    width: fit-content;
-
-    display: flex;
-}
 
 .link .circle {
     font-family: "BS-Medium";

@@ -3,4 +3,5 @@
     pointer-events: auto;
     cursor: pointer;
     width: fit-content;
+    text-decoration: none;
 }
