@@ -20,6 +20,7 @@
     transition: color .5s;
     z-index: 9999;
     background-color:unset !important;
+    border: none;
 }
  .lable {
    

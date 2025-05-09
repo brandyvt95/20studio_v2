@@ -1,38 +1,38 @@
 <template>
-  <section :class="s.section" data-scopeCursor="close">
+  <section :class="[s.section, 'bgclr-white', 'clr-story']" data-scopeCursor="close">
     <div :class="s.container">
-      <!--    <ul :class={s.s.media_wrapper} ref={triggleSection}>
-            <li :class={s.s.media}>
-              <Image sizes="100vw" alt="d" src="/home/letcontact_c.png" width={0} height={0} style={{ width: "100%", height: "auto" }} quality={100} />
-            </li>
-            <li :class={s.s.media}>
+      <!-- <ul :class="s.media_wrapper">
+        <li :class="s.media">
+          <img alt="d" src="/images/home/letcontact_c.png" />
+        </li>
+        <li :class="s.media">
 
-              <Image sizes="100vw" alt="d" src="/home/letcontact_tl.png" width={0} height={0} style={{ width: "100%", height: "auto" }} quality={100} />
-            </li>
-            <li :class={s.s.media}>
-              <Image sizes="100vw" alt="d" src="/home/letcontact_tr.png" width={0} height={0} style={{ width: "100%", height: "auto" }} quality={100} />
-            </li>
-            <li :class={s.s.media}>
-              <Image sizes="100vw" alt="d" src="/home/letcontact_bl.png" width={0} height={0} style={{ width: "100%", height: "auto" }} quality={100} /></li>
-            <li :class={s.s.media}>
-              <Image sizes="100vw" alt="d" src="/home/letcontact_br.png" width={0} height={0} style={{ width: "100%", height: "auto" }} quality={100} />
-            </li>
-          </ul> -->
+          <img alt="d" src="/images/home/letcontact_tl.png" />
+        </li>
+        <li :class="s.media">
+          <img alt="d" src="/images/home/letcontact_tr.png" />
+        </li>
+        <li :class="s.media">
+          <img alt="d" src="/images/home/letcontact_bl.png" />
+        </li>
+        <li :class="s.media">
+          <img alt="d" src="/images/home/letcontact_br.png" />
+        </li>
+      </ul> -->
 
       <div :class="s.text">
-        <h2 :class="s.lable">
-          <!--   <IconSVG src='/icon/star.svg' :class={s.s.icon} /> -->
+        <TypoParagraph tag="p" size="label" font="BS-Regular" :class="s.lable">
+          <StarIcon :class="s.icon" />
           {{ content.tag }}
-        </h2>
-        <h1 :class="s.title">
-
+        </TypoParagraph>
+        <TypoHeading tag="h2" font="BD-Bold" size="h1" :class="s.title">
           <div :class="s.title_line" v-for="(item, index) in content.tit" :key="index">{{ item }}</div>
-        </h1>
-        <div :class="s.body">
-          <p>{{ content.more }}</p>
-        </div>
+        </TypoHeading>
+        <TypoParagraph tag="p" size="h4" font="BD-Regular" :class="s.body">
+          {{ content.more }}
+        </TypoParagraph>
 
-        <NuxtLink :class="s.link">Let&apos;s touch</NuxtLink>
+        <ButtonHoverLine2 color="clr-story" colorIcon="clr-white" colorLine="bgclr-story" to="/contact" :customClass="s.link">Let&apos;s touch</ButtonHoverLine2>
 
 
       </div>
@@ -41,6 +41,8 @@
   </section>
 </template>
 <script setup>
+import ButtonHoverLine2 from '~/components/animation/Button/HoverLineVer2/index.vue';
+import StarIcon from '~/components/common/InlineSvg/Star.vue';
 import TypoHeading from '~/components/common/Typo/TypoHeading.vue';
 import TypoParagraph from '~/components/common/Typo/TypoParagraph.vue';
 import s from './style.module.css'

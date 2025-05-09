@@ -5,7 +5,7 @@
                 <!-- <IconSVG src='/icon/star.svg' className={s.icon} /> -->
                 {{ content.tag }}
             </TypoParagraph>
-            <TypoParagraph font="BS-Medium" :class="s.intro">
+            <TypoParagraph tag="p" font="BS-Medium" :class="s.intro">
                 {{ content.more }}
             </TypoParagraph>
             

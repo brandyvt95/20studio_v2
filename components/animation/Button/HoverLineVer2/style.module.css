@@ -1,6 +1,79 @@
+.button{
+    text-decoration: none;
+    
+}
 .wrapper {
     position: relative;
     cursor: pointer;
     pointer-events: auto;
+    user-select: none;
     width: fit-content;
+    display: block;
+    width: fit-content;
+    height: fit-content;
+}
+.content {
+    will-change: transform;
+}
+.line {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 0px;
+    transform: scaleX(1);
+    transform-origin: right;
+    will-change: transform;
+}
+
+
+.circle{
+    align-items: center;
+    border-radius: 100%;
+    display: flex;
+    height: 2.7083333333vw;
+    justify-content: center;
+    left: -2.2222222222vw;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.7083333333vw;
+}
+.circleFill {
+    background: currentColor;
+    border-radius: 100%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: scale(0);
+    will-change: transform;
+    z-index: 1
+}
+.circleOutline {
+    height: .4166666667vw;
+    width: .4166666667vw;
+    overflow: visible;
+    position: absolute;
+    fill: none;
+}
+.circleIcon {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    will-change: transform,opacity
+}
+.iconArrow {
+    height: .6944444444vw;
+    width: .7638888889vw;
 }

@@ -46,7 +46,7 @@
 
 @keyframes pageLeaveAnimation {
     to {
-        filter: brightness(16%);
+        filter: brightness(var(--targetBrightness));
         transform: rotate(var(--targetRotLeave)) translateY(var(--targetYEnter)) scale(var(--targetScale));
     }
 }

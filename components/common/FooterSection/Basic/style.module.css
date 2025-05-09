@@ -88,27 +88,5 @@
 }
 .link {
     display: inline-flex;
-    font-family: Lausanne-300;
-    font-family: var(--font-f-lausanne-300);
-    font-size: 4.2666666667vw;
-    font-size: var(--font-s-cta);
-    justify-self: flex-start;
-    letter-spacing: 0;
-    letter-spacing: var(--font-ls-cta);
-    line-height: 4.2666666667vw;
-    line-height: var(--font-lh-cta);
-    color: var(--color-sand-08);
     position: relative;
 }
-
-
-.link .circle {
-    font-family: "BS-Medium";
-    font-size: 4.2666666667vw;
-    font-size: var(--font-s-cta);
-    letter-spacing: 0;
-    letter-spacing: var(--font-ls-cta);
-    line-height: 4.2666666667vw;
-    line-height: var(--font-lh-cta);
-}
-

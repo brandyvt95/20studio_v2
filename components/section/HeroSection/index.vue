@@ -3,6 +3,7 @@ import s from './style.module.css'
 import TypoHeading from '~/components/common/Typo/TypoHeading.vue';
 import ButtonBasic from '~/components/animation/Button/Basic/index.vue';
 import ButtonHoverLineVer1 from '~/components/animation/Button/HoverLineVer1/index.vue';
+import ButtonHoverLineVer2 from '~/components/animation/Button/HoverLineVer2/index.vue';
 import ParallaxBackground from '~/components/animation/ParallaxBackground/index.vue';
 import TypoParagraph from '~/components/common/Typo/TypoParagraph.vue';
 import SplitText from '~/components/animation/Text/Split/index.vue';
@@ -12,10 +13,10 @@ defineProps({
 </script>
 
 <template>
-    <section :class="[s.section,'clr-white']">
+    <section :class="[s.section, 'clr-white']">
         <div :class="s.container">
             <div :class="s.intro">
-                <TypoHeading tag="h2" size="h1" font="BD-Bold" :className="s.title">
+                <TypoHeading tag="h1" size="h1" font="BD-Bold" :className="s.title">
                     <div v-for="(item, index) in content.tit" :key="index">
                         <span>{{ item }}</span>
                     </div>
@@ -24,16 +25,18 @@ defineProps({
             </div>
             <div :class='s.detail' v-if="stateUiGlobal.isActivePage">
 
-                <SplitText  tag="p" font="BS-Regular"  :className="s.paragraph"
-                    type="lines">
+                <TypoParagraph tag="p" size="h4" font="BS-Regular" :className="s.paragraph">
                     {{ content.morePara }}
-                </SplitText>
-
-
+                </TypoParagraph>
+                <ButtonHoverLineVer2 to="/services" :class="s.link" data-scopeCursor="close">
+                    <TypoParagraph tag="p" font="BS-Medium">
+                        Our Service
+                    </TypoParagraph>
+                </ButtonHoverLineVer2>
                 <ul :class='s.menu' data-scopeCursor="close">
                     <li v-for="(item, index) in content.listBtn" :key="index" :class="s.item">
                         <ButtonHoverLineVer1 :to="content.listBtnUrl[item]">
-                            <TypoParagraph tag="p" font="BS-Medium" >
+                            <TypoParagraph tag="p" font="BS-Medium">
                                 {{ item }}
                             </TypoParagraph>
                         </ButtonHoverLineVer1>
@@ -42,14 +45,14 @@ defineProps({
                 <ul :class='s.contact' data-scopeCursor="close">
                     <li :class='s.item'>
                         <ButtonBasic to="/">
-                            <TypoParagraph tag="p" font="BS-Medium" >
+                            <TypoParagraph tag="p" font="BS-Medium">
                                 {{ content.infoContact.mail.text }}
                             </TypoParagraph>
                         </ButtonBasic>
                     </li>
                     <li :class='s.item'>
                         <ButtonBasic to="/">
-                            <TypoParagraph tag="p" font="BS-Medium" >
+                            <TypoParagraph tag="p" font="BS-Medium">
                                 {{ content.infoContact.phone.text }}
                             </TypoParagraph>
                         </ButtonBasic>

@@ -1,5 +1,5 @@
 <template>
-  <section :class="s.section" data-scopeCursor="close">
+  <section :class="[s.section,'bgclr-white','clr-dark-grey']" data-scopeCursor="close">
     <div :class="s.container">
       <SlideMotion :direction="1" :rotate="7" :duration="1" :className="s.title">
         <TypoHeading tag="h2" size="h1" font="BD-Regular" >
@@ -10,11 +10,7 @@
    
       <TypoParagraph tag="p" font="BD-Regular" :class="s.label">
 
-        <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" :class="s.icon">
-          <path data-v-669b4a84=""
-            d="M7.41908 4.56679L6.13722 0L4.85418 4.92566L0 6L4.85418 7.25435L6.13722 12L7.3276 7.25435L12 6L7.41908 4.56679Z"
-            fill="currentColor"></path>
-        </svg>
+        <StarIcon :class="s.icon"/>
         <span>FAQs</span>
       </TypoParagraph>
 
@@ -37,6 +33,7 @@
 import s from './style.module.css'
 import SlideMotion from '~/components/animation/Text/SlideMotion/index.vue';
 import TypoHeading from '~/components/common/Typo/TypoHeading.vue';
+import StarIcon from '~/components/common/InlineSvg/Star.vue';
 import TypoParagraph from '~/components/common/Typo/TypoParagraph.vue';
 const data = defineProps({
   content: Object

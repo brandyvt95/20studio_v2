@@ -1,6 +1,4 @@
 .section {
-    background-color: white;
-    color: var(--color-dark-grey);
     pointer-events: auto;
 }
 

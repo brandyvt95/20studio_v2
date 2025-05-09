@@ -16,7 +16,7 @@ const props = defineProps({
   <HeroSection :content="props.content.heroSection" />
   <template v-if="stateUiGlobal.isActivePage">
     <ServicesSection :content="props.content.serviceSection" />
-    <FAQSection :content="props.content.faqSection" />
+    <!-- <FAQSection :content="props.content.faqSection" /> -->
     <LetContactSection :content="props.content.letContact" />
   </template>
 

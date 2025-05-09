@@ -31,32 +31,32 @@
             </ul>
             <ul :class="s.nav_footer">
                 <li :class="s.item">
-                    <ButtonHoverLineVer1 colorLine="bgclr-sand--08" to='/sustainability'>
-                        <TypoParagraph tag="p" color='clr-sand--08' font="BS-Regular">
+                    <ButtonHoverLineVer1 colorLine="bgclr-sand--08"  color='clr-sand--08' to='/sustainability'>
+                        <TypoParagraph tag="p" font="BS-Regular">
                             Sustain
                         </TypoParagraph>
 
                     </ButtonHoverLineVer1>
                 </li>
                 <li :class="s.item">
-                    <ButtonHoverLineVer1 colorLine="bgclr-sand--08" to='/'>
-                        <TypoParagraph tag="p" color='clr-sand--08' font="BS-Regular">
+                    <ButtonHoverLineVer1 colorLine="bgclr-sand--08" color='clr-sand--08'  to='/'>
+                        <TypoParagraph tag="p" font="BS-Regular">
                             Home
                         </TypoParagraph>
 
                     </ButtonHoverLineVer1>
                 </li>
                 <li :class="s.item">
-                    <ButtonHoverLineVer1 colorLine="bgclr-sand--08" to='/about'>
-                        <TypoParagraph tag="p" color='clr-sand--08' font="BS-Regular">
+                    <ButtonHoverLineVer1 colorLine="bgclr-sand--08" color='clr-sand--08' to='/about'>
+                        <TypoParagraph tag="p"  font="BS-Regular">
                             About us
                         </TypoParagraph>
 
                     </ButtonHoverLineVer1>
                 </li>
                 <li :class="s.item">
-                    <ButtonHoverLineVer1 colorLine="bgclr-sand--08" to='/contact'>
-                        <TypoParagraph tag="p" color='clr-sand--08' font="BS-Regular">
+                    <ButtonHoverLineVer1 colorLine="bgclr-sand--08"  color='clr-sand--08' to='/contact'>
+                        <TypoParagraph tag="p" font="BS-Regular">
                             Contact
                         </TypoParagraph>
 
@@ -65,25 +65,28 @@
             </ul>
             <ul :class="s.social">
                 <li :class="s.item">
-                    <ButtonHoverLineVer1 colorLine="bgclr-sand--08" to='/' :class="s.main_line">
-                        <TypoParagraph tag="p" color='clr-sand--08' font="BS-Regular">
+                    <ButtonHoverLineVer1 colorLine="bgclr-sand--08" color='clr-sand--08' to='/' :class="s.main_line">
+                        <TypoParagraph tag="p"  font="BS-Regular">
                             Facebook
                         </TypoParagraph>
-                        
+
                     </ButtonHoverLineVer1>
                 </li>
                 <li :class="s.item">
-                    <ButtonHoverLineVer1 colorLine="bgclr-sand--08" to='/' :class="s.main_line">
-                        <TypoParagraph tag="p" color='clr-sand--08' font="BS-Regular">
+                    <ButtonHoverLineVer1 colorLine="bgclr-sand--08" color='clr-sand--08' to='/' :class="s.main_line">
+                        <TypoParagraph tag="p"  font="BS-Regular">
                             Instagram
                         </TypoParagraph>
-                        
+
                     </ButtonHoverLineVer1>
                 </li>
             </ul>
-            <ButtonHoverLineVer1 to="/services" :class="[s.link]">
-                Our service
-            </ButtonHoverLineVer1>
+
+            <ButtonHoverLineVer2 colorLine='bgclr-sand--08'  color='clr-sand--08'  to="/services" :class="[s.link]">
+                <TypoParagraph tag="p"font="BS-Regular">
+                    Our&nbsp;service
+                </TypoParagraph>
+            </ButtonHoverLineVer2>
         </div>
 
     </section>
@@ -93,6 +96,7 @@
 import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 import ButtonBasic from '~/components/animation/Button/Basic/index.vue'
 import ButtonHoverLineVer1 from '~/components/animation/Button/HoverLineVer1/index.vue'
+import ButtonHoverLineVer2 from '~/components/animation/Button/HoverLineVer2/index.vue'
 import { preserveStyleAndRevert } from '../../../../composables/hooks/utils/preserveStyleAndRevert'
 import s from './style.module.css'
 import TypoParagraph from '../../../common/Typo/TypoParagraph.vue'
