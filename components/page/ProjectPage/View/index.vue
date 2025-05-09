@@ -11,25 +11,24 @@
                     </TypoParagraph>
                 </MotionHead>
             </div>
-            <MotionMask :classs="s.thumbGr" :dirRevert="1" :duration="1" ease="power3.inOut">
+            <MotionMask id="thumb" :classs="s.thumbGr" :dirRevert="1" :duration="1" ease="power3.inOut">
                 <li v-for="(item, index) in data.thumb" :key="index" :class="s.thumb">
                     <img :src="item" :alt="item.name" />
                 </li>
             </MotionMask>
 
-            <MotionMask :classs="s.backgroundGr" :dirRevert="-1" :duration="1" ease="power3.inOut">
+            <MotionMask id="background" :classs="s.backgroundGr" :dirRevert="-1" :duration="1" ease="power3.inOut">
                 <li v-for="(item, index) in data.background" :key="index" :class="s.background" id="slide">
-                    <ButtonBasic :to="`/projects/${data.slug[index]}`">
+                    <ButtonBasic @click="stateUiGlobal.isProjectPageToDetailProject = true" :to="`/projects/${data.slug[index]}`">
                         <img :src="item" :alt="item.name" />
                     </ButtonBasic>
                 </li>
             </MotionMask>
             <div :class="s.indi">
-                <MotionText :yTarget="10" :duration=".6" easeIn="power2.in" easeOut="power2.out">
+                <MotionCount :yTarget="10" :duration=".6" easeIn="power2.in" easeOut="power2.out">
                     <TypoParagraph tag="span" font="BS-Regular" :class="s.cur"></TypoParagraph>
-                </MotionText>
-                <TypoParagraph tag="span" font="BS-Regular" :class="s.total"> / 0{{ props.content.length }}
-                </TypoParagraph>
+                    <TypoParagraph tag="span" font="BS-Regular" :class="s.total"> / 0{{ props.content.length }}</TypoParagraph>
+                </MotionCount>
             </div>
         </div>
     </section>
@@ -47,7 +46,7 @@ import TypoParagraph from '~/components/common/Typo/TypoParagraph.vue';
 import s from './style.module.css'
 import { formatData } from './utils'
 import MotionMask from './Slide/MotionMask.vue';
-import MotionText from './Slide/MotionText.vue';
+import MotionCount from './Slide/MotionCount.vue';
 import MotionHead from './Slide/MotionHead.vue';
 const props = defineProps({
     content: Object
@@ -61,4 +60,5 @@ useObserver({
     onUp: () => handleOnUp({ dir: -1 }),
     conditionInit: computed(() => stateUiGlobal.isActivePage)
 })
+
 </script>

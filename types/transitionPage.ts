@@ -1,6 +1,7 @@
 export interface IHandleMotionTransPage {
     el: HTMLElement; 
     onCompleteCallback?: () => void; 
-    done?: () => void
+    done?: () => void;
+    isProjectPageToDetail?:boolean
 }
   

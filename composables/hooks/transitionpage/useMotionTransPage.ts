@@ -1,5 +1,5 @@
 import gsap from 'gsap'
-import { transitionMotion,transitionConfig } from '../../../constants/config_transitionPage'
+import { transitionMotion, transitionConfig } from '../../../constants/config_transitionPage'
 import type { IHandleMotionTransPage } from '~types/transitionPage'
 
 export const motionFirstLoadPage = ({ el }: { el: Element }) => {
@@ -18,7 +18,7 @@ const handleTransition = (element: Element, className: string, duration: number,
         callback?.();
         element.classList.remove(className);
         clearTimeout(timer);
-    }, duration * 1000); 
+    }, duration * 1000);
 }
 
 export const motionEnterPage = ({ el, onCompleteCallback }: IHandleMotionTransPage): void => {
@@ -30,4 +30,22 @@ export const motionEnterPage = ({ el, onCompleteCallback }: IHandleMotionTransPa
 export const motionLeavePage = ({ el, onCompleteCallback }: IHandleMotionTransPage): void => {
     const lenisWrapper = el.children[0];
     handleTransition(lenisWrapper, 'page-leave', transitionMotion.duration, onCompleteCallback);
+}
+
+
+const handleTransitionDetailProject = (duration: number, callback: any) => {
+    const timer = setTimeout(() => {
+        callback?.();
+        stateUiGlobal.isProjectPageToDetailProject = false
+        clearTimeout(timer);
+    }, duration * 1000);
+}
+
+export const motionEnterPageDetailProject = ({ el, onCompleteCallback }: IHandleMotionTransPage): void => {
+    handleTransitionDetailProject(transitionMotion.duration, onCompleteCallback);
+}
+
+export const motionLeavePageDetailProject = ({ el, onCompleteCallback }: IHandleMotionTransPage): void => {
+     el.style.zIndex = '10'
+    handleTransitionDetailProject(transitionMotion.duration, onCompleteCallback);
 }

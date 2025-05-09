@@ -1,11 +1,27 @@
 import { activeStateUi } from '../../controls/useStateUi'
-import { motionEnterPage, motionLeavePage } from './useMotionTransPage';
+import { motionEnterPage, motionLeavePage, motionEnterPageDetailProject, motionLeavePageDetailProject } from './useMotionTransPage';
 import type { IHandleMotionTransPage } from '~types/transitionPage';
 import { routesList } from '../../../constants/routerList'
 
 const routerState: {
     [key: string]: { visible: boolean }
 } = Object.fromEntries(routesList.map(route => [route, { visible: false }]));
+
+function isGoToProjectDetail(currentPath: string, targetPath: string): boolean {
+    const normalizedCurrent = currentPath.replace(/\/+$/, '');
+    const normalizedTarget = targetPath.replace(/\/+$/, '');
+
+    // currentPath phải là chính xác "/projects"
+    if (normalizedCurrent !== '/projects') return false;
+
+    // targetPath phải bắt đầu bằng "/projects/"
+    if (!normalizedTarget.startsWith('/projects/')) return false;
+
+    const relativePath = normalizedTarget.slice('/projects/'.length);
+
+    // relativePath không được rỗng và không chứa thêm "/"
+    return relativePath.length > 0 && !relativePath.includes('/');
+}
 
 
 export const defaultPageTransition = {
@@ -17,11 +33,19 @@ export const defaultPageTransition = {
     },
     onEnter: (el: Element, done: any) => {
         // console.log('-------------onEnter');
-        handlePageEnter({ el, done } as any)
+        const targetPath = useRouter().currentRoute.value.fullPath;
+        const currentPath = useRoute().fullPath
+        const isProjectPageToDetail = isGoToProjectDetail(currentPath, targetPath)
+
+        handlePageEnter({ el, done, isProjectPageToDetail } as any)
     },
     onLeave: (el: Element, done: any) => {
         // console.log('------------onLeave');
-        handlePageLeave({ el, done } as any)
+
+        const targetPath = useRouter().currentRoute.value.fullPath;
+        const currentPath = useRoute().fullPath
+        const isProjectPageToDetail = isGoToProjectDetail(currentPath, targetPath)
+        handlePageLeave({ el, done, isProjectPageToDetail } as any)
     },
 
     onAfterEnter: (el: Element) => {
@@ -34,6 +58,7 @@ export const defaultPageTransition = {
         // console.log('Transition vào bị hủy', el);
     },
     onBeforeLeave: (el: Element) => {
+        activeStateUi({ param: 'disable-page' });
         //console.log('Trước khi phần tử rời DOM', el);
     },
 
@@ -47,37 +72,19 @@ export const defaultPageTransition = {
     }
 }
 
-
-export const handlePageEnter = ({ el, done }: IHandleMotionTransPage): void => {
-    // const currentPath = useRouter().currentRoute.value.fullPath;
-    // routerState[`${currentPath}`].visible = true;
-
-    motionEnterPage({
+export const handlePageEnter = ({ el, done, isProjectPageToDetail }: IHandleMotionTransPage): void => {
+    const motionFn = isProjectPageToDetail ? motionEnterPageDetailProject : motionEnterPage;
+    motionFn({
         el,
-        onCompleteCallback: () => {
-            // if (routerState[`${currentPath}`].visible) {
-            //     //console.log(`>>>>>> Starting app state for ${currentPath}`);
-
-            // } else {
-            //    // console.log(`- Page ${currentPath} is no longer visible, not starting app state`);
-            // }
-            done?.()
-        }
-    })
+        onCompleteCallback: () => done?.()
+    });
 };
 
-export const handlePageLeave = ({ el, done }: IHandleMotionTransPage): void => {
+export const handlePageLeave = ({ el, done, isProjectPageToDetail }: IHandleMotionTransPage): void => {
 
-    activeStateUi({ param: 'disable-page' });
-    // const currentPath = useRoute().fullPath
-    // routerState[`${currentPath}`].visible = false;
-
-    motionLeavePage({
+    const motionFn = isProjectPageToDetail ? motionLeavePageDetailProject : motionLeavePage;
+    motionFn({
         el,
-        onCompleteCallback: () => {
-            // console.log(`- Leave completed for ${currentPath}`)
-            done?.()
-        }
-    })
-
+        onCompleteCallback: () => done?.()
+    });
 };

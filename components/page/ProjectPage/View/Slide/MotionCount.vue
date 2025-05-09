@@ -11,7 +11,7 @@ import { stateSliderProjects } from '../../../../../composables/page/projects/st
 const { $gsap } = useNuxtApp() as any
 
 const props = defineProps({
-    yTarget:{
+    yTarget: {
         type: Number,
         required: true,
     },
@@ -19,11 +19,11 @@ const props = defineProps({
         type: Number,
         required: true,
     },
-    easeIn:{
+    easeIn: {
         type: String,
         required: true,
     },
-    easeOut:{
+    easeOut: {
         type: String,
         required: true,
     }
@@ -52,7 +52,7 @@ const animateChange = (newIndex: number, direction: number) => {
     tl.clear()
 
     const nextIndex = newIndex
-    const moveY = direction * props.yTarget 
+    const moveY = direction * props.yTarget
 
     // Animation
     tl.to(spanElement, {
@@ -74,5 +74,15 @@ const animateChange = (newIndex: number, direction: number) => {
 }
 watch(() => stateSliderProjects.activeIndex, (newIndex, oldIndex) => {
     animateChange(stateSliderProjects.activeIndex + 1, stateSliderProjects.direction)
+})
+
+watch(() => stateUiGlobal.isProjectPageToDetailProject, (val) => {
+    if (val) {
+        $gsap.to(wref.value, {
+            opacity: 0,
+            duration: props.duration,
+            ease: props.easeIn,
+        })
+    }
 })
 </script>

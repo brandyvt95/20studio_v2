@@ -8,26 +8,30 @@
 import { ref, watch, onMounted } from 'vue'
 
 import { stateSliderProjects } from '../../../../../composables/page/projects/state'
-const {$gsap} = useNuxtApp() as any
+const { $gsap } = useNuxtApp() as any
 const props = defineProps({
+    id: {
+        type: String,
+        required: true,
+    },
     classs: {
         type: String,
         required: true,
     },
-    dirRevert:{
+    dirRevert: {
         type: Number,
         required: true,
     },
-    duration:{
+    duration: {
         type: Number,
         required: true,
     },
-    ease:{
+    ease: {
         type: String,
         required: true,
     }
 })
-
+const scaleProps = props.id === 'background' ? { scale: 1.3 } : {};
 const wref = ref<HTMLElement | null>(null)
 const itemsRef = ref<HTMLElement[]>([])
 
@@ -55,6 +59,7 @@ watch(() => stateSliderProjects.activeIndex, (newIndex, oldIndex) => {
 
     const prevItem = itemsRef.value[oldIndex]
     const activeItem = itemsRef.value[newIndex]
+   
 
     if (!prevItem || !activeItem) return
     const dir = stateSliderProjects.direction * props.dirRevert
@@ -63,28 +68,50 @@ watch(() => stateSliderProjects.activeIndex, (newIndex, oldIndex) => {
     $gsap.set(activeItem, { zIndex: 2 })
     $gsap.set(prevItem, { zIndex: 1 })
 
+
     if (dir === 1) {
         tl.fromTo(
             activeItem,
-            { clipPath: 'inset(100% 0% 0% 0%)' },
-            { clipPath: 'inset(0% 0% 0% 0%)', duration: props.duration, ease: props.ease }
+            { clipPath: 'inset(100% 0% 0% 0%)', scale: 1 },
+            { clipPath: 'inset(0% 0% 0% 0%)', ...scaleProps, duration: props.duration, ease: props.ease }
         )
             .to(
                 prevItem,
-                { clipPath: 'inset(0% 0% 100% 0%)', duration: props.duration, ease: props.ease },
+                { clipPath: 'inset(0% 0% 100% 0%)', scale: 1, duration: props.duration, ease: props.ease },
                 "-=0.6"
             )
     } else if (dir === -1) {
         tl.fromTo(
             activeItem,
-            { clipPath: 'inset(0% 0% 100% 0%)' },
-            { clipPath: 'inset(0% 0% 0% 0%)', duration: props.duration, ease: props.ease }
+            { clipPath: 'inset(0% 0% 100% 0%)', scale: 1 },
+            { clipPath: 'inset(0% 0% 0% 0%)', ...scaleProps, duration: props.duration, ease: props.ease }
         )
             .to(
                 prevItem,
-                { clipPath: 'inset(100% 0% 0% 0%)', duration: props.duration, ease: props.ease },
+                { clipPath: 'inset(100% 0% 0% 0%)', scale: 1, duration: props.duration, ease: props.ease },
                 "-=0.6"
             )
+    }
+})
+
+
+
+watch(() => stateUiGlobal.isProjectPageToDetailProject, (val) => {
+    if (val) {
+        const item = itemsRef.value[stateSliderProjects.activeIndex]
+        if (props.id === 'thumb') {
+            $gsap.to(item, {
+               clipPath: 'inset(0% 0% 100% 0%)',
+                duration: props.duration, ease: props.ease
+            })
+        }
+        if (props.id === 'background') {
+            $gsap.to(item, {
+                scale: 1,
+                duration: props.duration, ease: props.ease
+            })
+        }
+
     }
 })
 </script>

@@ -1,4 +1,5 @@
 <template>
+    <!-- @mouseenter="onEnter(index)" @mouseleave="onLeave(index)" -->
     <NuxtLink :to="to" :class="s.button" >
         <div :class="[s.wrapper, customClass, color]" ref="wrapper">
             <div :class="s.circle" ref="circle">

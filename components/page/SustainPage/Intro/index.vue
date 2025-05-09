@@ -1,11 +1,11 @@
 <template>
   <section :class="s.section">
     <div :class="s.container">
-      <TypoParagraph tag="span" font="BS-Regular" :class="s.lable">
+      <TypoParagraph tag="span" size="lable" font="BS-Regular" :class="s.lable">
           <!-- <IconSVG src='/icon/star.svg' :class={s.s.icon} /> -->
-          {{ content.tag }}
+           Sustainability
         </TypoParagraph>
-        <TypoHeading tag="p" size="h2" font="BD-Bold" :class="s.title">
+        <TypoHeading tag="h2" size="h2" font="BD-Bold" :class="s.title">
           <div v-for="(item, index) in content.tit" :key="index">
             {{ item }}
           </div>

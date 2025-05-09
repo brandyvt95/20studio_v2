@@ -33,11 +33,6 @@
     margin: 0 0 6.9444444444vw 6.1805555556vw;
 }
 
-.w_info {
-    position: relative;
-    overflow: hidden;
-}
-
 .icon {
     height: 3.2vw;
     position: absolute;
@@ -64,22 +59,46 @@
 .block {
     overflow: hidden;
     position: relative;
-    pointer-events: none;
+    pointer-events: auto;
     background-color: gray;
     height: 100%;
     img {
         object-fit: cover;
         width: 100%;
+        transition: 300ms ease-out;
+        will-change: transform;
     }
+}
+
+
+.w_info {
+    position: relative;
+    overflow: hidden;
+  
+}
+.info {
+    transform: translateY(-100%) rotate(-3deg);
+    transform-origin: left top;
+    opacity: 0;
+    will-change: transform,opacity;
+    transition: 300ms ease-in;
+    
+}
+.service:hover .info {
+    transform: translateY(0%) rotate(0deg);
+    opacity: 1;
+    transition: 300ms ease-in;
+}
+.service:hover img {
+    transform: scale(1.1);
+    transition: 300ms ease-in;
 }
 .icon {
     height: .8333333333vw;
         transform: translate(-1.4930555556vw, .7638888889vw);
         width: .8333333333vw;
 }
-.info {
-    will-change: transform;
-}
+
 
 .body{
     margin-left: 56.9444444444vw;

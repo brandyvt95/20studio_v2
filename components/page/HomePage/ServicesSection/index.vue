@@ -11,10 +11,10 @@ const data = defineProps({
 
 </script>
 <template>
-    <section :class="[s.section, 'bgclr-white','clr-story']" data-scopeCursor="close">
+    <section :class="[s.section, 'bgclr-white', 'clr-story']" data-scopeCursor="close">
         <div :class="s.container">
             <div :class="s.head">
-                <SlideMotion :direction="1" :rotate="7" :duration="1" :className="s.title">
+                <SlideMotion :useScrollTrigger="true" :direction="1" :rotate="7" :duration="1" :className="s.title">
                     <TypoHeading tag="h2" size="h1" font="BD-Bold">
                         {{ content.content.title }}
                     </TypoHeading>
@@ -28,7 +28,7 @@ const data = defineProps({
                     {{ content.content.des }}
                 </TypoParagraph>
             </div>
-            <div :class="s.services">
+            <div :class="s.services" ref="wrapper">
                 <ButtonBasic color="clr-story" :to="`/projects/${work.slug}`" data-scopeCursor="View" :class="s.service"
                     v-for="(work, index) in content.works" :key="index">
                     <div :class="s.block">
@@ -40,7 +40,7 @@ const data = defineProps({
                                 {{ work.clientName }} -
                             </span>
                             <span class="clr-dark-grey--06" :style="{ fontStyle: 'italic' }">
-                                {{ work.jobDes }} 
+                                {{ work.jobDes }}
                             </span>
                         </TypoParagraph>
                     </div>

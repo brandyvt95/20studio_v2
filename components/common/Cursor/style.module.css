@@ -7,9 +7,10 @@
     pointer-events: none;
     width: 5.9722222222vw;
     z-index: 999;
-    will-change: transform,scale;
+    will-change: transform;
     opacity: 0;
     scale: 0;
+    contain: layout style paint;
 }
 
 .innerY{

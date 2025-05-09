@@ -1,7 +1,7 @@
 <template>
   <section :class="[s.section,'bgclr-white','clr-dark-grey']" data-scopeCursor="close">
     <div :class="s.container">
-      <SlideMotion :direction="1" :rotate="7" :duration="1" :className="s.title">
+      <SlideMotion :useScrollTrigger="true" :direction="1" :rotate="7" :duration="1" :className="s.title">
         <TypoHeading tag="h2" size="h1" font="BD-Regular" >
         FAQ’S
       </TypoHeading>

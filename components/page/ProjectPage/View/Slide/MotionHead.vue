@@ -115,4 +115,24 @@ const animateChange = (newIndex: number, direction: number) => {
 watch(() => stateSliderProjects.activeIndex, (newIndex, oldIndex) => {
     animateChange(stateSliderProjects.activeIndex, stateSliderProjects.direction)
 })
+
+watch(() => stateUiGlobal.isProjectPageToDetailProject, (val) => {
+    if (val) {
+        $gsap.timeline()
+            .to(titleSplitEl.words, {
+                y: `${-100}%`,
+                opacity: 0,
+                rotate:  -(props.yTarget * .1),
+                duration: props.duration,
+                ease: props.easeIn,
+                stagger: 0.072,
+
+            })
+            .to(paragraphEl, {
+                opacity: 0,
+                duration: props.duration,
+                ease: props.easeIn,
+            }, "<")
+    }
+})
 </script>

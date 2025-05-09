@@ -3,11 +3,11 @@
     <div :class="s.background" :style="{ backgroundImage: `url(${content.img[0]})` }"></div>
             <div :class="s.container">
                 <div :class="s.text_1">
-                    <h1 :class="s.title">
+                     <SlideMotion :direction="1" :rotate="7" :duration="1"  :class="s.title">
                         <span :class="s.ii"><span :class="s.iii">{{content.name[0]}}</span></span>
                         <span :class="s.ii"><span :class="s.iii">{{content.name[1]}}</span></span>
 
-                    </h1>
+                    </SlideMotion>
                 <!--          <h2 :class="s.subtitle">
                         <div :class="s.text_line">
                             <span :class="s.iii">Celebrating a Century of Cinema</span>
@@ -45,6 +45,7 @@
         </section>
 </template>
 <script setup>
+import SlideMotion from '~/components/animation/Text/SlideMotion/index.vue';
     import s from './style.module.css'
     const props = defineProps({
   content: Object
