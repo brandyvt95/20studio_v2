@@ -27,17 +27,16 @@
 .icon {
     height: 3.2vw;
     position: absolute;
-    transform: translate(-5.3333333333vw, 2.1333333333vw);
-    width: 3.2vw;
+    transform:translate(-1.333333vw, -0.8333333333vw);
+    width: 1vw;
     z-index: 1;
 }
 .title {
     grid-column: 3/10;
 }
-.body ul {
-  
+.body {
+    margin-top:2rem;
 }
-
 .image {
     overflow: hidden;
     img {

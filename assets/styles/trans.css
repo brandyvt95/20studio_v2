@@ -1,11 +1,11 @@
 
 :root {
-    --ease-all: cubic-bezier(.17,.67,.3,.94);
-    --duration: 2s;
+    --ease-all: cubic-bezier(0.16, 1, 0.3, 1);
+    --duration: 4s;
     --targetYEnter : -500px;
     --targetYLeave : 500px;
-    --targetRotEnter: 7deg;
-    --targetRotLeave: -7deg;
+    --targetRotEnter: 4deg;
+    --targetRotLeave: -4deg;
     --targetScale: 1.5;
     --targetBrightness:16%;
     --maskStart:polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);

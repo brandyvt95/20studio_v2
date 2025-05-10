@@ -3,7 +3,7 @@
         <div :class="s.items">
             <div :class="s.detailGr">
                 <MotionHead :dataTitle="data.brand" :dataParagraph="data.jobDes" :yTarget="40" :duration=".5" easeIn="power3.out" easeOut="power3.out">
-                    <TypoHeading  tag="h3" size="h2" font="BD-Regular">
+                    <TypoHeading :class="s.title"  tag="h3" size="h2" font="BD-Regular">
                       {{ data.brand[0] }}
                     </TypoHeading>
                     <TypoParagraph  tag="p" font="BS-Regular">

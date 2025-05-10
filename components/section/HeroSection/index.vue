@@ -6,10 +6,16 @@ import ButtonHoverLineVer1 from '~/components/animation/Button/HoverLineVer1/ind
 import ButtonHoverLineVer2 from '~/components/animation/Button/HoverLineVer2/index.vue';
 import ParallaxBackground from '~/components/animation/ParallaxBackground/index.vue';
 import TypoParagraph from '~/components/common/Typo/TypoParagraph.vue';
-import SplitText from '~/components/animation/Text/Split/index.vue';
-defineProps({
-    content: Object
+import MotionHeadHero from '~/components/animation/Text/MotionHeadHero.vue';
+const props = defineProps({
+    content: {
+        type: Object,
+        required: true,
+        default: () => ({ tit: '' }) 
+    }
 })
+
+const splitWords = computed(() => (props.content?.tit || '').split(' '))
 </script>
 
 <template>
@@ -17,9 +23,11 @@ defineProps({
         <div :class="s.container">
             <div :class="s.intro">
                 <TypoHeading tag="h1" size="h1" font="BD-Bold" :className="s.title">
-                    <div v-for="(item, index) in content.tit" :key="index">
-                        <span>{{ item }}</span>
-                    </div>
+                    <MotionHeadHero>
+                        <span v-for="(word, index) in splitWords" :key="index" class="wrapper-word-span">
+                            <span class="word-span">{{ word }}</span>
+                        </span>
+                    </MotionHeadHero>
                 </TypoHeading>
 
             </div>

@@ -31,7 +31,7 @@ const props = defineProps({
         required: true,
     }
 })
-const scaleProps = props.id === 'background' ? { scale: 1.3 } : {};
+const scaleProps = props.id === 'background' ? { scale: 1.2 } : {};
 const wref = ref<HTMLElement | null>(null)
 const itemsRef = ref<HTMLElement[]>([])
 

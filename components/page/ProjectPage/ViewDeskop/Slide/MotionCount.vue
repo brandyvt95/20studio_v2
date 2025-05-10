@@ -1,5 +1,5 @@
 <template>
-    <div ref="wref">
+    <div ref="wref" class="wref">
         <slot />
     </div>
 </template>
@@ -86,3 +86,9 @@ watch(() => stateUiGlobal.isProjectPageToDetailProject, (val) => {
     }
 })
 </script>
+<style lang="css" scoped>
+.wref {
+    display: flex;
+    position: relative;
+}
+</style>

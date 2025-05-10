@@ -29,10 +29,11 @@ export const defaultPageTransition = {
     mode: 'default',
     css: false,
     onBeforeEnter(el: Element) {
-        //console.log('------------Before enter');
+        console.log('onBeforeEnterr');
     },
     onEnter: (el: Element, done: any) => {
-        // console.log('-------------onEnter');
+        stateUiGlobal.isFireMotionFlash = true
+        console.log('onEnter');
         const targetPath = useRouter().currentRoute.value.fullPath;
         const currentPath = useRoute().fullPath
         const isProjectPageToDetail = isGoToProjectDetail(currentPath, targetPath)
@@ -40,7 +41,7 @@ export const defaultPageTransition = {
         handlePageEnter({ el, done, isProjectPageToDetail } as any)
     },
     onLeave: (el: Element, done: any) => {
-        // console.log('------------onLeave');
+        console.log('onLeave');
 
         const targetPath = useRouter().currentRoute.value.fullPath;
         const currentPath = useRoute().fullPath
@@ -49,23 +50,31 @@ export const defaultPageTransition = {
     },
 
     onAfterEnter: (el: Element) => {
+        console.log('onAfterEnter');
         console.log('Transition vào đã hoàn thành', el);
         activeStateUi({ param: 'active-page' });
+        
+        stateUiGlobal.isFireMotionFlash = false
     },
     onEnterCancelled: (el: Element) => {
+        stateUiGlobal.isFireMotionFlash = false
+        console.log('onEnterCancelled');
         // const currentPath = useRoute().fullPath
         // routerState[`${currentPath}`].visible = false;
         // console.log('Transition vào bị hủy', el);
     },
     onBeforeLeave: (el: Element) => {
+        console.log('onBeforeLeave');
         activeStateUi({ param: 'disable-page' });
         //console.log('Trước khi phần tử rời DOM', el);
     },
 
     onAfterLeave: (el: Element) => {
+             console.log('onAfterLeave');
         // console.log('Transition ra đã hoàn thành', el);
     },
     onLeaveCancelled: (el: Element) => {
+             console.log('onLeaveCancelled');
         // const currentPath = useRoute().fullPath
         // routerState[`${currentPath}`].visible = false;
         //console.log('Transition ra bị hủy', el);
@@ -88,3 +97,5 @@ export const handlePageLeave = ({ el, done, isProjectPageToDetail }: IHandleMoti
         onCompleteCallback: () => done?.()
     });
 };
+
+

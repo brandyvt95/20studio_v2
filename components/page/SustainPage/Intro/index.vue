@@ -1,8 +1,8 @@
 <template>
   <section :class="s.section">
     <div :class="s.container">
-      <TypoParagraph tag="span" size="lable" font="BS-Regular" :class="s.lable">
-          <!-- <IconSVG src='/icon/star.svg' :class={s.s.icon} /> -->
+      <TypoParagraph tag="p" size="lable" font="BD-Regular" :class="s.lable">
+          <StarIcon :class="s.icon"/>
            Sustainability
         </TypoParagraph>
         <TypoHeading tag="h2" size="h2" font="BD-Bold" :class="s.title">
@@ -11,7 +11,7 @@
           </div>
         </TypoHeading>
 
-        <TypoParagraph tag="p" font="BD-Regular" :class="s.body">
+        <TypoParagraph tag="p" font="BS-Regular" :class="s.body">
           {{ content.more }}
         </TypoParagraph>
 
@@ -22,7 +22,7 @@
 <script setup>
 import TypoHeading from '~/components/common/Typo/TypoHeading.vue';
 import TypoParagraph from '~/components/common/Typo/TypoParagraph.vue';
-
+import StarIcon from '~/components/common/InlineSvg/Star.vue';
 import s from './style.module.css'
 defineProps({
   content: Object

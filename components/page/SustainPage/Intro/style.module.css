@@ -50,7 +50,7 @@
     }
     .icon {
         height: .8333333333vw;
-        transform: translate(-1.4930555556vw, .7638888889vw);
+        transform: translate(-1.4930555556vw, .27638888889vw);
         width: .8333333333vw;
         will-change: transform;
     }

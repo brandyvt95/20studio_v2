@@ -44,7 +44,8 @@ let paragraphEl: any = null
 let titleSplitEl: any = null
 let paragraphSplitEl: any = null
 
-onMounted(() => {
+onMounted(async () => {
+    await document.fonts.ready
     if (!wref.value) return
     titleEl = wref.value.children[0]
     paragraphEl = wref.value.children[1]
@@ -52,7 +53,6 @@ onMounted(() => {
     paragraphEl.classList.add('willChangeOpacity')
     updateText(stateSliderProjects.activeIndex)
 })
-
 const updateText = (index: number) => {
     if (!titleEl) return
     titleEl.textContent = `${props.dataTitle[stateSliderProjects.activeIndex]}`
@@ -122,7 +122,7 @@ watch(() => stateUiGlobal.isProjectPageToDetailProject, (val) => {
             .to(titleSplitEl.words, {
                 y: `${-100}%`,
                 opacity: 0,
-                rotate:  -(props.yTarget * .1),
+                rotate: -(props.yTarget * .1),
                 duration: props.duration,
                 ease: props.easeIn,
                 stagger: 0.072,

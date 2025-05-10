@@ -73,8 +73,12 @@
     z-index: 9;
 }
 .cur {
-    position: absolute;
+    display: block;
 }
 .total {
-    margin-left: 1.3rem;
+    margin-left: 0.3rem;
+}
+.title {
+    display:flex;
+    flex-direction: column;
 }

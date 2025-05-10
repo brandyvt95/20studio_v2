@@ -7,7 +7,7 @@ export const transitionMotion = {
     y:500,
     scale:1.5,
   },
-  duration: 2,
+  duration: 1.5,
   ease:'power3.out',
   brightness100: {
       '-webkit-filter': 'brightness(100%)',
@@ -31,13 +31,15 @@ export const transitionConfig = {
       enter: {
           start: {
               rotate: 7,
-              y: 500,
+              y: 600,
+              x:-30,
               scale:1.5,
              ...transitionMotion.brightness16
           },
           end: {
               rotate: 0,
               y: 0,
+              x:0,
               scale:1,
               ...transitionMotion.brightness100,
               duration: transitionMotion.duration,
@@ -48,13 +50,15 @@ export const transitionConfig = {
           start: {
               rotate: 0,
               y: 0,
+              x:0,
               scale:1,
               ...transitionMotion.brightness100
            
           },
           end: {
               rotate: -7,
-              y: -500,
+              y: -600,
+              x:-30,
               scale:1.5,
               ...transitionMotion.brightness16,
               duration: transitionMotion.duration,

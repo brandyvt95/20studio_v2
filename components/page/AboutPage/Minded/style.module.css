@@ -1,6 +1,5 @@
 .section {
-  color: var(--color-dark-grey);
-  background-color: white;
+  padding:15vw 0 0 0;
 }
 
 .container {
@@ -121,7 +120,7 @@
 
   .label {
     position: absolute;
-    top: 16.1097222vw;
+    top: 27.809722vw;
     height: 2.3611111111vw;
     line-height: 2.5694444444vw;
     padding-left: 1.5277777778vw;

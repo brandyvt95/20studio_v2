@@ -18,7 +18,7 @@ const handleTransition = (element: Element, className: string, duration: number,
         callback?.();
         element.classList.remove(className);
         clearTimeout(timer);
-    }, duration * 1000);
+    }, 4 * 1000);
 }
 
 export const motionEnterPage = ({ el, onCompleteCallback }: IHandleMotionTransPage): void => {
@@ -33,6 +33,45 @@ export const motionLeavePage = ({ el, onCompleteCallback }: IHandleMotionTransPa
 }
 
 
+// export const motionEnterPage = ({ el, onCompleteCallback }: IHandleMotionTransPage): void => {
+//     const ctx = gsap.context(() => {
+//         const lenisWrapper = el.children[0]
+//         gsap.timeline()
+//            //.set(el, { zIndex: setupZIndex() })
+//             .fromTo(el,
+//                 transitionConfig.mask.start,
+//                 {
+//                     ...transitionConfig.mask.end,
+//                     onComplete: () => {
+//                         onCompleteCallback?.()
+//                         ctx.revert();
+//                     }
+//                 }
+//             )
+//             .fromTo(lenisWrapper,
+//                 transitionConfig.lenisWrapper.enter.start,
+//                 transitionConfig.lenisWrapper.enter.end,
+//                 "<"
+//             )
+//     }, el)
+// }
+
+// export const motionLeavePage = ({ el, onCompleteCallback }: IHandleMotionTransPage): void => {
+//     const ctx = gsap.context(() => {
+//         const lenisWrapper = el.children[0]
+//         gsap.fromTo(
+//             lenisWrapper,
+//             transitionConfig.lenisWrapper.leave.start,
+//             {
+//                 ...transitionConfig.lenisWrapper.leave.end,
+//                 onComplete: () => {
+//                     onCompleteCallback?.()
+//                     ctx.revert() 
+//                 }
+//             }
+//         )
+//     }, el)
+// }
 const handleTransitionDetailProject = (duration: number, callback: any) => {
     const timer = setTimeout(() => {
         callback?.();

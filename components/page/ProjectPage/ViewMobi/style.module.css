@@ -1,0 +1,28 @@
+.section {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.items {
+    margin: 0 8vw;
+    padding: 40vw 0 21.3333333333vw;
+}
+
+.item {
+    margin-bottom: 11.4666666667vw;
+    text-align: left;
+    width: 100%;
+}
+
+.img {
+    overflow: hidden;
+    position: relative;
+    height: 104vw;
+    margin-bottom: 4vw;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
