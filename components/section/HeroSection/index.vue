@@ -23,9 +23,9 @@ const splitWords = computed(() => (props.content?.tit || '').split(' '))
         <div :class="s.container">
             <div :class="s.intro">
                 <TypoHeading tag="h1" size="h1" font="BD-Bold" :className="s.title">
-                    <MotionHeadHero>
-                        <span v-for="(word, index) in splitWords" :key="index" class="wrapper-word-span">
-                            <span class="word-span">{{ word }}</span>
+                    <MotionHeadHero targetMask="wrapper-word-hero-span" targetChild="word-hero-span">
+                        <span v-for="(word, index) in splitWords" :key="index" class="wrapper-word-hero-span">
+                            <span class="word-hero-span">{{ word }}</span>
                         </span>
                     </MotionHeadHero>
                 </TypoHeading>

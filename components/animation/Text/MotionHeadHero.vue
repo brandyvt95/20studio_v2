@@ -4,11 +4,20 @@
     </div>
 </template>
 <script setup>
-
+const props = defineProps({
+    targetMask: String,
+    targetChild: String
+})
 const wrapper = ref(null)
-const { $gsap } = useNuxtApp()
-let tl, ctx
+let wordSpans
 onMounted(() => {
+    wordSpans = wrapper.value.querySelectorAll(`.${props.targetChild}`)
+    wordSpans.forEach((span, index) => {
+
+        span.style.transitionDelay = `${0.5 - index * 0.072}s`;
+        void span.offsetWidth;
+        span.classList.add('fade-in-motion');
+    });
     watch(
         () => stateUiGlobal.isFireMotionFlash,
         async (val) => {
@@ -22,68 +31,20 @@ onMounted(() => {
 })
 
 function fireMotion() {
-    const wordSpans = wrapper.value.querySelectorAll('.word-span')
-
-    if (ctx) {
-        ctx.revert()
-        ctx = null
-    }
-
-    // Kill timeline cũ nếu đang tồn tại
-    if (tl) {
-        tl.kill()
-        tl = null
-    }
-
-    ctx = $gsap.context(() => {
-        tl = $gsap.timeline({
-            paused: true
-        }).fromTo(wordSpans, {
-            opacity: 0,
-            y: '100%',
-            rotate: 7,
-            transformOrigin: 'left center'
-        }, {
-            delay: .2,
-            opacity: 1,
-            y: 0,
-            rotate: 0,
-            duration: 1,
-            stagger: .072
-        })
-    })
-    tl.play()
+    wordSpans.forEach((span, index) => {
+        void span.offsetWidth;
+        span.classList.add('fade-in-motion');
+    });
 }
 
-let animationComplete = false
-
-onBeforeUnmount(() => {
-    console.log("---- MotionHeadHero onBeforeUnmount")
-})
 onBeforeRouteLeave((to, from, next) => {
-    console.log("Navigating away from current route");
-    if (ctx && tl) {
-        tl.timeScale(2).reverse()
-
-        tl.eventCallback("onReverseComplete", () => {
-            animationComplete = true
-            
-            setTimeout(() => {
-                tl.kill()
-                ctx.revert()
-                tl=null
-                ctx=null
-                console.log("onReverseComplete complete", ctx, tl)
-            }, 1000);
-        })
+    if (wordSpans) {
+        wordSpans.forEach((span, index) => {
+            span.style.transitionDelay = `${0.1 + index * 0.072}s`;
+            span.classList.remove('fade-in-motion');
+        });
     }
     next();
-})
-
-
-
-onUnmounted(() => {
-  console.log("Component is unmounted and animations are cleaned up.",ctx,tl)
 })
 </script>
 <style scoped>

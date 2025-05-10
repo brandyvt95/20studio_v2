@@ -1,15 +1,15 @@
-
+/* TRANSITION PAGE */
 :root {
     --ease-all: cubic-bezier(0.16, 1, 0.3, 1);
     --duration: 4s;
-    --targetYEnter : -500px;
-    --targetYLeave : 500px;
+    --targetYEnter: -500px;
+    --targetYLeave: 500px;
     --targetRotEnter: 4deg;
     --targetRotLeave: -4deg;
-    --targetScale: 1.5;
-    --targetBrightness:16%;
-    --maskStart:polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
-    --maskEnd:polygon(0% -2%, 100% 0%, 100% 100%, 0% 100%);
+    --targetScale: 1.2;
+    --targetBrightness: 16%;
+    --maskStart: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    --maskEnd: polygon(0% -2%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .mask-enter {
@@ -20,6 +20,7 @@
     0% {
         clip-path: var(--maskStart);
     }
+
     100% {
         clip-path: var(--maskEnd);
     }
@@ -49,4 +50,27 @@
         filter: brightness(var(--targetBrightness));
         transform: rotate(var(--targetRotLeave)) translateY(var(--targetYEnter)) scale(var(--targetScale));
     }
+}
+
+
+/*  HERO FADE TITILE */
+.wrapper-word-hero-span {
+    width: fit-content;
+    text-transform: capitalize;
+    overflow: hidden;
+}
+
+.word-hero-span {
+    display: block;
+    opacity: 0;
+    transform: translateY(100%) rotate(7deg);
+    transform-origin: left center;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+    will-change: transform, opacity;
+}
+
+.fade-in-motion {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+    transition: transform 1s ease-out, opacity 1s ease-out;
 }

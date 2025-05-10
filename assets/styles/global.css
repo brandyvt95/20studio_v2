@@ -82,14 +82,5 @@ p {
 .dark_background {
     background-color: var(--black);
 }
-/* split text ssr */
-.wrapper-word-span {
-    width: fit-content;
-    text-transform: capitalize;
-    overflow: hidden;
-}
 
-.word-span {
-    display: block;
-    will-change: transform,opacity;
-}
+
