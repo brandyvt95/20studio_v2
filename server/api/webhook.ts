@@ -7,9 +7,9 @@ import { cleanDeep } from './utils'
 export default defineEventHandler(async (event) => {
 
 
-
+ const config = useRuntimeConfig()
   const KEY = getRequestHeader(event, 'Authorization')?.split(' ')[1]; 
-  if (KEY !== process.env.SECRET_KEY_CMS_APP) {
+  if (KEY !== config.SECRET_KEY_CMS_APP) {
     return createError({
       statusCode: 401,
       message: 'Unauthorized'
@@ -17,7 +17,6 @@ export default defineEventHandler(async (event) => {
   }
 
   const body = await readBody(event)
-
   const model = body?.model
   const data = body?.entry
   if (!model || !data) {
