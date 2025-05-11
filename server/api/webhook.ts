@@ -9,14 +9,13 @@ export default defineEventHandler(async (event) => {
 
  const config = useRuntimeConfig()
   const KEY = getRequestHeader(event, 'Authorization')?.split(' ')[1]; 
-    console.log("out")
+
   if (KEY !== config.SECRET_KEY_CMS_APP) {
     return createError({
       statusCode: 401,
       message: 'Unauthorized'
     });
   }
-  console.log("innnnnn")
   const body = await readBody(event)
   const model = body?.model
   const data = body?.entry
@@ -26,11 +25,12 @@ export default defineEventHandler(async (event) => {
 
   const dataPath = join(process.cwd(), 'public', 'dataStrapi.json')
 
+  console.log("innnnnn",dataPath)
   let oldData = {}
   if (existsSync(dataPath)) {
     oldData = JSON.parse(readFileSync(dataPath, 'utf-8'))
   }
-
+  console.log("oldData",oldData)
   let { data: filteredData, meta } = await processRelations(data)
   filteredData = cleanDeep(filteredData)
   const updatedData = {
