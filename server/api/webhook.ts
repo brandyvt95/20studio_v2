@@ -9,13 +9,14 @@ export default defineEventHandler(async (event) => {
 
  const config = useRuntimeConfig()
   const KEY = getRequestHeader(event, 'Authorization')?.split(' ')[1]; 
+    console.log("out")
   if (KEY !== config.SECRET_KEY_CMS_APP) {
     return createError({
       statusCode: 401,
       message: 'Unauthorized'
     });
   }
-
+  console.log("innnnnn")
   const body = await readBody(event)
   const model = body?.model
   const data = body?.entry
