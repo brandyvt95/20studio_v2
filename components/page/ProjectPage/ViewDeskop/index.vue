@@ -2,25 +2,25 @@
     <section :class="s.section" ref="containerRef" data-scopeCursor="View">
         <div :class="s.items">
             <div :class="s.detailGr">
-                <MotionHead :dataTitle="data.brand" :dataParagraph="data.jobDes" :yTarget="40" :duration=".5" easeIn="power3.out" easeOut="power3.out">
+                <MotionHead :dataTitle="data.brand" :dataSubTitle="data.type" :dataParagraph="data.job_description" :yTarget="10" :duration=".7" easeIn="power3.out" easeOut="power3.out">
                     <TypoHeading :class="s.title"  tag="h3" size="h2" font="BD-Regular">
-                      {{ data.brand[0] }}
+                     
                     </TypoHeading>
                     <TypoParagraph  tag="p" font="BS-Regular">
-                        {{ data.jobDes[0] }}
+                        <!-- {{ data.jobDes[0] }} -->
                     </TypoParagraph>
                 </MotionHead>
             </div>
             <MotionMask id="thumb" :classs="s.thumbGr" :dirRevert="1" :duration="1" ease="power3.inOut">
-                <li v-for="(item, index) in data.thumb" :key="index" :class="s.thumb">
-                    <img :src="item" :alt="item.name" />
+                <li v-for="(item, index) in data.thumbnail" :key="index" :class="s.thumb">
+                   <img :src="item.url" alt="" />
                 </li>
             </MotionMask>
 
             <MotionMask id="background" :classs="s.backgroundGr" :dirRevert="-1" :duration="1" ease="power3.inOut">
                 <li v-for="(item, index) in data.background" :key="index" :class="s.background" id="slide">
                     <ButtonBasic @click="stateUiGlobal.isProjectPageToDetailProject = true" :to="`/projects/${data.slug[index]}`">
-                        <img :src="item" :alt="item.name" />
+                        <img :src="item.url" alt="" />
                     </ButtonBasic>
                 </li>
             </MotionMask>
@@ -52,6 +52,7 @@ const props = defineProps({
     content: Object
 })
 const data = formatData(props.content)
+console.log(data)
 const containerRef = ref(null)
 stateSliderProjects.totalItem = props.content.length
 useObserver({

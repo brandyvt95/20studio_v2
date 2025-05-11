@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, defineProps, defineExpose } from 'vue'
+import { ref, computed } from 'vue'
 import type { HeadingTag , Fonts, SizeFont} from './type';
 const elRef = ref(null)
 defineExpose({ elRef })

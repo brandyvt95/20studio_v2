@@ -3,12 +3,10 @@
         <div class="marquee">
             <div class="marquee__track">
                 <div class="marquee__content">
-                    Get in touch · 联系 · Liên lạc · Связаться · Contactum
-                    facere · Prendre contact ·
+                    <slot/>
                 </div>
                 <div class="marquee__content">
-                    Get in touch · 联系 · Liên lạc · Связаться · Contactum
-                    facere · Prendre contact ·
+                     <slot/>
                 </div>
             </div>
         </div>

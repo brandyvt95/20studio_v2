@@ -1,0 +1,38 @@
+//// single thi ko 's' collection thi them 's'
+
+//aboutpage
+/api/about-page?
+populate[HeroSection][populate]=*
+&
+populate[IntroSection][populate]=*
+&
+populate[AdvantageSection][populate]=*
+&
+populate[MindedSection][populate]=*
+&
+populate[UsSection][populate]=*
+
+
+//contactpage
+/api/contact-page?populate[info_companies][populate]=*
+
+//projectpage
+/api/project-page?populate[Common][populate]=*
+
+
+//sustain
+/api/sustain-page?populate[IntroSection][populate]=*&populate[AdvantageSection][populate]=*
+
+
+
+/api/navbars?populate=*
+
+
+
+
+
+//  const payload = { userId: '927658392', username: 'admin_20studio', rule:'bigger' };
+// const secretKey = 'a932d3e29ef595aa4c55a9a73f066cd79656e283681d7776d1bcca28d67ac3d8570c05f46fc76794b2990205c1cf717859eb1b7da5c251459b117d694eefdb6d';
+// const options = { expiresIn: '1y' };
+// const tokenG = jwt.sign(payload, secretKey, options);
+// console.log('Generated Token:', tokenG);

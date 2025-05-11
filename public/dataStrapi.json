@@ -1,0 +1,1077 @@
+{
+  "service-page": {
+    "IntroSection": {
+      "tag": "Service12s123123123",
+      "paragraph": "We transform Fashion businesses by solving upstream challenges to unlock new growth opportunities.",
+      "ListService": [
+        {
+          "name": "Design & Develop & Direct",
+          "Service": [
+            {
+              "name": "Fashion Design & Prototype Development"
+            },
+            {
+              "name": "Costume Design"
+            },
+            {
+              "name": "Sample Development"
+            },
+            {
+              "name": "Art Direction & Project Management"
+            }
+          ]
+        },
+        {
+          "name": "Digital",
+          "Service": [
+            {
+              "name": "Website & E-commerce Development"
+            },
+            {
+              "name": "Photo, Video, 2D, 3D & Motion"
+            }
+          ]
+        },
+        {
+          "name": "Production",
+          "Service": [
+            {
+              "name": "Mass Production"
+            },
+            {
+              "name": "Production Management"
+            },
+            {
+              "name": "Inventory Management"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "sustain-page": {
+    "IntroSection": {
+      "tag": "Sustainability",
+      "title": "Sustainability in every attemps",
+      "paragraph": "Sustainable is hard, especially for those who not have deep pocket. At 20Studio, we understand the concern toward sustainability of our customer and strive to make it accessible without compromising on quality or style. We believe that sustainability shouldn't be a luxury, but a standard that everyone can afford."
+    },
+    "AdvantageSection": {
+      "tag": "Our solution for sustainability",
+      "paragraph": "To be sustainable, we are committed to offering eco-friendly solutions that align with your budget and your values, in creative ways than spending money.",
+      "advantage": [
+        {
+          "title": "he",
+          "paragraph": "he"
+        },
+        {
+          "title": "e1",
+          "paragraph": "e1"
+        }
+      ]
+    },
+    "meta": {
+      "relation": []
+    }
+  },
+  "about-page": {
+    "IntroSection": {
+      "paragraph": "20Studio is a fashion creative agency providing fashion business solutions, including Creative develop, Fashion management, Web develop and Digital design.",
+      "tag": "Our mission",
+      "industries_companies": {
+        "bus1": "JobA",
+        "bus2": "JobB"
+      },
+      "images": [
+        {
+          "name": "ser1.jpg",
+          "alternativeText": null,
+          "caption": null,
+          "width": 1300,
+          "height": 1620,
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_ser1.jpg",
+              "hash": "thumbnail_ser1_7ff9ced4bb",
+              "ext": ".jpg",
+              "mime": "image/jpeg",
+              "path": null,
+              "width": 125,
+              "height": 156,
+              "size": 4.75,
+              "sizeInBytes": 4751,
+              "url": "/uploads/thumbnail_ser1_7ff9ced4bb.jpg"
+            },
+            "small": {
+              "name": "small_ser1.jpg",
+              "hash": "small_ser1_7ff9ced4bb",
+              "ext": ".jpg",
+              "mime": "image/jpeg",
+              "path": null,
+              "width": 401,
+              "height": 500,
+              "size": 35.51,
+              "sizeInBytes": 35511,
+              "url": "/uploads/small_ser1_7ff9ced4bb.jpg"
+            },
+            "medium": {
+              "name": "medium_ser1.jpg",
+              "hash": "medium_ser1_7ff9ced4bb",
+              "ext": ".jpg",
+              "mime": "image/jpeg",
+              "path": null,
+              "width": 602,
+              "height": 750,
+              "size": 73.37,
+              "sizeInBytes": 73372,
+              "url": "/uploads/medium_ser1_7ff9ced4bb.jpg"
+            },
+            "large": {
+              "name": "large_ser1.jpg",
+              "hash": "large_ser1_7ff9ced4bb",
+              "ext": ".jpg",
+              "mime": "image/jpeg",
+              "path": null,
+              "width": 802,
+              "height": 1000,
+              "size": 123.23,
+              "sizeInBytes": 123230,
+              "url": "/uploads/large_ser1_7ff9ced4bb.jpg"
+            }
+          },
+          "hash": "ser1_7ff9ced4bb",
+          "ext": ".jpg",
+          "mime": "image/jpeg",
+          "size": 286.37,
+          "url": "/uploads/ser1_7ff9ced4bb.jpg",
+          "previewUrl": null,
+          "provider": "local",
+          "provider_metadata": null
+        }
+      ]
+    },
+    "AdvantageSection": {
+      "tag": "Our procedure",
+      "paragraph": "We believe that all good things are achieved by those who are willing to put in passion, courage and craftsmanship.",
+      "advantage": []
+    },
+    "MindedSection": {
+      "tag": "How we work",
+      "title": "A Fashion Agency",
+      "paragraph": "We’ve assembled a bespoke team of designers, innovators, manufactures and suppliers to work with\n                    teams across a client’s organization to help them find new sources of growth, whether that’s\n                    repositioning for new target audiences, innovating to create new products and services, improving\n                    the core product or removing the barriers to growth that stand in way of long-term success. Partnering with clients on their journey to develop fashion brands, we assist in creating and\n                    producing collections as well as supporting brand image management, business, and production.",
+      "qoute": "“With our market expertise and technology application, we can help clients turn their designs into\n                reality”"
+    },
+    "UsSection": {
+      "tag": "The 20Studio",
+      "title": "Design, Technology and Experimenttation",
+      "paragraph": "We are a team* of like-minded design enthusiasts and tech aficionados that explore the digital frontier with grit and dedication. Intrigued by beauty, fascinated by technology and fuelled with an everlasting devotion to digital craftsmanship and meaningful aesthetics.",
+      "qoute": "*We believe in a fluid team approach that allows us to bring together the best designers, developers and agencies in the world in order to serve the needs of today’s clients."
+    },
+    "HeroSection": {
+      "title": "caigiaaa",
+      "paragraph": null,
+      "info_companies": {
+        "Contact": {
+          "phone": "969168629",
+          "mail": "20studio.contact@gmail.com"
+        },
+        "Social": {
+          "facebook": "facebook",
+          "instagram": "instags"
+        },
+        "Location": {
+          "ward": "Ward 4, Tan Binh District",
+          "city": "Ho Chi Minh City, Viet Nam",
+          "street": "340D Hoang Van Thu Street",
+          "link": "https://maps.app.goo.gl/RyKGjCtV1PeY2CP67"
+        }
+      },
+      "navbars": {
+        "HomePage": {
+          "slug": "/",
+          "name": "home",
+          "label_vi": "Trang chu",
+          "label_en": "Home"
+        },
+        "AboutPage": {
+          "slug": "/about",
+          "name": "about",
+          "label_vi": "Ve chung toi",
+          "label_en": "About us"
+        },
+        "ContactPage": {
+          "slug": "/contact",
+          "name": "contact",
+          "label_vi": "Lien he",
+          "label_en": "Contact"
+        },
+        "ServicePage": {
+          "slug": "/services",
+          "name": "services",
+          "label_vi": "Dich vu",
+          "label_en": "Services"
+        }
+      },
+      "ButtonAction": null
+    },
+    "meta": {
+      "relation": [
+        "industries_companies",
+        "info_companies",
+        "navbars"
+      ]
+    }
+  },
+  "home-page": {
+    "HeroSection": {
+      "title": "s",
+      "paragraph": null,
+      "info_companies": [],
+      "main_navbars": [],
+      "ButtonAction": null
+    },
+    "ListProject": null,
+    "FAQSection": null,
+    "LetContact": null
+  },
+  "project-page": {
+    "Common": [
+      {
+        "slug": "uwanted",
+        "brand": "Unwanted",
+        "paragraph": null,
+        "job_description": "Sample management",
+        "type": "project",
+        "thumbnail": {
+          "name": "unwanted-project--20studio.webp",
+          "alternativeText": null,
+          "caption": null,
+          "width": 1512,
+          "height": 2031,
+          "formats": {
+            "medium": {
+              "name": "medium_unwanted-project--20studio.webp",
+              "hash": "medium_unwanted_project_20studio_f7fdb2d284",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 558,
+              "height": 750,
+              "size": 14.18,
+              "sizeInBytes": 14182,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976443/medium_unwanted_project_20studio_f7fdb2d284.webp",
+              "provider_metadata": {
+                "public_id": "medium_unwanted_project_20studio_f7fdb2d284",
+                "resource_type": "image"
+              }
+            },
+            "large": {
+              "name": "large_unwanted-project--20studio.webp",
+              "hash": "large_unwanted_project_20studio_f7fdb2d284",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 744,
+              "height": 1000,
+              "size": 21.27,
+              "sizeInBytes": 21270,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976443/large_unwanted_project_20studio_f7fdb2d284.webp",
+              "provider_metadata": {
+                "public_id": "large_unwanted_project_20studio_f7fdb2d284",
+                "resource_type": "image"
+              }
+            },
+            "small": {
+              "name": "small_unwanted-project--20studio.webp",
+              "hash": "small_unwanted_project_20studio_f7fdb2d284",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 372,
+              "height": 500,
+              "size": 8.33,
+              "sizeInBytes": 8330,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976443/small_unwanted_project_20studio_f7fdb2d284.webp",
+              "provider_metadata": {
+                "public_id": "small_unwanted_project_20studio_f7fdb2d284",
+                "resource_type": "image"
+              }
+            },
+            "thumbnail": {
+              "name": "thumbnail_unwanted-project--20studio.webp",
+              "hash": "thumbnail_unwanted_project_20studio_f7fdb2d284",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 116,
+              "height": 156,
+              "size": 1.73,
+              "sizeInBytes": 1728,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976444/thumbnail_unwanted_project_20studio_f7fdb2d284.webp",
+              "provider_metadata": {
+                "public_id": "thumbnail_unwanted_project_20studio_f7fdb2d284",
+                "resource_type": "image"
+              }
+            }
+          },
+          "hash": "unwanted_project_20studio_f7fdb2d284",
+          "ext": ".webp",
+          "mime": "image/webp",
+          "size": 63.95,
+          "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976443/unwanted_project_20studio_f7fdb2d284.webp",
+          "previewUrl": null,
+          "provider": "cloudinary",
+          "provider_metadata": {
+            "public_id": "unwanted_project_20studio_f7fdb2d284",
+            "resource_type": "image"
+          }
+        },
+        "background": {
+          "name": "unwanted-project--20studio.webp",
+          "alternativeText": null,
+          "caption": null,
+          "width": 1512,
+          "height": 2031,
+          "formats": {
+            "medium": {
+              "name": "medium_unwanted-project--20studio.webp",
+              "hash": "medium_unwanted_project_20studio_f7fdb2d284",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 558,
+              "height": 750,
+              "size": 14.18,
+              "sizeInBytes": 14182,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976443/medium_unwanted_project_20studio_f7fdb2d284.webp",
+              "provider_metadata": {
+                "public_id": "medium_unwanted_project_20studio_f7fdb2d284",
+                "resource_type": "image"
+              }
+            },
+            "large": {
+              "name": "large_unwanted-project--20studio.webp",
+              "hash": "large_unwanted_project_20studio_f7fdb2d284",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 744,
+              "height": 1000,
+              "size": 21.27,
+              "sizeInBytes": 21270,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976443/large_unwanted_project_20studio_f7fdb2d284.webp",
+              "provider_metadata": {
+                "public_id": "large_unwanted_project_20studio_f7fdb2d284",
+                "resource_type": "image"
+              }
+            },
+            "small": {
+              "name": "small_unwanted-project--20studio.webp",
+              "hash": "small_unwanted_project_20studio_f7fdb2d284",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 372,
+              "height": 500,
+              "size": 8.33,
+              "sizeInBytes": 8330,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976443/small_unwanted_project_20studio_f7fdb2d284.webp",
+              "provider_metadata": {
+                "public_id": "small_unwanted_project_20studio_f7fdb2d284",
+                "resource_type": "image"
+              }
+            },
+            "thumbnail": {
+              "name": "thumbnail_unwanted-project--20studio.webp",
+              "hash": "thumbnail_unwanted_project_20studio_f7fdb2d284",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 116,
+              "height": 156,
+              "size": 1.73,
+              "sizeInBytes": 1728,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976444/thumbnail_unwanted_project_20studio_f7fdb2d284.webp",
+              "provider_metadata": {
+                "public_id": "thumbnail_unwanted_project_20studio_f7fdb2d284",
+                "resource_type": "image"
+              }
+            }
+          },
+          "hash": "unwanted_project_20studio_f7fdb2d284",
+          "ext": ".webp",
+          "mime": "image/webp",
+          "size": 63.95,
+          "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976443/unwanted_project_20studio_f7fdb2d284.webp",
+          "previewUrl": null,
+          "provider": "cloudinary",
+          "provider_metadata": {
+            "public_id": "unwanted_project_20studio_f7fdb2d284",
+            "resource_type": "image"
+          }
+        }
+      },
+      {
+        "slug": "net-collection",
+        "brand": "Nét",
+        "paragraph": null,
+        "job_description": "Sample management",
+        "type": "collection",
+        "thumbnail": {
+          "name": "net-collection--20studio.webp",
+          "alternativeText": null,
+          "caption": null,
+          "width": 1512,
+          "height": 2031,
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_net-collection--20studio.webp",
+              "hash": "thumbnail_net_collection_20studio_96d55a780c",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 116,
+              "height": 156,
+              "size": 3.87,
+              "sizeInBytes": 3868,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976489/thumbnail_net_collection_20studio_96d55a780c.webp",
+              "provider_metadata": {
+                "public_id": "thumbnail_net_collection_20studio_96d55a780c",
+                "resource_type": "image"
+              }
+            },
+            "small": {
+              "name": "small_net-collection--20studio.webp",
+              "hash": "small_net_collection_20studio_96d55a780c",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 372,
+              "height": 500,
+              "size": 21.73,
+              "sizeInBytes": 21728,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976490/small_net_collection_20studio_96d55a780c.webp",
+              "provider_metadata": {
+                "public_id": "small_net_collection_20studio_96d55a780c",
+                "resource_type": "image"
+              }
+            },
+            "medium": {
+              "name": "medium_net-collection--20studio.webp",
+              "hash": "medium_net_collection_20studio_96d55a780c",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 558,
+              "height": 750,
+              "size": 38.12,
+              "sizeInBytes": 38120,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976494/medium_net_collection_20studio_96d55a780c.webp",
+              "provider_metadata": {
+                "public_id": "medium_net_collection_20studio_96d55a780c",
+                "resource_type": "image"
+              }
+            },
+            "large": {
+              "name": "large_net-collection--20studio.webp",
+              "hash": "large_net_collection_20studio_96d55a780c",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 744,
+              "height": 1000,
+              "size": 57.71,
+              "sizeInBytes": 57708,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976495/large_net_collection_20studio_96d55a780c.webp",
+              "provider_metadata": {
+                "public_id": "large_net_collection_20studio_96d55a780c",
+                "resource_type": "image"
+              }
+            }
+          },
+          "hash": "net_collection_20studio_96d55a780c",
+          "ext": ".webp",
+          "mime": "image/webp",
+          "size": 161.79,
+          "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976492/net_collection_20studio_96d55a780c.webp",
+          "previewUrl": null,
+          "provider": "cloudinary",
+          "provider_metadata": {
+            "public_id": "net_collection_20studio_96d55a780c",
+            "resource_type": "image"
+          }
+        },
+        "background": {
+          "name": "net-collection--20studio.webp",
+          "alternativeText": null,
+          "caption": null,
+          "width": 1512,
+          "height": 2031,
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_net-collection--20studio.webp",
+              "hash": "thumbnail_net_collection_20studio_96d55a780c",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 116,
+              "height": 156,
+              "size": 3.87,
+              "sizeInBytes": 3868,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976489/thumbnail_net_collection_20studio_96d55a780c.webp",
+              "provider_metadata": {
+                "public_id": "thumbnail_net_collection_20studio_96d55a780c",
+                "resource_type": "image"
+              }
+            },
+            "small": {
+              "name": "small_net-collection--20studio.webp",
+              "hash": "small_net_collection_20studio_96d55a780c",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 372,
+              "height": 500,
+              "size": 21.73,
+              "sizeInBytes": 21728,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976490/small_net_collection_20studio_96d55a780c.webp",
+              "provider_metadata": {
+                "public_id": "small_net_collection_20studio_96d55a780c",
+                "resource_type": "image"
+              }
+            },
+            "medium": {
+              "name": "medium_net-collection--20studio.webp",
+              "hash": "medium_net_collection_20studio_96d55a780c",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 558,
+              "height": 750,
+              "size": 38.12,
+              "sizeInBytes": 38120,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976494/medium_net_collection_20studio_96d55a780c.webp",
+              "provider_metadata": {
+                "public_id": "medium_net_collection_20studio_96d55a780c",
+                "resource_type": "image"
+              }
+            },
+            "large": {
+              "name": "large_net-collection--20studio.webp",
+              "hash": "large_net_collection_20studio_96d55a780c",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 744,
+              "height": 1000,
+              "size": 57.71,
+              "sizeInBytes": 57708,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976495/large_net_collection_20studio_96d55a780c.webp",
+              "provider_metadata": {
+                "public_id": "large_net_collection_20studio_96d55a780c",
+                "resource_type": "image"
+              }
+            }
+          },
+          "hash": "net_collection_20studio_96d55a780c",
+          "ext": ".webp",
+          "mime": "image/webp",
+          "size": 161.79,
+          "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976492/net_collection_20studio_96d55a780c.webp",
+          "previewUrl": null,
+          "provider": "cloudinary",
+          "provider_metadata": {
+            "public_id": "net_collection_20studio_96d55a780c",
+            "resource_type": "image"
+          }
+        }
+      },
+      {
+        "slug": "lungtung-collection",
+        "brand": "Lung Tung",
+        "paragraph": null,
+        "job_description": "Production management",
+        "type": "collection 2",
+        "thumbnail": {
+          "name": "lung-tung-collection-2--20studio.webp",
+          "alternativeText": null,
+          "caption": null,
+          "width": 1512,
+          "height": 2031,
+          "formats": {
+            "medium": {
+              "name": "medium_lung-tung-collection-2--20studio.webp",
+              "hash": "medium_lung_tung_collection_2_20studio_0e422fdded",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 558,
+              "height": 750,
+              "size": 6.99,
+              "sizeInBytes": 6988,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976535/medium_lung_tung_collection_2_20studio_0e422fdded.webp",
+              "provider_metadata": {
+                "public_id": "medium_lung_tung_collection_2_20studio_0e422fdded",
+                "resource_type": "image"
+              }
+            },
+            "large": {
+              "name": "large_lung-tung-collection-2--20studio.webp",
+              "hash": "large_lung_tung_collection_2_20studio_0e422fdded",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 744,
+              "height": 1000,
+              "size": 10.71,
+              "sizeInBytes": 10714,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976535/large_lung_tung_collection_2_20studio_0e422fdded.webp",
+              "provider_metadata": {
+                "public_id": "large_lung_tung_collection_2_20studio_0e422fdded",
+                "resource_type": "image"
+              }
+            },
+            "thumbnail": {
+              "name": "thumbnail_lung-tung-collection-2--20studio.webp",
+              "hash": "thumbnail_lung_tung_collection_2_20studio_0e422fdded",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 116,
+              "height": 156,
+              "size": 0.75,
+              "sizeInBytes": 752,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976535/thumbnail_lung_tung_collection_2_20studio_0e422fdded.webp",
+              "provider_metadata": {
+                "public_id": "thumbnail_lung_tung_collection_2_20studio_0e422fdded",
+                "resource_type": "image"
+              }
+            },
+            "small": {
+              "name": "small_lung-tung-collection-2--20studio.webp",
+              "hash": "small_lung_tung_collection_2_20studio_0e422fdded",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 372,
+              "height": 500,
+              "size": 4.03,
+              "sizeInBytes": 4032,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976537/small_lung_tung_collection_2_20studio_0e422fdded.webp",
+              "provider_metadata": {
+                "public_id": "small_lung_tung_collection_2_20studio_0e422fdded",
+                "resource_type": "image"
+              }
+            }
+          },
+          "hash": "lung_tung_collection_2_20studio_0e422fdded",
+          "ext": ".webp",
+          "mime": "image/webp",
+          "size": 91.99,
+          "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976536/lung_tung_collection_2_20studio_0e422fdded.webp",
+          "previewUrl": null,
+          "provider": "cloudinary",
+          "provider_metadata": {
+            "public_id": "lung_tung_collection_2_20studio_0e422fdded",
+            "resource_type": "image"
+          }
+        },
+        "background": {
+          "name": "lung-tung-collection-2--20studio.webp",
+          "alternativeText": null,
+          "caption": null,
+          "width": 1512,
+          "height": 2031,
+          "formats": {
+            "medium": {
+              "name": "medium_lung-tung-collection-2--20studio.webp",
+              "hash": "medium_lung_tung_collection_2_20studio_0e422fdded",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 558,
+              "height": 750,
+              "size": 6.99,
+              "sizeInBytes": 6988,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976535/medium_lung_tung_collection_2_20studio_0e422fdded.webp",
+              "provider_metadata": {
+                "public_id": "medium_lung_tung_collection_2_20studio_0e422fdded",
+                "resource_type": "image"
+              }
+            },
+            "large": {
+              "name": "large_lung-tung-collection-2--20studio.webp",
+              "hash": "large_lung_tung_collection_2_20studio_0e422fdded",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 744,
+              "height": 1000,
+              "size": 10.71,
+              "sizeInBytes": 10714,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976535/large_lung_tung_collection_2_20studio_0e422fdded.webp",
+              "provider_metadata": {
+                "public_id": "large_lung_tung_collection_2_20studio_0e422fdded",
+                "resource_type": "image"
+              }
+            },
+            "thumbnail": {
+              "name": "thumbnail_lung-tung-collection-2--20studio.webp",
+              "hash": "thumbnail_lung_tung_collection_2_20studio_0e422fdded",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 116,
+              "height": 156,
+              "size": 0.75,
+              "sizeInBytes": 752,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976535/thumbnail_lung_tung_collection_2_20studio_0e422fdded.webp",
+              "provider_metadata": {
+                "public_id": "thumbnail_lung_tung_collection_2_20studio_0e422fdded",
+                "resource_type": "image"
+              }
+            },
+            "small": {
+              "name": "small_lung-tung-collection-2--20studio.webp",
+              "hash": "small_lung_tung_collection_2_20studio_0e422fdded",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 372,
+              "height": 500,
+              "size": 4.03,
+              "sizeInBytes": 4032,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976537/small_lung_tung_collection_2_20studio_0e422fdded.webp",
+              "provider_metadata": {
+                "public_id": "small_lung_tung_collection_2_20studio_0e422fdded",
+                "resource_type": "image"
+              }
+            }
+          },
+          "hash": "lung_tung_collection_2_20studio_0e422fdded",
+          "ext": ".webp",
+          "mime": "image/webp",
+          "size": 91.99,
+          "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976536/lung_tung_collection_2_20studio_0e422fdded.webp",
+          "previewUrl": null,
+          "provider": "cloudinary",
+          "provider_metadata": {
+            "public_id": "lung_tung_collection_2_20studio_0e422fdded",
+            "resource_type": "image"
+          }
+        }
+      },
+      {
+        "slug": "20studio-website",
+        "brand": "20Studio",
+        "paragraph": null,
+        "job_description": "Web development",
+        "type": "website",
+        "thumbnail": {
+          "name": "20studio-website--20studio.webp",
+          "alternativeText": null,
+          "caption": null,
+          "width": 1512,
+          "height": 2031,
+          "formats": {
+            "large": {
+              "name": "large_20studio-website--20studio.webp",
+              "hash": "large_20studio_website_20studio_8d1e79cb76",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 744,
+              "height": 1000,
+              "size": 26.96,
+              "sizeInBytes": 26964,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976573/large_20studio_website_20studio_8d1e79cb76.webp",
+              "provider_metadata": {
+                "public_id": "large_20studio_website_20studio_8d1e79cb76",
+                "resource_type": "image"
+              }
+            },
+            "medium": {
+              "name": "medium_20studio-website--20studio.webp",
+              "hash": "medium_20studio_website_20studio_8d1e79cb76",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 558,
+              "height": 750,
+              "size": 18.25,
+              "sizeInBytes": 18252,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976574/medium_20studio_website_20studio_8d1e79cb76.webp",
+              "provider_metadata": {
+                "public_id": "medium_20studio_website_20studio_8d1e79cb76",
+                "resource_type": "image"
+              }
+            },
+            "thumbnail": {
+              "name": "thumbnail_20studio-website--20studio.webp",
+              "hash": "thumbnail_20studio_website_20studio_8d1e79cb76",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 116,
+              "height": 156,
+              "size": 1.75,
+              "sizeInBytes": 1748,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976573/thumbnail_20studio_website_20studio_8d1e79cb76.webp",
+              "provider_metadata": {
+                "public_id": "thumbnail_20studio_website_20studio_8d1e79cb76",
+                "resource_type": "image"
+              }
+            },
+            "small": {
+              "name": "small_20studio-website--20studio.webp",
+              "hash": "small_20studio_website_20studio_8d1e79cb76",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 372,
+              "height": 500,
+              "size": 10.09,
+              "sizeInBytes": 10094,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976575/small_20studio_website_20studio_8d1e79cb76.webp",
+              "provider_metadata": {
+                "public_id": "small_20studio_website_20studio_8d1e79cb76",
+                "resource_type": "image"
+              }
+            }
+          },
+          "hash": "20studio_website_20studio_8d1e79cb76",
+          "ext": ".webp",
+          "mime": "image/webp",
+          "size": 73.41,
+          "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976574/20studio_website_20studio_8d1e79cb76.webp",
+          "previewUrl": null,
+          "provider": "cloudinary",
+          "provider_metadata": {
+            "public_id": "20studio_website_20studio_8d1e79cb76",
+            "resource_type": "image"
+          }
+        },
+        "background": {
+          "name": "20studio-website--20studio.webp",
+          "alternativeText": null,
+          "caption": null,
+          "width": 1512,
+          "height": 2031,
+          "formats": {
+            "large": {
+              "name": "large_20studio-website--20studio.webp",
+              "hash": "large_20studio_website_20studio_8d1e79cb76",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 744,
+              "height": 1000,
+              "size": 26.96,
+              "sizeInBytes": 26964,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976573/large_20studio_website_20studio_8d1e79cb76.webp",
+              "provider_metadata": {
+                "public_id": "large_20studio_website_20studio_8d1e79cb76",
+                "resource_type": "image"
+              }
+            },
+            "medium": {
+              "name": "medium_20studio-website--20studio.webp",
+              "hash": "medium_20studio_website_20studio_8d1e79cb76",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 558,
+              "height": 750,
+              "size": 18.25,
+              "sizeInBytes": 18252,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976574/medium_20studio_website_20studio_8d1e79cb76.webp",
+              "provider_metadata": {
+                "public_id": "medium_20studio_website_20studio_8d1e79cb76",
+                "resource_type": "image"
+              }
+            },
+            "thumbnail": {
+              "name": "thumbnail_20studio-website--20studio.webp",
+              "hash": "thumbnail_20studio_website_20studio_8d1e79cb76",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 116,
+              "height": 156,
+              "size": 1.75,
+              "sizeInBytes": 1748,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976573/thumbnail_20studio_website_20studio_8d1e79cb76.webp",
+              "provider_metadata": {
+                "public_id": "thumbnail_20studio_website_20studio_8d1e79cb76",
+                "resource_type": "image"
+              }
+            },
+            "small": {
+              "name": "small_20studio-website--20studio.webp",
+              "hash": "small_20studio_website_20studio_8d1e79cb76",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "path": null,
+              "width": 372,
+              "height": 500,
+              "size": 10.09,
+              "sizeInBytes": 10094,
+              "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976575/small_20studio_website_20studio_8d1e79cb76.webp",
+              "provider_metadata": {
+                "public_id": "small_20studio_website_20studio_8d1e79cb76",
+                "resource_type": "image"
+              }
+            }
+          },
+          "hash": "20studio_website_20studio_8d1e79cb76",
+          "ext": ".webp",
+          "mime": "image/webp",
+          "size": 73.41,
+          "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746976574/20studio_website_20studio_8d1e79cb76.webp",
+          "previewUrl": null,
+          "provider": "cloudinary",
+          "provider_metadata": {
+            "public_id": "20studio_website_20studio_8d1e79cb76",
+            "resource_type": "image"
+          }
+        }
+      }
+    ],
+    "meta": {
+      "relation": []
+    }
+  },
+  "contact-page": {
+    "intro": "Ready to take off? Message, tweet, or text us, and we will get back to you as soon as possible.",
+    "titleSlide": "Get in touch · 联系 · Liên lạc · Связаться · Contactum facere · Prendre contact · ",
+    "info_companies": {
+      "Contact": {
+        "phone": "969168629",
+        "mail": "20studio.contact@gmail.com"
+      },
+      "Social": {
+        "facebook": "facebook",
+        "instagram": "instags"
+      },
+      "Location": {
+        "ward": "Ward 4, Tan Binh District",
+        "city": "Ho Chi Minh City, Viet Nam",
+        "street": "340D Hoang Van Thu Street",
+        "link": "https://maps.app.goo.gl/RyKGjCtV1PeY2CP67"
+      }
+    },
+    "ButtonAction": [
+      {
+        "name": "View map",
+        "slug": "/"
+      }
+    ],
+    "images": [
+      {
+        "name": "banner.webp",
+        "alternativeText": null,
+        "caption": null,
+        "width": 1512,
+        "height": 2038,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_banner.webp",
+            "hash": "thumbnail_banner_ab945f124d",
+            "ext": ".webp",
+            "mime": "image/webp",
+            "path": null,
+            "width": 116,
+            "height": 156,
+            "size": 4.23,
+            "sizeInBytes": 4230,
+            "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746975889/thumbnail_banner_ab945f124d.webp",
+            "provider_metadata": {
+              "public_id": "thumbnail_banner_ab945f124d",
+              "resource_type": "image"
+            }
+          },
+          "medium": {
+            "name": "medium_banner.webp",
+            "hash": "medium_banner_ab945f124d",
+            "ext": ".webp",
+            "mime": "image/webp",
+            "path": null,
+            "width": 556,
+            "height": 750,
+            "size": 50.94,
+            "sizeInBytes": 50938,
+            "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746975890/medium_banner_ab945f124d.webp",
+            "provider_metadata": {
+              "public_id": "medium_banner_ab945f124d",
+              "resource_type": "image"
+            }
+          },
+          "large": {
+            "name": "large_banner.webp",
+            "hash": "large_banner_ab945f124d",
+            "ext": ".webp",
+            "mime": "image/webp",
+            "path": null,
+            "width": 742,
+            "height": 1000,
+            "size": 77.83,
+            "sizeInBytes": 77826,
+            "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746975890/large_banner_ab945f124d.webp",
+            "provider_metadata": {
+              "public_id": "large_banner_ab945f124d",
+              "resource_type": "image"
+            }
+          },
+          "small": {
+            "name": "small_banner.webp",
+            "hash": "small_banner_ab945f124d",
+            "ext": ".webp",
+            "mime": "image/webp",
+            "path": null,
+            "width": 371,
+            "height": 500,
+            "size": 28.38,
+            "sizeInBytes": 28380,
+            "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746975890/small_banner_ab945f124d.webp",
+            "provider_metadata": {
+              "public_id": "small_banner_ab945f124d",
+              "resource_type": "image"
+            }
+          }
+        },
+        "hash": "banner_ab945f124d",
+        "ext": ".webp",
+        "mime": "image/webp",
+        "size": 231.84,
+        "url": "https://res.cloudinary.com/dqcyafqs6/image/upload/v1746975890/banner_ab945f124d.webp",
+        "previewUrl": null,
+        "provider": "cloudinary",
+        "provider_metadata": {
+          "public_id": "banner_ab945f124d",
+          "resource_type": "image"
+        }
+      }
+    ],
+    "meta": {
+      "relation": [
+        "info_companies"
+      ]
+    }
+  },
+  "data-global": {},
+  "info-company": {
+    "Contact": {
+      "phone": "969168629",
+      "mail": "20studio.contact@gmail.com"
+    },
+    "Social": {
+      "facebook": "facebook",
+      "instagram": "instags"
+    },
+    "Location": {
+      "ward": "Ward 4, Tan Binh District",
+      "city": "Ho Chi Minh City, Viet Nam",
+      "street": "340D Hoang Van Thu Street",
+      "link": "https://maps.app.goo.gl/RyKGjCtV1PeY2CP67"
+    }
+  }
+}

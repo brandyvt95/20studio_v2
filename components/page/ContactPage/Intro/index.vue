@@ -7,42 +7,40 @@
 
             <SlideLoop>
 
-                Get in touch · 联系 · Liên lạc · Связаться · Contactum
-                facere · Prendre contact · Get in touch · 联系 · Liên lạc · 연락하다 · Prendre contact
-                · Связаться · اتصل
+                {{ content.titleSlide }}
 
             </SlideLoop>
 
 
             <div :class="s.left">
                 <TypoParagraph font='BS-Regular' tag="p" size="psmall" :class="s.body">
-                    {{ content.des }}
+                    {{ content.intro }}
 
                 </TypoParagraph>
                 <ul :class="s.contact">
                     <li :class="s.contact_item">
                         <ButtonBasic to='/' :class="s.link">
-                            {{ content.mail }}
+                            {{ content.info_companies.Contact.mail }}
                         </ButtonBasic>
 
                     </li>
                     <li :class="s.contact_item">
                         <ButtonBasic to='/' :class="s.link">
-                            {{ content.phone }}
+                            {{ content.info_companies.Contact.phone }}
                         </ButtonBasic>
 
                     </li>
                 </ul>
             </div>
             <div :class="s.right">
-                <ButtonBasic to='/' :class="s.address">
-                    {{ content.location[0] }}<br />
-                    {{ content.location[1] }}<br />
-                    {{ content.location[2] }}
-                </ButtonBasic>
+                <TypoParagraph tag="p" :class="s.address">
+                    {{ content.info_companies.Location.street }},<br />
+                    {{ content.info_companies.Location.ward }},<br />
+                    {{ content.info_companies.Location.city }}.
+                </TypoParagraph>
 
-                <ButtonBasic to='/' :class="s.link">
-                    {{ content.more }}
+                <ButtonBasic :to='content.info_companies.Location.link' :class="s.link">
+                    {{ content.ButtonAction.name }}
                 </ButtonBasic>
 
 
@@ -56,7 +54,8 @@ import TypoHeading from '~/components/common/Typo/TypoHeading.vue';
 import TypoParagraph from '~/components/common/Typo/TypoParagraph.vue';
 import ButtonBasic from '~/components/animation/Button/Basic/index.vue'
 import s from './style.module.css'
-defineProps({
+const data = defineProps({
     content: Object
 })
+console.log(data.content)
 </script>

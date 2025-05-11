@@ -1,0 +1,1 @@
+export const NEXT_CMS_API_LOCAL = process.env.NEXT_CMS_API_LOCAL 

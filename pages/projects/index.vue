@@ -10,11 +10,11 @@ useHead({
 definePageMeta({
   pageTransition: defaultPageTransition
 })
-
+const jsonData = useState('jsonData')
 </script>
 
 <template>
   <WrapperPage>
-    <PageProjectPage :content="projects_page" />
+    <PageProjectPage   v-if="jsonData && jsonData['project-page']" :content="jsonData['project-page']" />
   </WrapperPage>
 </template>

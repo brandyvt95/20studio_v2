@@ -1,12 +1,11 @@
 <script setup>
 import Intro from './Intro/index.vue'
 import s from './style.module.css'
-const props = defineProps({
+defineProps({
   content: Object
 })
-
 </script>
 
 <template>
-  <Intro :content="props.content.intro" />
+  <Intro :content="content" />
 </template>

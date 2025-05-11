@@ -18,7 +18,7 @@ const handleTransition = (element: Element, className: string, duration: number,
         callback?.();
         element.classList.remove(className);
         clearTimeout(timer);
-    }, 4 * 1000);
+    }, 2 * 1000);
 }
 
 export const motionEnterPage = ({ el, onCompleteCallback }: IHandleMotionTransPage): void => {

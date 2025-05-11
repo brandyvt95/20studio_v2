@@ -6,14 +6,6 @@ const props = defineProps({
   content: Object
 })
 
-const data = props.content.map((item) => ({
-  slug: item.slug,
-  brand: item.brand,
-  jobDes: item.jobDes,
-  thumb: item.thumb,
-  background: item.background,
-}))
-
 import { useDevice } from '~/composables/useDevice'
 const { isMobile } = useDevice()
 const CurrentView = computed(() => isMobile.value ? ViewMobi : View)
@@ -21,6 +13,6 @@ const CurrentView = computed(() => isMobile.value ? ViewMobi : View)
 
 <template>
   <ClientOnly>
-    <component :is="CurrentView" :content="data" />
+    <component :is="CurrentView" :content="content.Common" />
   </ClientOnly>
 </template>

@@ -485,7 +485,10 @@ export const project4_page = {
 export const projects_page = [
     {
         slug:'uwanted',
-        brand:"Unwanted Project",
+        brand:{
+            name:"Unwanted",
+            type:"Project"
+        },
         jobDes:"Sample management",
         thumb:"/images/clone/services1.webp",
         background:"/images/clone/services1.webp",
@@ -536,7 +539,10 @@ export const projects_page = [
     },
     {
         slug:'net-collection',
-        brand:"Nét Collection",
+        brand:{
+            name:"Nét",
+            type:"Collection"
+        },
         jobDes:"Sample management",
         thumb:"/images/clone/services2.webp",
         background:"/images/clone/services2.webp",
@@ -585,7 +591,10 @@ export const projects_page = [
     },
     {
         slug:"lungtung-collection",
-        brand:"Lung Tung Collection 2",
+        brand:{
+            name:"LungTung",
+            type:"Collection 2"
+        },
          jobDes:"Production management",
         thumb:"/images/clone/services3.webp",
         background:"/images/clone/services3.webp",
@@ -633,7 +642,10 @@ export const projects_page = [
     },
     {
         slug:"20studio-website",
-        brand:"20 Studio Website",
+        brand:{
+            name:"20 Studio",
+            type:"Website"
+        },
         jobDes:"Web development",
         thumb:"/images/clone/services4.webp",
         background:"/images/clone/services4.webp",
