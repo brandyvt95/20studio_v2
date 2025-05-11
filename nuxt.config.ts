@@ -16,6 +16,11 @@ export default defineNuxtConfig({
     url: process.env.URL_DEV,
     gzip: true,
   },
-
+  runtimeConfig: {
+    URL_MAIN: process.env.URL_MAIN, // dùng được ở server
+    public: {
+      URL_MAIN: process.env.URL_MAIN, // dùng được ở client
+    },
+  },
   compatibilityDate: '2025-05-04',
 })
