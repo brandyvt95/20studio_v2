@@ -30,7 +30,7 @@ const data = defineProps({
             </div>
             <div :class="s.services" ref="wrapper">
                 <ButtonBasic color="clr-story" :to="`/projects/${work.slug}`" data-scopeCursor="View" :class="s.service"
-                    v-for="(work, index) in info_project[0].List" :key="index">
+                    v-for="(work, index) in info_project.List" :key="index">
                     <div :class="s.block">
                         <!--  <img :src="work.thumbnail.url" alt="" /> -->
                     </div>

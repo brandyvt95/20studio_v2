@@ -9,10 +9,10 @@ const props = defineProps({
 
 </script>
 <template>
-    <Intro :content="content.detail" />
+    <Intro :content="content" />
     <template v-if="stateUiGlobal.isActivePage">
-        <Gallery :content="content.gallery" />
-        <More :content="content.gallery" />
+        <Gallery :content="content.DetailProject.DetailSection[0]" />
+        <More :content="content.DetailProject.DetailSection" />
     </template>
 
 </template>

@@ -11,8 +11,10 @@ import { defaultPageTransition } from '../composables/hooks/transitionpage/useHa
 import WrapperPage from '~/components/wrapper/WrapperPage.vue'
 const route = useRoute()
 const slug = route.params.slug
-
-const data = projects_page.find(p => p.slug === slug) ?? (() => {
+const jsonData = useState('jsonData')
+const dataStrapi = jsonData.value.info_project.data.List
+const cleanSlug = slug.replace(/^\//, '') 
+const data = dataStrapi.find(p => p.slug === cleanSlug) ?? (() => {
   throw createError({ statusCode: 404, statusMessage: 'Project not found' })
 })()
 

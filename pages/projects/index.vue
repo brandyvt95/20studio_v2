@@ -1,6 +1,4 @@
 <script setup>
-import { projects_page } from '~/constants/content'
-
 import { defaultPageTransition } from '../composables/hooks/transitionpage/useHandleTransPage'
 import { meta } from '../constants/meta'
 useHead({
@@ -15,10 +13,7 @@ const jsonData = useState('jsonData')
 
 <template>
   <WrapperPage>
-    <PageProjectPage   
-    v-if="jsonData && jsonData.project_page.data" 
-    :content="jsonData.project_page.data" 
-   :info_project="jsonData.info_project.data"
-    />
+    <PageProjectPage v-if="jsonData" 
+      :info_project="jsonData.info_project.data" />
   </WrapperPage>
 </template>

@@ -20,13 +20,13 @@
                 <ul :class="s.contact">
                     <li :class="s.contact_item">
                         <ButtonBasic to='/' :class="s.link">
-                            {{ info_company[0].Contact.mail }}
+                            {{ info_company.Contact.mail }}
                         </ButtonBasic>
 
                     </li>
                     <li :class="s.contact_item">
                         <ButtonBasic to='/' :class="s.link">
-                            {{ info_company[0].Contact.phone }}
+                            {{ info_company.Contact.phone }}
                         </ButtonBasic>
 
                     </li>
@@ -34,12 +34,12 @@
             </div>
             <div :class="s.right">
                 <TypoParagraph tag="p" :class="s.address">
-                    {{ info_company[0].Location.street }},<br />
-                    {{ info_company[0].Location.ward }},<br />
-                    {{ info_company[0].Location.city }}.
+                    {{ info_company.Location.street }},<br />
+                    {{ info_company.Location.ward }},<br />
+                    {{ info_company.Location.city }}.
                 </TypoParagraph>
 
-                <ButtonBasic :to='info_company[0].Location.link' :class="s.link">
+                <ButtonBasic :to='info_company.Location.link' :class="s.link">
                     {{ content.ButtonAction.name }}
                 </ButtonBasic>
 

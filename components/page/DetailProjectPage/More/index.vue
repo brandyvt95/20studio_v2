@@ -1,43 +1,43 @@
-<template >
-     <section :class="s.layout_custom">
+<template>
+  <section :class="s.layout_custom">
     <div :class="s.container">
       <div :class="s.sketching">
-        <h3>Sketching</h3>
-        <p>Great works start with great ideas</p>
+        <h3>{{ content[1].title }}</h3>
+        <p>{{ content[1].paragraph }}</p>
       </div>
       <div :class="s.sketchingImg">
-        <img :src="content.img2[0]" alt="img" width="0" height="0" sizes="100vw" style="height: auto; width: 100%;" />
+        <img :src="content[1].images[0].url" alt="" />
       </div>
 
       <div :class="s.experimentation">
-        <h3>Experimentation</h3>
-        <p>Finding solutions to turn wildest idea into reality</p>
+        <h3>{{ content[2].title }}</h3>
+        <p>{{ content[2].paragraph }}</p>
       </div>
       <div :class="s.experimentationImg1">
-        <img :src="content.img2[1]" alt="img" width="0" height="0" sizes="100vw" style="height: auto; width: 100%;" />
+        <img :src="content[2].images[0].url" alt="" />
       </div>
       <div :class="s.experimentationImg2">
-        <img :src="content.img2[2]" alt="img" width="0" height="0" sizes="100vw" style="height: auto; width: 100%;" />
+        <img :src="content[2].images[1].url" alt="" />
       </div>
 
       <div :class="s.prototyping">
-        <h3>Prototyping & Craftmenship</h3>
-        <p>Craftmenship</p>
+        <h3>{{ content[3].title }}</h3>
+        <p>{{ content[3].paragraph }}</p>
+
       </div>
       <div :class="s.prototypingImg">
-        <img :src="content.img2[3]" alt="img" width="0" height="0" sizes="100vw" style="height: auto; width: 100%;" />
+        <img :src="content[3].images[0].url" alt="" />
       </div>
     </div>
 
     <div :class="s.experimentationImg3">
-      <img :src="content.img2[4]" alt="img" width="0" height="0" sizes="100vw" style="height: auto; width: 100%;" />
+      <img :src="content[2].images[2].url" alt="" />
     </div>
   </section>
 </template>
 <script setup>
-    import s from './style.module.css'
-    const props = defineProps({
+import s from './style.module.css'
+const props = defineProps({
   content: Object
 })
-
 </script>

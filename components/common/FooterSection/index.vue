@@ -5,8 +5,8 @@
         ? { content: nextItem }
         : { 
           content:jsonData.data_global.data.FooterSection,
-          info_navbar: jsonData.info_navbar.data[0].NavbarItem, 
-          info_company: jsonData.info_company.data[0] 
+          info_navbar: jsonData.info_navbar.data.NavbarItem, 
+          info_company: jsonData.info_company.data
           }" />
 
     </template>
@@ -20,7 +20,8 @@ import RedirectProject from './RedirectProject/index.vue'
 import { routesListIgnoreFooter } from '../../../constants/routerList'
 
 const jsonData = useState('jsonData')
-const projects_page = jsonData.value.info_project.data[0]
+
+const projects_page = jsonData.value.info_project.data.List
 
 const route = useRoute()
 const nextItem = computed(() => {

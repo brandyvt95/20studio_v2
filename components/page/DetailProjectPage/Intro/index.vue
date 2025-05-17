@@ -1,54 +1,44 @@
 <template>
-<section :class="s.IntroWorkPage">
-    <div :class="s.background" :style="{ backgroundImage: `url(${content.img[0]})` }"></div>
-            <div :class="s.container">
-                <div :class="s.text_1">
-                     <SlideMotion :direction="1" :rotate="7" :duration="1"  :class="s.title">
-                        <span :class="s.ii"><span :class="s.iii">{{content.name[0]}}</span></span>
-                        <span :class="s.ii"><span :class="s.iii">{{content.name[1]}}</span></span>
-
-                    </SlideMotion>
+    <section :class="s.IntroWorkPage">
+        <div :class="s.background" :style="{ backgroundImage: `url(${content.background.url})` }"></div>
+        <div :class="s.container">
+            <div :class="s.text_1">
+                <SlideMotion :direction="1" :rotate="7" :duration="1" :class="s.title">
+                    <span>{{ content.brand }}</span>
+                    <span>{{ content.type }}</span>
+                </SlideMotion>
                 <!--          <h2 :class="s.subtitle">
                         <div :class="s.text_line">
-                            <span :class="s.iii">Celebrating a Century of Cinema</span>
+                            <span>Celebrating a Century of Cinema</span>
                         </div>
                     </h2> -->
+            </div>
+            <div :class="s.text_2">
+                <p :class="s.intro">{{ content.DetailProject.intro }}</p>
+                <div :class="s.info">
+                    <span :class="s.client">{{ content.DetailProject.challenge }}</span>
+                    <ul :class="s.services">
+                        <li v-for="(role, index) in content.DetailProject?.Role" :key="index" :class="s.service">
+                            {{ role.name }}
+                        </li>
 
-                </div>
-                <div :class="s.text_2">
-                    <p :class="s.intro">{{content.des}}</p>
-                    <div :class="s.info">
-                        <span :class="s.client">{{content.challenge}}</span>
-                        <ul :class="s.services">
-                            <li :class="s.service">
-                                {{content.role[0]}}
-                            </li>
-                            <li :class="s.service">
-                            {{content.role[1]}}
-                            </li>
-                            <li :class="s.service">
-                            {{content.role[2]}}
-                            </li>
-                            <li :class="s.service">
-                            {{content.role[4]}}
-                            </li>
-                        </ul>
-                        <ul :class="s.industries">
-                            <li :class="s.industry">
-                            {{content.client}}
-                            </li>
-                        </ul>
-                        <time :class="s.date"> {{content.date}}</time>
-                    </div>
+                    </ul>
+                    <ul :class="s.industries">
+                        <li :class="s.industry">
+                            {{ content.DetailProject.client }}
+                        </li>
+                    </ul>
+                    <time :class="s.date">{{ content.DetailProject.date }} - {{ content.DetailProject.duration }}</time>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 </template>
 <script setup>
 import SlideMotion from '~/components/animation/Text/SlideMotion/index.vue';
-    import s from './style.module.css'
-    const props = defineProps({
-  content: Object
+import s from './style.module.css'
+const props = defineProps({
+    content: Object
 })
 
 

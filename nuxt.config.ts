@@ -3,7 +3,7 @@
 export default defineNuxtConfig({
   modules: ['@pinia/nuxt','@nuxtjs/sitemap','@nuxt/image'],
   plugins: [
-    '~/plugins/gsap.js'  
+    '~/plugins/gsap.js'
   ],
   devtools: {
     enabled: false,
@@ -17,9 +17,11 @@ export default defineNuxtConfig({
     gzip: true,
   },
   runtimeConfig: {
-    SECRET_KEY_CMS_APP: process.env.SECRET_KEY_CMS_APP, // dùng được ở server
+    supabaseServicesKey: process.env.NUXT_PUBLIC_SUPABASE_SERVICE_KEY, // dùng được ở server
     public: {
-      URL_MAIN: process.env.URL_MAIN, // dùng được ở client
+      URL_MAIN: process.env.URL_MAIN, 
+      supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL,
+      supabaseAnonKey: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY
     },
   },
   compatibilityDate: '2025-05-04',

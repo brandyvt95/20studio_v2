@@ -51,7 +51,7 @@ const props = defineProps({
                     </TypoParagraph>
                 </ButtonHoverLineVer2>
                 <ul :class='s.menu' data-scopeCursor="close">
-                    <li v-for="(item, index) in info_navbar?.[0].NavbarItem" :key="index" :class="s.item">
+                    <li v-for="(item, index) in info_navbar?.NavbarItem" :key="index" :class="s.item">
                         <ButtonHoverLineVer1 :to="item.slug" v-if="item.slug !== route.path">
                             <TypoParagraph tag="p" font="BS-Medium">
                                 {{ item.label }}
@@ -63,14 +63,14 @@ const props = defineProps({
                     <li :class='s.item'>
                         <ButtonBasic to="/">
                             <TypoParagraph tag="p" font="BS-Medium">
-                                {{ info_company?.[0].Contact.mail }}
+                                {{ info_company?.Contact.mail }}
                             </TypoParagraph>
                         </ButtonBasic>
                     </li>
                     <li :class='s.item'>
                         <ButtonBasic to="/">
                             <TypoParagraph tag="p" font="BS-Medium">
-                                {{ info_company?.[0].Contact.phone }}
+                                {{ info_company?.Contact.phone }}
                             </TypoParagraph>
                         </ButtonBasic>
                     </li>

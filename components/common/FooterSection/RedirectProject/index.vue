@@ -7,20 +7,19 @@
           {{ props.content.brand }}
         </TypoHeading>
         <TypoParagraph tag="p">
-          {{ props.content.jobDes }}
+          {{ props.content.type }}
         </TypoParagraph>
         <div :class="s.icon" ref="iconRef">
           <Icon />
         </div>
       </div>
       <div :class="s.thumb">
-        <img :src="props.content.thumb" alt="" />
+        <img :src="props.content.thumbnail.url" alt="" />
       </div>
       <div :class="s.background" ref="backgroundRef">
-        <img :src="props.content.thumb" alt="" />
+        <img :src="props.content.background.url" alt="" />
       </div>
     </div>
-
   </section>
 </template>
 
@@ -47,8 +46,8 @@ const backgroundRef = ref(null)
 let ctx
 onMounted(() => {
   nextTick(() => {
-    
-   if (!wrapper.value || !backgroundRef.value || !iconRef.value) return
+
+    if (!wrapper.value || !backgroundRef.value || !iconRef.value) return
 
     ctx = $gsap.context(() => {
       $gsap.fromTo(backgroundRef.value, { scale: 1, y: -200 }, {
@@ -63,7 +62,7 @@ onMounted(() => {
           markers: true,
           once: false,
           onUpdate: (self) => {
-            if(iconRef.value) iconRef.value.style.strokeDasharray = `${self.progress * 120}px, ${110 - 100 * self.progress}px`
+            if (iconRef.value) iconRef.value.style.strokeDasharray = `${self.progress * 120}px, ${110 - 100 * self.progress}px`
           },
         }
       })

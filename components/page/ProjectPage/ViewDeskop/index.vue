@@ -45,7 +45,6 @@ import MotionMask from './Slide/MotionMask.vue';
 import MotionCount from './Slide/MotionCount.vue';
 import MotionHead from './Slide/MotionHead.vue';
 const props = defineProps({
-    content: Object,
     info_project:Object
 })
 const data = formatData(props.info_project)
