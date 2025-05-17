@@ -8,18 +8,25 @@
   import s from './style.module.css'
 
   const props = defineProps({
-    content: Object
+     content: Object,
+    info_navbar:Object,
+    info_company:Object,
+    info_project:Object
   })
 
 </script>
 
 <template>
-    <HeroSection :content="props.content.heroSection"/>
+    <HeroSection 
+    :content="content.HeroSection"
+    :info_navbar="info_navbar" 
+    :info_company="info_company" 
+    />
     <template v-if="stateUiGlobal.isActivePage">
-      <Intro :content="props.content.intro"/>
-      <Advantage :content="props.content.advantage"/>
-      <Minded :content="props.content.minded"/>
-      <Us :content="props.content.us"/>
+      <Intro :content="content.IntroSection"/>
+     <Advantage :content="content.AdvantageSection"/>
+      <Minded :content="content.MindedSection"/>
+       <Us :content="content.UsSection"/>
     </template>
 
 </template>

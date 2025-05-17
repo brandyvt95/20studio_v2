@@ -3,7 +3,8 @@ import View from './ViewDeskop/index.vue'
 import ViewMobi from './ViewMobi/index.vue'
 import './style.css'
 const props = defineProps({
-  content: Object
+  content: Object,
+  info_project:Object
 })
 
 import { useDevice } from '~/composables/useDevice'
@@ -13,6 +14,6 @@ const CurrentView = computed(() => isMobile.value ? ViewMobi : View)
 
 <template>
   <ClientOnly>
-    <component :is="CurrentView" :content="content.Common" />
+    <component :is="CurrentView" :content="content.Common" :info_project="info_project[0].List"/>
   </ClientOnly>
 </template>

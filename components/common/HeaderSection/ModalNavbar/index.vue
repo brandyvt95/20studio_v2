@@ -16,15 +16,71 @@ const data = defineProps({
 const route = useRoute()
 const isModalMenuOpen = stateModalNavbar()
 const modalRef = ref(null)
-const tlRef = shallowRef(null)
-const { useModalNavbar } = useGsap()
-const { init, play, reverse } = useModalNavbar(modalRef)
+let tlContent, tlModal
+const contentRef = ref(null)
+const { $gsap } = useNuxtApp()
+const configMotion = {
 
+    duration: 1.23,
+    ease: 'power3.inOut',
+}
 onMounted(() => {
-    init()
+    tlModal = $gsap.timeline({ paused: true })
+        .fromTo(modalRef.value, {
+            clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
+        }, {
+            clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+            ...configMotion
+        })
+        .fromTo(modalRef.value.children[0], {
+            y: -500,
+            rotate: -4,
+            scale: 2,
+            filter: 'brightness(16%)',
+        }, {
+            filter: 'brightness(100%)',
+            transformOrigin: 'center center',
+            y: 0,
+            rotate: 0,
+            scale: 1,
+            ...configMotion
+        }, "<")
 })
+watch(
+    () => stateUiGlobal.isActivePage,
+    async (newVal) => {
+        if (newVal) {
+            await nextTick()
+            const el = document.getElementById('lenisWrapper')
+            contentRef.value = el
+            if (tlContent) tlContent.kill()
+            tlContent = $gsap.timeline({ paused: true })
+                .fromTo(contentRef.value, {
+                    filter: 'brightness(100%)',
+                    y: 0,
+                    rotate: 0,
+                    scale: 1
+                },
+                    {
+                        //delay: 0.1,
+                        filter: 'brightness(16%)',
+                        y: 500,
+                        rotate: 4,
+                        scale: 1.2,
+                        ...configMotion
+                    })
+        }
+    }
+)
+
 watch(isModalMenuOpen, (val) => {
-    val ? play() : reverse()
+    if (val) {
+        tlModal.play()
+        tlContent.play()
+    } else {
+       tlModal.reverse()
+            tlContent.reverse()
+    }
 })
 
 watch(() => route.path, (newPath, oldPath) => {
@@ -32,7 +88,16 @@ watch(() => route.path, (newPath, oldPath) => {
         isModalMenuOpen.value = false
     }
 })
-
+onUnmounted(() => {
+    if (tlModal) {
+        tlModal.kill()
+        tlModal = null
+    }
+    if (tlContent) {
+        tlContent.kill()
+        tlContent = null
+    }
+})
 
 </script>
 <template>
@@ -53,21 +118,22 @@ watch(() => route.path, (newPath, oldPath) => {
                             </ButtonBasic>
                         </MotionToggle>
                     </li>
-                </ul>
-                <ul :class="s.social">
-                    <li :class="s.social_link">
-                        <ButtonBasic to='/' :customClass="s.link_item">Linked</ButtonBasic>
-                    </li>
-                    <li :class="s.social_link">
-                        <ButtonBasic to='/' :customClass="s.link_item">Facebook</ButtonBasic>
-                    </li>
-                    <li :class="s.social_link">
+                    <ul :class="s.social">
+                        <li :class="s.social_link">
+                            <ButtonBasic to='/' :customClass="s.link_item">Linked</ButtonBasic>
+                        </li>
+                        <li :class="s.social_link">
+                            <ButtonBasic to='/' :customClass="s.link_item">Facebook</ButtonBasic>
+                        </li>
+                        <li :class="s.social_link">
 
-                        <ButtonBasic to='https://www.instagram.com/20studio.vn/' :customClass="s.link_item">
-                            Instagram
-                        </ButtonBasic>
-                    </li>
+                            <ButtonBasic to='https://www.instagram.com/20studio.vn/' :customClass="s.link_item">
+                                Instagram
+                            </ButtonBasic>
+                        </li>
+                    </ul>
                 </ul>
+
                 <ul :class="s.sub">
                     <li :class="s.sub_link">
                         <span :class="[s.link_item, s.is_reel]">
@@ -84,30 +150,28 @@ watch(() => route.path, (newPath, oldPath) => {
                 </div>
 
 
-                <!--    {isMobi ? <></> :
-                            <ul :class="s.images} ref={listImgHover">
-                                <li >
-                                    <Image src="/home/banner.png" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%' }} alt="logo narbar modal" />
-                                </li>
-                                <li>
-                                    <Image src="/work3/8.png" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%' }} alt="logo narbar modal" />
-                                </li>
-                                <li>
-                                    <Image src="/work1/2.png" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%' }} alt="logo narbar modal" />
-                                </li>
-                                <li>
-                                    <Image src="/about/us2.png" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%' }} alt="logo narbar modal" />
-                                </li>
-                                <li>
-                                    <Image src="/about/intro2.png" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%' }} alt="logo narbar modal" />
-                                </li>
-                                <li>
-                                    <Image src="/about/banner.webp" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%' }} alt="logo narbar modal" />
-                                </li>
+                <ul :class="s.images">
+                    <li>
+                        <img src="/images/home/banner.png"  alt="logo narbar modal" />
+                    </li>
+                  <!--   <li>
+                        <img src="/images/work3/8.png"  alt="logo narbar modal" />
+                    </li>
+                    <li>
+                        <img src="/images/work1/2.png"  alt="logo narbar modal" />
+                    </li>
+                    <li>
+                        <img src="/images/about/us2.png"  alt="logo narbar modal" />
+                    </li>
+                    <li>
+                        <img src="/images/about/intro2.png"  alt="logo narbar modal" />
+                    </li>
+                    <li>
+                        <img src="/images/about/banner.webp"  alt="logo narbar modal" />
+                    </li> -->
 
 
-                            </ul>
-                        } -->
+                </ul>
             </div>
 
         </div>

@@ -1,18 +1,16 @@
 <template>
-    <section :class="[s.section,'bgclr-white clr-dark-grey']">
+    <section :class="[s.section, 'bgclr-white clr-dark-grey']">
         <div :class="s.container">
             <TypoParagraph tag="p" font="BD-Medium" :class="s.label">
-               <StarIcon :class="s.icon"/>
+                <StarIcon :class="s.icon" />
                 <span :class="s.text">{{ content.tag }}</span>
             </TypoParagraph>
             <TypoHeading tag="h3" size="h1" font="BD-Regular" :class="s.title">
-                <span>{{ content.title[0] }}</span>
-                <span>{{ content.title[1] }}</span>
+                <span v-for="(item, index) in content.TitleSplit" :key="index">{{ item.row }}</span>
             </TypoHeading>
 
             <TypoParagraph tag="p" font="BS-Medium" :class="s.body">
-                <span>{{ content.para[0] }}</span>
-                <span>{{ content.para[1] }}</span>
+                {{ content.paragraph }}
             </TypoParagraph>
 
             <TypoParagraph tag="blockquote" size="subtitle" font="BS-Medium" :class="s.quote">

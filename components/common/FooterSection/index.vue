@@ -1,22 +1,26 @@
 <template>
   <footer>
     <template v-if="isRenderFooter">
-      <component
-      v-if="isRenderFooter"
-      :is="isShowRedirectStyle ? RedirectProject : Basic"
-      :content="nextItem"
-    />
+      <component v-if="isRenderFooter" :is="isShowRedirectStyle ? RedirectProject : Basic" v-bind="isShowRedirectStyle
+        ? { content: nextItem }
+        : { 
+          content:jsonData.data_global.data.FooterSection,
+          info_navbar: jsonData.info_navbar.data[0].NavbarItem, 
+          info_company: jsonData.info_company.data[0] 
+          }" />
+
     </template>
   </footer>
 </template>
 
 <script setup>
-import { projects_page } from '~/constants/content'
+//import { projects_page } from '~/constants/content'
 import Basic from './Basic/index.vue'
 import RedirectProject from './RedirectProject/index.vue'
-import {routesListIgnoreFooter}  from '../../../constants/routerList'
+import { routesListIgnoreFooter } from '../../../constants/routerList'
 
-
+const jsonData = useState('jsonData')
+const projects_page = jsonData.value.info_project.data[0]
 
 const route = useRoute()
 const nextItem = computed(() => {

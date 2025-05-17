@@ -20,7 +20,7 @@ const data = defineProps({
 const paths = Object.values(data.content);
 const route = useRoute();
 const iconRef = ref(null)
-
+defineExpose({iconRef})
 // Reactive state for window dimensions
 const dimensions = ref({
   distance: 0,

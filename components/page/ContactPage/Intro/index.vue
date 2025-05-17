@@ -2,7 +2,7 @@
     <section :class="s.section" data-scopeCursor="close">
         <div :class="s.container">
             <div :class="s.image">
-                <img src="/images/home/banner.png" alt="" />
+                <img :src="content.images[0].url" alt="" />
             </div>
 
             <SlideLoop>
@@ -20,13 +20,13 @@
                 <ul :class="s.contact">
                     <li :class="s.contact_item">
                         <ButtonBasic to='/' :class="s.link">
-                            {{ content.info_companies.Contact.mail }}
+                            {{ info_company[0].Contact.mail }}
                         </ButtonBasic>
 
                     </li>
                     <li :class="s.contact_item">
                         <ButtonBasic to='/' :class="s.link">
-                            {{ content.info_companies.Contact.phone }}
+                            {{ info_company[0].Contact.phone }}
                         </ButtonBasic>
 
                     </li>
@@ -34,12 +34,12 @@
             </div>
             <div :class="s.right">
                 <TypoParagraph tag="p" :class="s.address">
-                    {{ content.info_companies.Location.street }},<br />
-                    {{ content.info_companies.Location.ward }},<br />
-                    {{ content.info_companies.Location.city }}.
+                    {{ info_company[0].Location.street }},<br />
+                    {{ info_company[0].Location.ward }},<br />
+                    {{ info_company[0].Location.city }}.
                 </TypoParagraph>
 
-                <ButtonBasic :to='content.info_companies.Location.link' :class="s.link">
+                <ButtonBasic :to='info_company[0].Location.link' :class="s.link">
                     {{ content.ButtonAction.name }}
                 </ButtonBasic>
 
@@ -55,7 +55,8 @@ import TypoParagraph from '~/components/common/Typo/TypoParagraph.vue';
 import ButtonBasic from '~/components/animation/Button/Basic/index.vue'
 import s from './style.module.css'
 const data = defineProps({
-    content: Object
+    content: Object,
+    info_company:Object
 })
-console.log(data.content)
+console.log(data.info_company)
 </script>

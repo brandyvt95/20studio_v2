@@ -1,10 +1,11 @@
 //// single thi ko 's' collection thi them 's'
 
 //aboutpage
+
 /api/about-page?
-populate[HeroSection][populate]=*
+populate[HeroSection][populate][info_companies][populate]=*&populate[HeroSection][populate][navbars][populate]=*&populate[HeroSection][populate][ButtonAction][populate]=*&populate[HeroSection][populate][background][populate]=*&populate[HeroSection][populate][TitleSplit][populate]=*
 &
-populate[IntroSection][populate]=*
+populate[IntroSection][populate][industries_companies][populate]=*&populate[IntroSection][populate][images][populate]=*
 &
 populate[AdvantageSection][populate]=*
 &
@@ -28,7 +29,22 @@ populate[UsSection][populate]=*
 /api/navbars?populate=*
 
 
-
+//homepage
+http://localhost:1337/api/
+home-page?
+populate[HeroSection][populate][info_companies][populate]=*
+&
+populate[HeroSection][populate][navbars][populate]=*
+&
+populate[HeroSection][populate][background][populate]=*
+&
+populate[HeroSection][populate][ButtonAction][populate]=*
+&
+populate[ListProject][populate][list_projects][populate][List][populate]=*
+&
+populate[FAQSection][populate]=*
+&
+populate[LetContact][populate]=*
 
 
 //  const payload = { userId: '927658392', username: 'admin_20studio', rule:'bigger' };

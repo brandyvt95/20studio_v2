@@ -14,12 +14,12 @@ useHead({
 definePageMeta({
   pageTransition: defaultPageTransition
 })
-
+const jsonData = useState('jsonData')
 </script>
 
 <template>
   <WrapperPage>
-    <PageSustainPage  :content="sustainability_page.content"/>
+    <PageSustainPage v-if="jsonData && jsonData.sustain_page.data" :content="jsonData.sustain_page.data" />
   </WrapperPage>
 </template>
 

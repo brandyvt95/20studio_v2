@@ -1,25 +1,4 @@
 
-@media (max-width:601px) {
-    #button_menu {
-        opacity: 1;
-        visibility: visible;
-    }
-    #navbar_deskop {
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-@media (min-width: 601px) {
-    #button_menu {
-        opacity: 0;
-      
-    }
-    #navbar_deskop {
-        opacity: 1;
-    }
-}
-
-
 .nav {
     position: fixed;
     right: 3.4722222222vw;
@@ -33,7 +12,8 @@
     mix-blend-mode: difference;
     padding: .5rem 0;
     pointer-events: auto;
- 
+  
+
 }
 .logo {
     position: fixed;
@@ -49,6 +29,7 @@
     position: relative;
     display: flex;
     pointer-events: none;
+      overflow: hidden;
 }
 .this_icon {
     pointer-events: none;
@@ -58,9 +39,13 @@
     width: .7vw;
     height: .7vw;
     color: white;
-    opacity:0;
-    will-change: transform,opacity;
+  
+    will-change: transform;
     transform-origin: center center;
+    
+    transform: translateY(10px) rotate(180deg) scale(0);
+ 
+
     svg {
         position: absolute;
     }
@@ -69,10 +54,11 @@
 .nav_item {
     width:7vw;
     text-align: center;
-}
-.nav_item a {
-    color:var(--white);
-  
+    overflow: hidden;
+    
+    will-change: transform,opacity;
+    transform: translateY(20px) rotate(7deg);
+    opacity: 0;
 }
 
 

@@ -8,8 +8,8 @@
 </script>
 
 <template>
-    <Intro :content="props.content.intro" />
+    <Intro :content="props.content.IntroSection" />
   
-    <Advantage :content="props.content.advantage" />
+    <Advantage :content="props.content.AdvantageSection" />
 
 </template>

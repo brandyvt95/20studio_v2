@@ -18,7 +18,10 @@ const jsonData = useState('jsonData')
 
 <template>
   <WrapperPage>
-    <PageContactPage v-if="jsonData && jsonData['contact-page']" :content="jsonData['contact-page']" />
+    <PageContactPage 
+    v-if="jsonData" 
+    :info_company="jsonData.info_company.data"
+    :content="jsonData.contact_page.data" />
   </WrapperPage>
 </template>
 

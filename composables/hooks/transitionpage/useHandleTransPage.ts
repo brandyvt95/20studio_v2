@@ -66,11 +66,13 @@ export const defaultPageTransition = {
     onBeforeLeave: (el: Element) => {
         console.log('onBeforeLeave');
         activeStateUi({ param: 'disable-page' });
+        stateUiGlobal.isRunningTransitionPage = true
         //console.log('Trước khi phần tử rời DOM', el);
     },
 
     onAfterLeave: (el: Element) => {
-             console.log('onAfterLeave');
+        console.log('onAfterLeave');
+        stateUiGlobal.isRunningTransitionPage = false
         // console.log('Transition ra đã hoàn thành', el);
     },
     onLeaveCancelled: (el: Element) => {

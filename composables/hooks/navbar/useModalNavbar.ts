@@ -21,8 +21,12 @@ export function useModalNavbar(modalRef: Ref<HTMLElement | null>) {
     }
   }
 
-  const play = () => tl.value?.play()
-  const reverse = () => tl.value?.reverse()
+  const play = () => {
+    tl.value?.play()
+  }
+  const reverse = () => {
+    tl.value?.reverse()
+  }
 
   return {
     init,

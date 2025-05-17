@@ -3,20 +3,21 @@
     <section :class="[s.wrapper, 'clr-sand', 'bgclr-story']" ref="wrapper" data-scopeCursor="close">
         <div :class="s.container" ref="content">
             <TypoParagraph tag="p" size="h1" font="BD-Regular" :class="s.title">
-                <div>Our</div>
-                <div>Mission</div>
+                <span v-for="(item, index) in data.content.TitleSplit" :key="index" >
+                    {{ item.row }}
+                </span>
             </TypoParagraph>
-            <TypoParagraph tag="p" color='clr-sand--08' font="BS-Regular" :class="s.body">20Studio wishes to accompany
-                you and create the best quality products at competitive
-                prices
-                within the committed deadline.</TypoParagraph>
+            <TypoParagraph tag="p" color='clr-sand--08' font="BS-Regular" :class="s.body">
+                {{ data.content.paragraph }}
+                </TypoParagraph>
             <div :class="s.divider"></div>
             <ul :class="s.address">
                 <li :class="s.item">
                     <ButtonBasic to="/">
                         <TypoParagraph tag="p" color='clr-sand--08' font="BS-Regular">
-                            340D Hoang Van Thu Street,<br />
-                            Ward 4, Tan Binh District,<br /> HCMC.
+                            {{ info_company.Location.street }}<br />
+                            {{ info_company.Location.ward }},<br />
+                            {{ info_company.Location.city }}.
                         </TypoParagraph>
 
                     </ButtonBasic>
@@ -24,60 +25,27 @@
                 <li :class="s.item">
                     <ButtonBasic to="/">
                         <TypoParagraph tag="p" color='clr-sand--08' font="BS-Regular">
-                            20studio.contact@gmail.com
+                            {{ info_company.Contact.mail }}
                         </TypoParagraph>
                     </ButtonBasic>
                 </li>
             </ul>
             <ul :class="s.nav_footer">
-                <li :class="s.item">
-                    <ButtonHoverLineVer1 colorLine="bgclr-sand--08"  color='clr-sand--08' to='/sustainability'>
-                        <TypoParagraph tag="p" font="BS-Regular">
-                            Sustain
-                        </TypoParagraph>
-
-                    </ButtonHoverLineVer1>
-                </li>
-                <li :class="s.item">
-                    <ButtonHoverLineVer1 colorLine="bgclr-sand--08" color='clr-sand--08'  to='/'>
-                        <TypoParagraph tag="p" font="BS-Regular">
-                            Home
-                        </TypoParagraph>
-
-                    </ButtonHoverLineVer1>
-                </li>
-                <li :class="s.item">
-                    <ButtonHoverLineVer1 colorLine="bgclr-sand--08" color='clr-sand--08' to='/about'>
-                        <TypoParagraph tag="p"  font="BS-Regular">
-                            About us
-                        </TypoParagraph>
-
-                    </ButtonHoverLineVer1>
-                </li>
-                <li :class="s.item">
-                    <ButtonHoverLineVer1 colorLine="bgclr-sand--08"  color='clr-sand--08' to='/contact'>
-                        <TypoParagraph tag="p" font="BS-Regular">
-                            Contact
+                <li :class="s.item" v-for="(item, index) in filteredItems" :key="index">
+                    <ButtonHoverLineVer1 colorLine="bgclr-sand--08"  color='clr-sand--08' :to='item.slug'>
+                        <TypoParagraph tag="p" font="BS-Regular" transform="capitalize">
+                            {{ item.label }}
                         </TypoParagraph>
 
                     </ButtonHoverLineVer1>
                 </li>
             </ul>
             <ul :class="s.social">
-                <li :class="s.item">
-                    <ButtonHoverLineVer1 colorLine="bgclr-sand--08" color='clr-sand--08' to='/' :class="s.main_line">
-                        <TypoParagraph tag="p"  font="BS-Regular">
-                            Facebook
+                <li :class="s.item" v-for="([key, value], index) in Object.entries(info_company.Social)"  :key="index">
+                    <ButtonHoverLineVer1 v-if="key !== 'id'" colorLine="bgclr-sand--08" color='clr-sand--08' :to="value">
+                        <TypoParagraph tag="p"  font="BS-Regular" transform="capitalize">
+                            {{ key }}
                         </TypoParagraph>
-
-                    </ButtonHoverLineVer1>
-                </li>
-                <li :class="s.item">
-                    <ButtonHoverLineVer1 colorLine="bgclr-sand--08" color='clr-sand--08' to='/' :class="s.main_line">
-                        <TypoParagraph tag="p"  font="BS-Regular">
-                            Instagram
-                        </TypoParagraph>
-
                     </ButtonHoverLineVer1>
                 </li>
             </ul>
@@ -104,6 +72,22 @@ const { $gsap } = useNuxtApp()
 const wrapper = ref(null)
 const content = ref(null)
 
+const data = defineProps({
+    content: Object,
+    info_navbar:Object,
+    info_company:Object
+})
+const route = useRoute()
+const filteredItems = computed(() => {
+  const currentPath = route.path
+
+  const filtered = data.info_navbar.filter(item => {
+  return item.slug !== currentPath && item.slug !== '/services'
+})
+  // Randomize và lấy tối đa 4 item
+  const shuffled = filtered.sort(() => 0.5 - Math.random())
+  return shuffled.slice(0, 4)
+})
 let ctx
 onMounted(() => {
     nextTick(() => {

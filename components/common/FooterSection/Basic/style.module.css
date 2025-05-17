@@ -52,7 +52,8 @@
         grid-column: 1 / 6;
         margin-bottom: 1.8055555556vw;
         text-indent: -.3472222222vw;
-        
+        display: flex;
+        flex-direction: column;
     }
     .body {
         grid-column: 1 / 6;

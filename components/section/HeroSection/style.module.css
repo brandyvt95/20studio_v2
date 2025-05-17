@@ -42,7 +42,8 @@
 }
 
 .item {
-    height: 2.2222222222vw;
+  text-transform: capitalize;
+
 }
 .detail {
     display:grid;

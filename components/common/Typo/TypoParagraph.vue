@@ -16,6 +16,7 @@ const props = defineProps<{
   size?: SizeFont
   className?: string
   color?:string
+  transform?:string
 }>()
 
 const computedClass = computed(() => {
@@ -23,6 +24,7 @@ const computedClass = computed(() => {
   const fontClass = props.font || ''
   const customClass = props.className || ''
   const color = props.color || ''
-  return [sizeClass, fontClass, customClass,color].filter(Boolean).join(' ')
+  const transform = props.transform || ''
+  return [sizeClass, fontClass, customClass,color,transform].filter(Boolean).join(' ')
 })
 </script>

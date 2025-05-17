@@ -168,7 +168,9 @@
 }
 
 
-
+.capitalize {
+    text-transform: capitalize;
+}
 
 .clr-white {
   color: var(--color-white);

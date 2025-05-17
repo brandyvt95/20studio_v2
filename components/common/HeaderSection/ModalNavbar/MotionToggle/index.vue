@@ -24,7 +24,7 @@ onMounted(async () => {
   
   timeline = $gsap.timeline({ paused: true })
     .to(icon, { opacity: 1, rotate: 180, scale: 1, force3D: true })
-    .to(button, { x: 20, duration: 0.8, force3D: true }, "<")
+    .to(button, { x: 40, duration: 0.8, force3D: true }, "<")
   
   timeline[isActive.value ? 'play' : 'reverse']()
 })

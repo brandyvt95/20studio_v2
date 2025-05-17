@@ -5,7 +5,8 @@ export const stateUiGlobal = reactive({
   isPageFirstLoad:false,
   isRunningTransitionPage:false,
   isProjectPageToDetailProject:false,
-  isFireMotionFlash:false
+  isFireMotionFlash:false,
+  toggleNavbar:false
 });
 
 

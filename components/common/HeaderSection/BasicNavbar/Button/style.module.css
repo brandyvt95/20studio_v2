@@ -1,9 +1,9 @@
 /* button menu */
 
 .button_menu {
- 
+    cursor: pointer;
     color: #cbcbcd;
-   
+   mix-blend-mode: difference;
     display: flex;
     font-family: Lausanne-300;
     font-family: var(--font-f-lausanne-300);
@@ -21,7 +21,8 @@
     z-index: 9999;
     background-color:unset !important;
     border: none;
-}
+    
+}   
  .lable {
    
     position: relative;
@@ -36,9 +37,7 @@
     right: 0;
     transform-origin: top left;
 }
-.lable_item:last-child {
-    visibility: hidden;
-}
+
 
 .icon {
     align-items: center;
@@ -66,8 +65,7 @@
 @media (min-width: 601px) {
     .button_menu {
          line-height: 1.3888888889vw;
-         padding:5.000001vw 3.4722222222vw 0 0 ;
-         visibility: hidden;
+         padding:6.000001vw 4.472222vw 0 0;
      }
     .icon {
      
@@ -85,15 +83,13 @@
          height: .8333333333vw;
          width: 1.25vw;
      }.lable_item {
-         will-change: transform;
+         will-change: transform,opacity;
      }
  }
  @media (max-width: 601px) {
    
      .button_menu {
-        visibility: visible !important;
-        opacity: 1 !important;
-        padding-top : 10vw !important;
+        padding-top : 10vw ;
      }
  }
  

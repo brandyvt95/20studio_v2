@@ -10,18 +10,18 @@
 
     will-change: transform;
     pointer-events: none;
+      background-color: var(--color-dark-grey);
 }
 
 .wrapper {
-    background-color: #0d0e13;
-    background-color: var(--color-dark-grey);
+  
     color: #e4e0db;
     color: var(--color-light-grey);
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: absolute;
-
+ will-change: transform,opacity;
     height: 100%;
     width: 100%;
 }
@@ -51,19 +51,10 @@
 }
 
 .images li {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    will-change: tranform, opacity;
-    opacity: 0;
-}
-
-.images li:first-child {
-    opacity: 1;
+    img{
+        width: 100%;
+        object-fit: cover;
+    }
 }
 
 .main {

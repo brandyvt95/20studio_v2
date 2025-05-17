@@ -3,12 +3,8 @@
         <div :class="s.items">
             <div :class="s.detailGr">
                 <MotionHead :dataTitle="data.brand" :dataSubTitle="data.type" :dataParagraph="data.job_description" :yTarget="10" :duration=".7" easeIn="power3.out" easeOut="power3.out">
-                    <TypoHeading :class="s.title"  tag="h3" size="h2" font="BD-Regular">
-                     
-                    </TypoHeading>
-                    <TypoParagraph  tag="p" font="BS-Regular">
-                        <!-- {{ data.jobDes[0] }} -->
-                    </TypoParagraph>
+                    <TypoHeading :class="s.title"  tag="h3" size="h2" font="BD-Regular"></TypoHeading>
+                    <TypoParagraph  tag="p" font="BS-Regular"></TypoParagraph>
                 </MotionHead>
             </div>
             <MotionMask id="thumb" :classs="s.thumbGr" :dirRevert="1" :duration="1" ease="power3.inOut">
@@ -27,7 +23,7 @@
             <div :class="s.indi">
                 <MotionCount :yTarget="10" :duration=".6" easeIn="power2.in" easeOut="power2.out">
                     <TypoParagraph tag="span" font="BS-Regular" :class="s.cur"></TypoParagraph>
-                    <TypoParagraph tag="span" font="BS-Regular" :class="s.total"> / 0{{ props.content.length }}</TypoParagraph>
+                    <TypoParagraph tag="span" font="BS-Regular" :class="s.total"> / 0{{ info_project.length }}</TypoParagraph>
                 </MotionCount>
             </div>
         </div>
@@ -49,12 +45,12 @@ import MotionMask from './Slide/MotionMask.vue';
 import MotionCount from './Slide/MotionCount.vue';
 import MotionHead from './Slide/MotionHead.vue';
 const props = defineProps({
-    content: Object
+    content: Object,
+    info_project:Object
 })
-const data = formatData(props.content)
-console.log(data)
+const data = formatData(props.info_project)
 const containerRef = ref(null)
-stateSliderProjects.totalItem = props.content.length
+stateSliderProjects.totalItem = props.info_project.length
 useObserver({
     el: containerRef,
     onDown: () => handleOnDown({ dir: 1 }),

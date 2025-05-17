@@ -39,6 +39,7 @@ body {
     overscroll-behavior: none;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
+
 }
 
 section {
@@ -84,3 +85,6 @@ p {
 }
 
 
+.disable-pointer {
+  pointer-events: none;
+}

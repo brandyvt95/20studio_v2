@@ -6,43 +6,46 @@ import { cleanDeep } from './utils'
 
 export default defineEventHandler(async (event) => {
 
+  console.log("Webhook run")
+//  const config = useRuntimeConfig()
+//   const KEY = getRequestHeader(event, 'Authorization')?.split(' ')[1]; 
 
- const config = useRuntimeConfig()
-  const KEY = getRequestHeader(event, 'Authorization')?.split(' ')[1]; 
+//   if (KEY !== config.SECRET_KEY_CMS_APP) {
+//     return createError({
+//       statusCode: 401,
+//       message: 'Unauthorized'
+//     });
+//   }
+//   const body = await readBody(event)
+//   const model = body?.model
+//   const data = body?.entry
+//   if (!model || !data) {
+//     return { message: 'Invalid payload' }
+//   }
 
-  if (KEY !== config.SECRET_KEY_CMS_APP) {
-    return createError({
-      statusCode: 401,
-      message: 'Unauthorized'
-    });
-  }
-  const body = await readBody(event)
-  const model = body?.model
-  const data = body?.entry
-  if (!model || !data) {
-    return { message: 'Invalid payload' }
-  }
+//   const dataPath = join(process.cwd(), 'public', 'dataStrapi.json')
 
-  const dataPath = join(process.cwd(), 'public', 'dataStrapi.json')
+//   console.log("dataPath",dataPath) /// /var/task/public/dataStrapi.json
+//   let oldData = {}
+//   if (existsSync(dataPath)) {
+//     oldData = JSON.parse(readFileSync(dataPath, 'utf-8'))
+//   }
+//   console.log("oldData",oldData) /// {}
+//   let { data: filteredData, meta } = await processRelations(data)
+//   filteredData = cleanDeep(filteredData)
+//   const updatedData = {
+//     ...oldData,
+//     [model]: {
+//       ...filteredData,
+//       meta,
+//     }
+//   }
 
-  console.log("innnnnn",dataPath)
-  let oldData = {}
-  if (existsSync(dataPath)) {
-    oldData = JSON.parse(readFileSync(dataPath, 'utf-8'))
-  }
-  console.log("oldData",oldData)
-  let { data: filteredData, meta } = await processRelations(data)
-  filteredData = cleanDeep(filteredData)
-  const updatedData = {
-    ...oldData,
-    [model]: {
-      ...filteredData,
-      meta,
-    }
-  }
-
-  writeFileSync(dataPath, JSON.stringify(updatedData, null, 2), 'utf-8')
-  console.log("Update",model)
-  return { message: `Updated ${model}` }
+//   writeFileSync(dataPath, JSON.stringify(updatedData, null, 2), 'utf-8')
+//   console.log("Update",model)
+//   return { message: `Updated ${model}` }
 
 })
+
+
+

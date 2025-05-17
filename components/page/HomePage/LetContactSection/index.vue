@@ -26,13 +26,16 @@
           {{ content.tag }}
         </TypoParagraph>
         <TypoHeading tag="h2" font="BD-Bold" size="h1" :class="s.title">
-          <div :class="s.title_line" v-for="(item, index) in content.tit" :key="index">{{ item }}</div>
+          <span v-for="(word, index) in content.TitleSplit" :key="index" :class="s.title_line">
+            <span>{{ word.row }}</span>
+          </span>
         </TypoHeading>
         <TypoParagraph tag="p" size="h4" font="BD-Regular" :class="s.body">
-          {{ content.more }}
+          {{ content.paragraph }}
         </TypoParagraph>
 
-        <ButtonHoverLine2 color="clr-story" colorIcon="clr-white" colorLine="bgclr-story" to="/contact" :customClass="s.link">Let&apos;s touch</ButtonHoverLine2>
+        <ButtonHoverLine2 color="clr-story" colorIcon="clr-white" colorLine="bgclr-story"
+          :to="content.ButtonAction.slug" :customClass="s.link">{{ content.ButtonAction.name }}</ButtonHoverLine2>
 
 
       </div>
@@ -49,4 +52,6 @@ import s from './style.module.css'
 const data = defineProps({
   content: Object
 })
+
+
 </script>

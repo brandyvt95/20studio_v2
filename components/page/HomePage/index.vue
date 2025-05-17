@@ -6,18 +6,25 @@ import LetContactSection from './LetContactSection/index.vue';
 import './style.css'
 
 const props = defineProps({
-  content: Object
+  content: Object,
+  info_navbar:Object,
+  info_company:Object,
+  info_project:Object
 })
-
+ 
 </script>
 
 <template>
 
-  <HeroSection :content="props.content.heroSection" />
+  <HeroSection 
+    :content="content.HeroSection" 
+    :info_navbar="info_navbar" 
+    :info_company="info_company" 
+  />
   <template v-if="stateUiGlobal.isActivePage">
-    <ServicesSection :content="props.content.serviceSection" />
-    <!-- <FAQSection :content="props.content.faqSection" /> -->
-    <LetContactSection :content="props.content.letContact" />
+    <ServicesSection :content="content.ListProject" :info_project="info_project"/>
+    <FAQSection :content="content.FAQSection" />
+    <LetContactSection :content="content.LetContact" />
   </template>
 
 </template>
