@@ -2,6 +2,7 @@
 import { ref, onMounted, nextTick } from 'vue'
 import MaskOverlay from './MaskOverlay.vue'
 import TriggleViewNavbar from './TriggleViewNavbar.vue'
+import GSAPScrollSmoother from './GSAPScrollSmoother.vue'
 import LenisWrapper from './LenisWrapper.vue'
 import { motionFirstLoadPage } from '~/composables/hooks/transitionpage/useMotionTransPage'
 import { activeStateUi } from '~/composables/controls/useStateUi'
@@ -26,14 +27,19 @@ onMounted(async () => {
 </script>
 
 <template>
-  <MaskOverlay ref="maskRef">
-    <LenisWrapper>
+
+    <MaskOverlay ref="maskRef">
+       <GSAPScrollSmoother>
+   <!--  <LenisWrapper> -->
       <TriggleViewNavbar v-if="stateUiGlobal.isActivePage && !listPathIgnore.includes(currentPath)" />
 
       <slot />
       <FooterSection v-if="stateUiGlobal.isActivePage" />
-    </LenisWrapper>
+ <!--    </LenisWrapper> -->
+      </GSAPScrollSmoother>
   </MaskOverlay>
+
+
 </template>
 
 <style scoped></style>
