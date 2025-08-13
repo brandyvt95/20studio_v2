@@ -14,7 +14,10 @@ export const stateUiGlobal = reactive({
   toggleNavbar:false
 });
 
-
+export const navbarState = reactive({
+  isModalMenuOpen:false,
+  redirectOnNavbar:false
+})
 
 export const stateMouseGlobal = reactive({
   isExpend:true

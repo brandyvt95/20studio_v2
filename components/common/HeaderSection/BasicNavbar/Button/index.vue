@@ -1,7 +1,7 @@
 <script setup>
 import s from './style.module.css'
 const buttonRef = ref(null)
-const isModalMenuOpen = stateModalNavbar()
+
 defineExpose({ buttonRef })
 
 
@@ -118,8 +118,9 @@ onMounted(async () => {
 
 
 function toggleMenu() {
-  isModalMenuOpen.value = !isModalMenuOpen.value
-  if (!isModalMenuOpen.value) {
+  console.log(navbarState.isModalMenuOpen)
+  navbarState.isModalMenuOpen = !navbarState.isModalMenuOpen
+  if (!navbarState.isModalMenuOpen) {
     // Đóng menu
     tlIconToggle.reverse()
     tlLableToggle.reverse()

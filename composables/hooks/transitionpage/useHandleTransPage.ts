@@ -42,7 +42,10 @@ export const defaultPageTransition = {
     },
     onLeave: (el: Element, done: any) => {
         console.log('onLeave');
-
+        if ( navbarState.redirectOnNavbar ) {
+            console.log("disable anim leave")
+            return
+        }
         const targetPath = useRouter().currentRoute.value.fullPath;
         const currentPath = useRoute().fullPath
         const isProjectPageToDetail = isGoToProjectDetail(currentPath, targetPath)
@@ -52,8 +55,9 @@ export const defaultPageTransition = {
     onAfterEnter: (el: Element) => {
         console.log('onAfterEnter');
         console.log('Transition vào đã hoàn thành', el);
-        activeStateUi({ param: 'active-page' });
-        
+        stateUiGlobal.isActivePage = true;
+        navbarState.redirectOnNavbar = false
+        navbarState.isModalMenuOpen = false
         stateUiGlobal.isFireMotionFlash = false
     },
     onEnterCancelled: (el: Element) => {
@@ -65,13 +69,14 @@ export const defaultPageTransition = {
     },
     onBeforeLeave: (el: Element) => {
         console.log('onBeforeLeave');
-        activeStateUi({ param: 'disable-page' });
+      stateUiGlobal.isActivePage = false;
         stateUiGlobal.isRunningTransitionPage = true
         //console.log('Trước khi phần tử rời DOM', el);
     },
 
     onAfterLeave: (el: Element) => {
         console.log('onAfterLeave');
+      
         stateUiGlobal.isRunningTransitionPage = false
         // console.log('Transition ra đã hoàn thành', el);
     },
@@ -92,7 +97,7 @@ export const handlePageEnter = ({ el, done, isProjectPageToDetail }: IHandleMoti
 };
 
 export const handlePageLeave = ({ el, done, isProjectPageToDetail }: IHandleMotionTransPage): void => {
-
+  
     const motionFn = isProjectPageToDetail ? motionLeavePageDetailProject : motionLeavePage;
     motionFn({
         el,

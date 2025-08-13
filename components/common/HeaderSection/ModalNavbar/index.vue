@@ -9,20 +9,19 @@ import gsap from 'gsap'
 import { useRoute } from 'vue-router'
 import { activeStateUi } from '../composables/controls/useStateUi'
 import { useGsap } from '~/composables/hooks/useGsap'
+import { transitionMotion } from '../../../../constants/config_transitionPage';
 const data = defineProps({
     content: Object
 })
 
 const route = useRoute()
-const isModalMenuOpen = stateModalNavbar()
 const modalRef = ref(null)
 let tlContent, tlModal
 const contentRef = ref(null)
 const { $gsap } = useNuxtApp()
 const configMotion = {
 
-    duration: 1.23,
-    ease: 'power3.inOut',
+  duration: transitionMotion.duration,
 }
 onMounted(() => {
     tlModal = $gsap.timeline({ paused: true })
@@ -33,14 +32,16 @@ onMounted(() => {
             ...configMotion
         })
         .fromTo(modalRef.value.children[0], {
-            y: -500,
+            y: -600,
             rotate: -4,
+             x:-30,
             scale: 2,
             filter: 'brightness(16%)',
         }, {
             filter: 'brightness(100%)',
             transformOrigin: 'center center',
             y: 0,
+            x:0,
             rotate: 0,
             scale: 1,
             ...configMotion
@@ -51,7 +52,9 @@ watch(
     async (newVal) => {
         if (newVal) {
             await nextTick()
-            const el = document.getElementById('lenisWrapper')
+          
+            const el = document.querySelector(`[data-url="${route.path}"]`)
+
             contentRef.value = el
             if (tlContent) tlContent.kill()
             tlContent = $gsap.timeline({ paused: true })
@@ -67,25 +70,29 @@ watch(
                         y: 500,
                         rotate: 4,
                         scale: 1.2,
-                        ...configMotion
+                       ...configMotion
                     })
         }
     }
 )
-
-watch(isModalMenuOpen, (val) => {
+watch(
+  () => navbarState.isModalMenuOpen, 
+  (val) => {
     if (val) {
-        tlModal.play()
-        tlContent.play()
+      tlModal.play()
+      tlContent.play()
     } else {
-       tlModal.reverse()
-            tlContent.reverse()
+      tlModal.reverse()
+      tlContent.reverse()
     }
-})
+  }
+)
+
 
 watch(() => route.path, (newPath, oldPath) => {
-    if (newPath !== oldPath) {
-        isModalMenuOpen.value = false
+    if (newPath !== oldPath && navbarState.isModalMenuOpen === true) {
+        navbarState.redirectOnNavbar = true
+        tlModal.reverse()
     }
 })
 onUnmounted(() => {

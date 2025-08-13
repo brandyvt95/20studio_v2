@@ -7,8 +7,8 @@ export const transitionMotion = {
     y:500,
     scale:1.5,
   },
-  duration: 2,
-  ease:'power3.out',
+  duration: 1,
+  ease:'none',
   brightness100: {
       '-webkit-filter': 'brightness(100%)',
       filter: 'brightness(100%)',

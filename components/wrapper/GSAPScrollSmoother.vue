@@ -1,5 +1,5 @@
 <template>
-  <div ref="mainWrapper" class="mainWrapper">
+  <div ref="mainWrapper" class="mainWrapper" id="mainWrapper">
     <div ref="smoothContent" class="smooth-content">
       <slot />
     </div>
@@ -18,12 +18,13 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 let scrollSmooth = null
 const mainWrapper = ref(null)
 const smoothContent = ref(null)
-
+const route = useRoute()
 onMounted(() => {
   watch(
     () => stateUiGlobal.isActivePage,
     (active) => {
       if (active) {
+        mainWrapper.value.dataset.url = route.path;
         if (scrollSmooth) {
           scrollSmooth.kill()
         }
