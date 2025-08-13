@@ -7,7 +7,7 @@ export const transitionMotion = {
     y:500,
     scale:1.5,
   },
-  duration: 1.5,
+  duration: 10.5,
   ease:'power3.out',
   brightness100: {
       '-webkit-filter': 'brightness(100%)',
@@ -27,7 +27,7 @@ export const transitionConfig = {
           ease: transitionMotion.ease,
       }
   },
-  lenisWrapper: {
+  mainWrap: {
       enter: {
           start: {
               rotate: 7,

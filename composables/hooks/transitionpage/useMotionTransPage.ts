@@ -18,24 +18,24 @@ const handleTransition = (element: Element, className: string, duration: number,
         callback?.();
         element.classList.remove(className);
         clearTimeout(timer);
-    }, 2 * 1000);
+    }, 20 * 1000);
 }
 
 export const motionEnterPage = ({ el, onCompleteCallback }: IHandleMotionTransPage): void => {
-    const lenisWrapper = el.children[0];
+    const mainWrap = el.children[0];
     handleTransition(el, 'mask-enter', transitionMotion.duration, onCompleteCallback);
-    handleTransition(lenisWrapper, 'page-enter', transitionMotion.duration, null);
+    handleTransition(mainWrap, 'page-enter', transitionMotion.duration, null);
 }
 
 export const motionLeavePage = ({ el, onCompleteCallback }: IHandleMotionTransPage): void => {
-    const lenisWrapper = el.children[0];
-    handleTransition(lenisWrapper, 'page-leave', transitionMotion.duration, onCompleteCallback);
+    const mainWrap = el.children[0];
+    handleTransition(mainWrap, 'page-leave', transitionMotion.duration, onCompleteCallback);
 }
 
 
 // export const motionEnterPage = ({ el, onCompleteCallback }: IHandleMotionTransPage): void => {
 //     const ctx = gsap.context(() => {
-//         const lenisWrapper = el.children[0]
+//         const mainWrap = el.children[0]
 //         gsap.timeline()
 //            //.set(el, { zIndex: setupZIndex() })
 //             .fromTo(el,
@@ -48,9 +48,9 @@ export const motionLeavePage = ({ el, onCompleteCallback }: IHandleMotionTransPa
 //                     }
 //                 }
 //             )
-//             .fromTo(lenisWrapper,
-//                 transitionConfig.lenisWrapper.enter.start,
-//                 transitionConfig.lenisWrapper.enter.end,
+//             .fromTo(mainWrap,
+//                 transitionConfig.mainWrap.enter.start,
+//                 transitionConfig.mainWrap.enter.end,
 //                 "<"
 //             )
 //     }, el)
@@ -58,12 +58,12 @@ export const motionLeavePage = ({ el, onCompleteCallback }: IHandleMotionTransPa
 
 // export const motionLeavePage = ({ el, onCompleteCallback }: IHandleMotionTransPage): void => {
 //     const ctx = gsap.context(() => {
-//         const lenisWrapper = el.children[0]
+//         const mainWrap = el.children[0]
 //         gsap.fromTo(
-//             lenisWrapper,
-//             transitionConfig.lenisWrapper.leave.start,
+//             mainWrap,
+//             transitionConfig.mainWrap.leave.start,
 //             {
-//                 ...transitionConfig.lenisWrapper.leave.end,
+//                 ...transitionConfig.mainWrap.leave.end,
 //                 onComplete: () => {
 //                     onCompleteCallback?.()
 //                     ctx.revert() 

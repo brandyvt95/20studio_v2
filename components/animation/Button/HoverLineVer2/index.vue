@@ -51,11 +51,25 @@ const line = ref(null)
 let ctx
 let tl
 
-onMounted(async () => {
-    await nextTick();
-    if (!stateUiGlobal.isActivePage) return;
-    if (!wrapper.value || !content.value || !line.value || !circle.value || !circleFill.value || !circleIcon.value) return
-    ctx = $gsap.context(() => {
+
+onMounted(() => {
+  const stopWatch = watch(
+    () => ({
+      active: stateUiGlobal.isActivePage,
+      refsReady: wrapper.value && content.value && line.value && circle.value && circleFill.value && circleIcon.value,
+    }),
+    async (val) => {
+      if (val.active && val.refsReady) {
+        await nextTick();
+        initAnimation();
+        stopWatch(); 
+      }
+    },
+    { immediate: true, deep: true }
+  );
+});
+function initAnimation() {
+  ctx = $gsap.context(() => {
         $gsap.set(circle.value, { clipPath: 'circle(10% at 50% 50%)' })
         $gsap.set(circleIcon.value, { x: '-100%', opacity: 0 })
 
@@ -72,9 +86,7 @@ onMounted(async () => {
             .to(content.value, { x: 20 }, "<")
             .to(line.value, { scaleX: 0 }, "<")
     }, wrapper.value)
-
-})
-
+}
 function handlePointerEnter() {
     tl?.play()
 }

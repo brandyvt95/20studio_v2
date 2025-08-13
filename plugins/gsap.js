@@ -11,8 +11,8 @@ export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.provide('ScrollTrigger', ScrollTrigger);
   nuxtApp.provide('Observer', Observer);
   nuxtApp.provide('SplitText', SplitText);
-  ScrollTrigger.defaults({
-    scroller: '#lenisWrapper',  
-  })
+  // ScrollTrigger.defaults({
+  //   scroller: '#lenisWrapper',  
+  // })
 
 });

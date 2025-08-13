@@ -10,6 +10,7 @@ let initialized = false
 export function initViewportSize() {
   if (initialized || typeof window === 'undefined') return
   
+  console.log("-------- initViewprtSizew hook")
   const update = () => {
     viewportWidth.value = window.innerWidth
     viewportHeight.value = window.innerHeight
@@ -27,6 +28,7 @@ export function initViewportSize() {
   })
   
   initialized = true
+  utilsApp.initHookViewportSize = true
 }
 
 // Composable để sử dụng trong các component
