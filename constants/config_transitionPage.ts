@@ -7,7 +7,7 @@ export const transitionMotion = {
     y:500,
     scale:1.5,
   },
-  duration: 10.5,
+  duration: 2,
   ease:'power3.out',
   brightness100: {
       '-webkit-filter': 'brightness(100%)',
@@ -34,14 +34,14 @@ export const transitionConfig = {
               y: 600,
               x:-30,
               scale:1.5,
-             ...transitionMotion.brightness16
+             //...transitionMotion.brightness16
           },
           end: {
               rotate: 0,
               y: 0,
               x:0,
               scale:1,
-              ...transitionMotion.brightness100,
+            //  ...transitionMotion.brightness100,
               duration: transitionMotion.duration,
               ease: transitionMotion.ease,
           }
@@ -52,7 +52,7 @@ export const transitionConfig = {
               y: 0,
               x:0,
               scale:1,
-              ...transitionMotion.brightness100
+            //  ...transitionMotion.brightness100
            
           },
           end: {
@@ -60,7 +60,7 @@ export const transitionConfig = {
               y: -600,
               x:-30,
               scale:1.5,
-              ...transitionMotion.brightness16,
+            //  ...transitionMotion.brightness16,
               duration: transitionMotion.duration,
               ease: transitionMotion.ease,
           }
