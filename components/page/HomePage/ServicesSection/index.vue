@@ -4,6 +4,7 @@ import s from './style.module.css'
 import StarIcon from '~/components/common/InlineSvg/Star.vue';
 import TypoParagraph from '~/components/common/Typo/TypoParagraph.vue';
 import ButtonBasic from '~/components/animation/Button/Basic/index.vue';
+import ButtonHoverLineVer2 from '~/components/animation/Button/HoverLineVer2/index.vue';
 import SlideMotion from '~/components/animation/Text/SlideMotion/index.vue';
 const data = defineProps({
     content: Object,
@@ -32,7 +33,7 @@ const data = defineProps({
                 <ButtonBasic color="clr-story" :to="`/projects/${work.slug}`" data-scopeCursor="View" :class="s.service"
                     v-for="(work, index) in info_project.List" :key="index">
                     <div :class="s.block">
-                        <!--  <img :src="work.thumbnail.url" alt="" /> -->
+                        <img v-if="work?.thumbnail?.url" :src="work.thumbnail.url" :alt="work.brand" />
                     </div>
                     <div :class="s.w_info">
                         <TypoParagraph tag="p" font="BS-Medium" :class="s.info">
@@ -45,6 +46,13 @@ const data = defineProps({
                         </TypoParagraph>
                     </div>
                 </ButtonBasic>
+            </div>
+            <div :class="s.actionAll">
+                <ButtonHoverLineVer2 to="/projects" color="clr-dark-grey" colorIcon="clr-white" colorLine="bgclr-dark-grey">
+                    <TypoParagraph tag="p" font="BS-Medium">
+                        Browse all work
+                    </TypoParagraph>
+                </ButtonHoverLineVer2>
             </div>
         </div>
     </section>

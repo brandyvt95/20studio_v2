@@ -36,7 +36,7 @@ const isIgnoredPath = computed(() => {
   return routesListIgnoreFooter.includes(route.path)
 })
 const isRenderFooter = computed(() => {
-  return !isIgnoredPath.value && stateUiGlobal.isActivePage
+  return !isIgnoredPath.value
 })
 const isShowRedirectStyle = computed(() => {
   return route.path.startsWith('/projects/')

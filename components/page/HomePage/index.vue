@@ -16,15 +16,15 @@ const props = defineProps({
 
 <template>
 
-  <HeroSection 
-    :content="content.HeroSection" 
-    :info_navbar="info_navbar" 
-    :info_company="info_company" 
-  />
-  <template v-if="stateUiGlobal.isActivePage">
-    <ServicesSection :content="content.ListProject" :info_project="info_project"/>
-    <FAQSection :content="content.FAQSection" />
-    <LetContactSection :content="content.LetContact" />
-  </template>
+  <WrapperFirstSection>
+    <HeroSection 
+      :content="content.HeroSection" 
+      :info_navbar="info_navbar" 
+      :info_company="info_company" 
+    />
+  </WrapperFirstSection>
+  <ServicesSection :content="content.ListProject" :info_project="info_project"/>
+  <FAQSection :content="content.FAQSection" />
+  <LetContactSection :content="content.LetContact" />
 
 </template>

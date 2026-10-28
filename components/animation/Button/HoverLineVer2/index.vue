@@ -1,6 +1,6 @@
 <template>
 
-    <NuxtLink :to="to" :class="s.button" @mouseenter="handlePointerEnter()" @mouseleave="handlePointerLeave()">
+    <NuxtLink :to="to" :target="target" :class="s.button" @mouseenter="handlePointerEnter()" @mouseleave="handlePointerLeave()">
         <div :class="[s.wrapper, customClass, color]" ref="wrapper">
             <div :class="s.circle" ref="circle">
                 <div :class="s.circleFill" ref="circleFill"></div>
@@ -30,6 +30,7 @@
 <script setup>
 const props = defineProps({
     to: String,
+    target: String,
     customClass: String,
     colorLine: String,
     color: String,

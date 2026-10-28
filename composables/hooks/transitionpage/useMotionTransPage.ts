@@ -7,9 +7,8 @@ export const motionFirstLoadPage = ({ el }: { el: Element }) => {
     return null
 }
 export const setupZIndex = (): number => {
-    const z = Number(localStorage.getItem('zIndexPage')) + 1
-    localStorage.setItem('zIndexPage', `${z}`)
-    return z
+    stateUiGlobal.pageZIndex += 1
+    return stateUiGlobal.pageZIndex
 }
 
 const handleTransition = (element: Element, className: string, duration: number, callback: any) => {
@@ -21,36 +20,23 @@ const handleTransition = (element: Element, className: string, duration: number,
     }, 2 * 1000);
 }
 
-// export const motionEnterPage = ({ el, onCompleteCallback }: IHandleMotionTransPage): void => {
-//     const mainWrap = el.children[0];
-//     handleTransition(el, 'mask-enter', transitionMotion.duration, onCompleteCallback);
-//     handleTransition(mainWrap, 'page-enter', transitionMotion.duration, null);
-// }
-
-// export const motionLeavePage = ({ el, onCompleteCallback }: IHandleMotionTransPage): void => {
-//     const mainWrap = el.children[0];
-//     handleTransition(mainWrap, 'page-leave', transitionMotion.duration, onCompleteCallback);
-// }
-
 
 export const motionEnterPage = ({ el, onCompleteCallback }: IHandleMotionTransPage): void => {
- 
     const ctx = gsap.context(() => {
-        const mainWrap = el.children[0]
+        gsap.set('.page-dark-overlay', { opacity: 0 })
         gsap.timeline()
-           //.set(el, { zIndex: setupZIndex() })
+            .set(el, { zIndex: setupZIndex() })
             .fromTo(el,
                 transitionConfig.mask.start,
                 {
                     ...transitionConfig.mask.end,
                     onComplete: () => {
                         onCompleteCallback?.()
-                          
                         ctx.revert();
                     }
                 }
             )
-            .fromTo(mainWrap,
+            .fromTo('.page-main-wrap',
                 transitionConfig.mainWrap.enter.start,
                 transitionConfig.mainWrap.enter.end,
                 "<"
@@ -59,20 +45,29 @@ export const motionEnterPage = ({ el, onCompleteCallback }: IHandleMotionTransPa
 }
 
 export const motionLeavePage = ({ el, onCompleteCallback }: IHandleMotionTransPage): void => {
-
- 
     const ctx = gsap.context(() => {
-        const mainWrap = el.children[0]
-        gsap.to(
-            mainWrap,
-            //transitionConfig.mainWrap.leave.start,
+        const tl = gsap.timeline({
+            onComplete: () => {
+                onCompleteCallback?.()
+                ctx.revert()
+            }
+        })
+
+        tl.to(
+            '.page-main-wrap',
             {
                 ...transitionConfig.mainWrap.leave.end,
-                onComplete: () => {
-                    onCompleteCallback?.()
-                    ctx.revert() 
-                }
             }
+        )
+
+        tl.to(
+            '.page-dark-overlay',
+            {
+                opacity: 0.84,
+                duration: transitionMotion.duration,
+                ease: transitionMotion.ease
+            },
+            "<"
         )
     }, el)
 }

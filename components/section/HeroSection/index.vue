@@ -30,6 +30,9 @@ const props = defineProps({
     <section :class="[s.section, 'clr-white']">
         <div :class="s.container">
             <div :class="s.intro">
+                <TypoParagraph v-if="content?.subparagraph" tag="p" size="h4" font="BS-Regular" :className="s.subparagraph">
+                    {{ content.subparagraph }}
+                </TypoParagraph>
                 <TypoHeading tag="h1" size="h1" font="BD-Bold" :className="s.title">
                     <MotionHeadHero v-if="content?.TitleSplit" targetMask="wrapper-word-hero-span" targetChild="word-hero-span">
                         <span v-for="(word, index) in content.TitleSplit || []" :key="index"
@@ -40,7 +43,7 @@ const props = defineProps({
                 </TypoHeading>
 
             </div>
-            <div :class='s.detail' v-if="stateUiGlobal.isActivePage">
+            <div :class='s.detail'>
 
                 <TypoParagraph tag="p" size="h4" font="BS-Regular" :className="s.paragraph">
                     {{ content?.paragraph || 'Lorem' }}

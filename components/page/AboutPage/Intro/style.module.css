@@ -71,40 +71,35 @@
     }
 }
 @media (min-width: 601px) {
-    .aboutus_intro {
-        padding: 0 0 12.9861111111vw;
+    .section {
+        padding-bottom: 12.9861111111vw;
     }
 
     .gridImage {
         grid-column-gap: 2.2222222222vw;
         grid-template-columns: repeat(12, 1fr);
     }
-    .aboutus_intro  .image:first-child {
-        grid-column: 1 / 5;
-        height: 37.2222222222vw;
-    }
     .text {
         display: grid;
         grid-template-columns: repeat(10, 1fr);
         margin-top: 6.9444444444vw;
     }
-    .aboutus_intro  .label {
+    .label {
         height: 2.3611111111vw;
         padding-left: 1.5277777778vw;
+        grid-column: 1 / 3;
     }
-    .aboutus_intro  .icon {
+    .icon {
         height: .8333333333vw;
         transform: translate(-1.4930555556vw, .7638888889vw);
         width: .8333333333vw;
         will-change: transform;
     }
-    .aboutus_intro  .body,   .aboutus_intro  .title {
+    .title {
         grid-column: 3 / 10;
     }
-    .body,   .aboutus_intro  .title {
+    .body {
         grid-column: 3 / 10;
-    }
-    .aboutus_intro  .body {
         margin-top: 3.6805555556vw;
     }
    

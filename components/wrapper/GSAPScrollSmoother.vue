@@ -1,5 +1,5 @@
 <template>
-  <div ref="mainWrapper" class="mainWrapper" id="mainWrapper">
+  <div ref="mainWrapper" class="mainWrapper page-main-wrap" id="mainWrapper">
     <div ref="smoothContent" class="smooth-content">
       <slot />
     </div>

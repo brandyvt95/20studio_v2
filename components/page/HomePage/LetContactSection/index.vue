@@ -1,24 +1,23 @@
 <template>
   <section :class="[s.section, 'bgclr-white', 'clr-story']" data-scopeCursor="close">
     <div :class="s.container">
-      <!-- <ul :class="s.media_wrapper">
+      <ul :class="s.media_wrapper">
         <li :class="s.media">
-          <img alt="d" src="/images/home/letcontact_c.png" />
+          <img alt="Let Contact Center" src="/images/home/letcontact_c.png" />
         </li>
         <li :class="s.media">
-
-          <img alt="d" src="/images/home/letcontact_tl.png" />
+          <img alt="Let Contact Top Left" src="/images/home/letcontact_tl.png" />
         </li>
         <li :class="s.media">
-          <img alt="d" src="/images/home/letcontact_tr.png" />
+          <img alt="Let Contact Top Right" src="/images/home/letcontact_tr.png" />
         </li>
         <li :class="s.media">
-          <img alt="d" src="/images/home/letcontact_bl.png" />
+          <img alt="Let Contact Bottom Left" src="/images/home/letcontact_bl.png" />
         </li>
         <li :class="s.media">
-          <img alt="d" src="/images/home/letcontact_br.png" />
+          <img alt="Let Contact Bottom Right" src="/images/home/letcontact_br.png" />
         </li>
-      </ul> -->
+      </ul>
 
       <div :class="s.text">
         <TypoParagraph tag="p" size="label" font="BS-Regular" :class="s.lable">

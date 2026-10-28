@@ -10,7 +10,7 @@
             </TypoParagraph>
             <div :class="s.items">
                 <div v-for="(item, index) in content.advantage" :key="index" :class="s.item">
-                    <TypoParagraph tag="span" font="BS-Regular" v-if="!content.disableIndex" :class="s.index">{{ index + 1 }}</TypoParagraph>
+                    <TypoParagraph tag="span" font="BS-Regular" v-if="!content.disableIndex" :class="s.index">{{ index + 1 < 10 ? '0' + (index + 1) : index + 1 }}</TypoParagraph>
                     <TypoHeading tag="h3" size="h2" font="BD-Regular" :class="s.subtitle">{{ item.title }}</TypoHeading>
                     <TypoParagraph tag="p" font="BS-Medium"  :class="s.body">
                        {{ item.paragraph }}

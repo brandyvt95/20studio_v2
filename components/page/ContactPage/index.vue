@@ -8,5 +8,7 @@ defineProps({
 </script>
 
 <template>
-  <Intro :content="content" :info_company="info_company"/>
+  <WrapperFirstSection>
+    <Intro :content="content" :info_company="info_company"/>
+  </WrapperFirstSection>
 </template>

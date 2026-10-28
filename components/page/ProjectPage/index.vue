@@ -13,6 +13,8 @@ const CurrentView = computed(() => isMobile.value ? ViewMobi : View)
 
 <template>
   <ClientOnly>
-    <component :is="CurrentView" :info_project="info_project.List"/>
+    <WrapperFirstSection :fullViewport="true">
+      <component :is="CurrentView" :info_project="info_project.List"/>
+    </WrapperFirstSection>
   </ClientOnly>
 </template>

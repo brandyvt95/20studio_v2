@@ -17,6 +17,10 @@
     padding-top: 25vw;
 }
 
+.subparagraph {
+    max-width: 36.8055555556vw;
+    margin-bottom: 2.7777777778vw;
+}
 
  .title {
     display: flex;

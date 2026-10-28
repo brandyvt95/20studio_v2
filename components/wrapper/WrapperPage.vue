@@ -34,7 +34,7 @@ onMounted(async () => {
       <TriggleViewNavbar v-if="stateUiGlobal.isActivePage && !listPathIgnore.includes(currentPath)" />
 
       <slot />
-      <FooterSection v-if="stateUiGlobal.isActivePage" />
+      <FooterSection />
  <!--    </LenisWrapper> -->
       </GSAPScrollSmoother>
   </MaskOverlay>

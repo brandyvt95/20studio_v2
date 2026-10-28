@@ -11,7 +11,8 @@ export const stateUiGlobal = reactive({
   isRunningTransitionPage:false,
   isProjectPageToDetailProject:false,
   isFireMotionFlash:false,
-  toggleNavbar:false
+  toggleNavbar:false,
+  pageZIndex: 10
 });
 
 export const navbarState = reactive({

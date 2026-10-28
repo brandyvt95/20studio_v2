@@ -8,7 +8,9 @@
 </script>
 
 <template>
-    <Intro :content="props.content.IntroSection" />
+    <WrapperFirstSection>
+        <Intro :content="props.content.IntroSection" />
+    </WrapperFirstSection>
   
     <Advantage :content="props.content.AdvantageSection" />
 

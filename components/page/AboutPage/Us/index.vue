@@ -5,7 +5,7 @@
                 <StarIcon :class="s.icon" />
                 <span>{{ content.tag }}</span>
             </TypoParagraph>
-            <TypoHeading tag="h2" size="h2" font="BD-Medium" :class="s.title">
+            <TypoHeading tag="h2" size="h1" font="BD-Medium" :class="s.title">
                 <span v-for="(item, index) in content.TitleSplit" :key="index"> {{ item.row }}</span>
             </TypoHeading>
             <TypoParagraph tag="p" size="h4" font="BS-Regular" :class="s.body">

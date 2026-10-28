@@ -138,7 +138,16 @@
     aspect-ratio: 504/677;
 }
 
+.actionAll {
+    grid-column: 2 / 6;
+    margin-top: 6vw;
+    pointer-events: auto;
+}
+
 @media (max-width: 601px) {
+    .actionAll {
+        margin-top: 8vw;
+    }
     .container {
         align-items: flex-start;
         display: flex;

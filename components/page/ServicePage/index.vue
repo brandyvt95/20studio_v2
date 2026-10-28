@@ -7,5 +7,7 @@
 </script>
 
 <template>
+  <WrapperFirstSection>
     <Intro :content="props.content.intro"/>
+  </WrapperFirstSection>
 </template>
