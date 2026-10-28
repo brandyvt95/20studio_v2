@@ -45,9 +45,10 @@ onBeforeUnmount(() => {
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 255, 0.324);
-    width: 10px;
+    width: 1px;
     height: 150vh;
-    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
 }
 </style>

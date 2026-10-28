@@ -24,9 +24,22 @@
   width: 100vw;
   height: 100vh;
   z-index: 2;
-  pointer-events: none;
+  pointer-events: auto;
   will-change: transform;
 }
+
+@media (max-width: 600px) {
+  .mask-overlay {
+    position: relative !important;
+    width: 100% !important;
+    min-height: 100vh !important;
+    height: auto !important;
+    overflow: visible !important;
+    top: auto;
+    left: auto;
+  }
+}
+
   .page-dark-overlay {
   position: absolute;
   top: 0;
