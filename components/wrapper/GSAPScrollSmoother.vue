@@ -81,13 +81,22 @@ onUnmounted(() => {
 }
 
 @media (max-width: 600px) {
-  .mainWrapper {
-    position: relative !important;
-    inset: auto !important;
-    width: 100% !important;
-    height: auto !important;
-    overflow: visible !important;
+  .mainWrapper:not(.is-transitioning) {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    overflow: visible;
   }
+
+  .mainWrapper.is-transitioning {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
   .smooth-content {
     will-change: auto;
     width: 100%;

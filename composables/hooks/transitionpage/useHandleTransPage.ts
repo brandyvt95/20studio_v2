@@ -29,7 +29,9 @@ export const defaultPageTransition = {
     mode: 'default',
     css: false,
     onBeforeEnter(el: Element) {
-        console.log('onBeforeEnterr');
+        console.log('onBeforeEnter');
+        el.classList.add('is-transitioning');
+        el.querySelector('.page-main-wrap')?.classList.add('is-transitioning');
     },
     onEnter: (el: Element, done: any) => {
         stateUiGlobal.isFireMotionFlash = true
@@ -44,6 +46,9 @@ export const defaultPageTransition = {
         console.log('onLeave');
         if ( navbarState.redirectOnNavbar ) {
             console.log("disable anim leave")
+            el.classList.remove('is-transitioning');
+            el.querySelector('.page-main-wrap')?.classList.remove('is-transitioning');
+            done?.();
             return
         }
         const targetPath = useRouter().currentRoute.value.fullPath;
@@ -55,36 +60,45 @@ export const defaultPageTransition = {
     onAfterEnter: (el: Element) => {
         console.log('onAfterEnter');
         console.log('Transition vào đã hoàn thành', el);
+        el.classList.remove('is-transitioning');
+        el.querySelector('.page-main-wrap')?.classList.remove('is-transitioning');
+        if (typeof window !== 'undefined') window.scrollTo(0, 0);
         stateUiGlobal.isActivePage = true;
         navbarState.redirectOnNavbar = false
         navbarState.isModalMenuOpen = false
         stateUiGlobal.isFireMotionFlash = false
     },
     onEnterCancelled: (el: Element) => {
+        el.classList.remove('is-transitioning');
+        el.querySelector('.page-main-wrap')?.classList.remove('is-transitioning');
         stateUiGlobal.isFireMotionFlash = false
         console.log('onEnterCancelled');
-        // const currentPath = useRoute().fullPath
-        // routerState[`${currentPath}`].visible = false;
-        // console.log('Transition vào bị hủy', el);
     },
     onBeforeLeave: (el: Element) => {
         console.log('onBeforeLeave');
-      stateUiGlobal.isActivePage = false;
+        stateUiGlobal.isActivePage = false;
         stateUiGlobal.isRunningTransitionPage = true
-        //console.log('Trước khi phần tử rời DOM', el);
+        el.classList.add('is-transitioning');
+        el.querySelector('.page-main-wrap')?.classList.add('is-transitioning');
+        const scrollY = typeof window !== 'undefined' ? window.scrollY : 0;
+        if (scrollY > 0) {
+            const content = el.querySelector('.smooth-content') as HTMLElement;
+            if (content) {
+                content.style.transform = `translate3d(0, -${scrollY}px, 0)`;
+            }
+        }
     },
 
     onAfterLeave: (el: Element) => {
         console.log('onAfterLeave');
-      
+        el.classList.remove('is-transitioning');
+        el.querySelector('.page-main-wrap')?.classList.remove('is-transitioning');
         stateUiGlobal.isRunningTransitionPage = false
-        // console.log('Transition ra đã hoàn thành', el);
     },
     onLeaveCancelled: (el: Element) => {
-             console.log('onLeaveCancelled');
-        // const currentPath = useRoute().fullPath
-        // routerState[`${currentPath}`].visible = false;
-        //console.log('Transition ra bị hủy', el);
+        el.classList.remove('is-transitioning');
+        el.querySelector('.page-main-wrap')?.classList.remove('is-transitioning');
+        console.log('onLeaveCancelled');
     }
 }
 

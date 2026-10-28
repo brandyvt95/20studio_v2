@@ -29,14 +29,23 @@
 }
 
 @media (max-width: 600px) {
-  .mask-overlay {
-    position: relative !important;
-    width: 100% !important;
-    min-height: 100vh !important;
-    height: auto !important;
-    overflow: visible !important;
+  .mask-overlay:not(.is-transitioning) {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    overflow: visible;
     top: auto;
     left: auto;
+  }
+
+  .mask-overlay.is-transitioning {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
   }
 }
 
