@@ -39,11 +39,15 @@ const stopWatchNavbar = watch(
   () => stateUiGlobal.toggleNavbar,
   (newValue) => {
     if (!tl) return
+    const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600
+    if (newValue || isMobile) {
+      buttonRef.value?.buttonRef?.classList.remove('disable-pointer')
+    } else {
+      buttonRef.value?.buttonRef?.classList.add('disable-pointer')
+    }
     if (newValue) {
-      buttonRef.value?.buttonRef.classList.remove('disable-pointer')
       tl.reverse()
     } else {
-  buttonRef.value?.buttonRef.classList.add('disable-pointer')
       tl.play()
     }
   },

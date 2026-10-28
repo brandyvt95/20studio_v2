@@ -627,7 +627,7 @@
       },
       "Location": {
         "id": 23,
-        "ward": "Ward 4, Tan Binh Districtdds",
+        "ward": "Ward 4, Tan Binh District",
         "city": "Ho Chi Minh City, Viet Nam",
         "street": "340D Hoang Van Thu Street",
         "link": "https://maps.app.goo.gl/RyKGjCtV1PeY2CP67"
@@ -3954,11 +3954,11 @@
       "publishedAt": "2025-05-17T04:11:27.206Z",
       "FooterSection": {
         "id": 14,
-        "paragraph": "20Studio wishes to accompany you and create the best quality products at competitive prices within the committed deadline.  ",
+        "paragraph": "The story behind 20Studio is one of exploration, creativity and curiosity.",
         "ButtonAction": {
           "id": 252,
-          "name": "Our service ",
-          "slug": "/services "
+          "name": "Our Story",
+          "slug": "/about"
         },
         "TitleSplit": [
           {
@@ -3967,7 +3967,7 @@
           },
           {
             "id": 63,
-            "row": "Misson"
+            "row": "Story"
           }
         ]
       }

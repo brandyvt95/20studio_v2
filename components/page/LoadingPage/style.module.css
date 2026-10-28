@@ -1,0 +1,143 @@
+.loading_layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  /* Ultra-high z-index ensuring it overlays on top of absolutely everything */
+  z-index: 9999999;
+  background-color: #070707;
+  color: #e0ccbb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  user-select: none;
+  pointer-events: auto;
+  will-change: clip-path;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  will-change: transform, opacity;
+}
+
+/* 20 Typography Mark */
+.mark_wrap {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+}
+
+/* Background outline / faint text */
+.text_bg {
+  font-family: Lausanne-300, sans-serif;
+  font-family: var(--font-f-lausanne-300, sans-serif);
+  font-size: 24vw;
+  letter-spacing: -0.8vw;
+  line-height: 0.9;
+  color: rgba(224, 204, 187, 0.12);
+  display: block;
+}
+
+@media (min-width: 601px) {
+  .text_bg {
+    font-size: 11.1111111111vw;
+    letter-spacing: -0.4166666667vw;
+  }
+}
+
+/* Filled text clipping up based on progress */
+.text_fill {
+  font-family: Lausanne-300, sans-serif;
+  font-family: var(--font-f-lausanne-300, sans-serif);
+  font-size: 24vw;
+  letter-spacing: -0.8vw;
+  line-height: 0.9;
+  color: #e0ccbb;
+  color: var(--color-sand, #e0ccbb);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  overflow: hidden;
+  will-change: clip-path;
+}
+
+@media (min-width: 601px) {
+  .text_fill {
+    font-size: 11.1111111111vw;
+    letter-spacing: -0.4166666667vw;
+  }
+}
+
+/* Progress bar & percentage info */
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 28vw;
+  margin-top: 4vw;
+}
+
+@media (min-width: 601px) {
+  .meta {
+    width: 13.8888888889vw;
+    margin-top: 2.0833333333vw;
+  }
+}
+
+.bar_track {
+  flex: 1;
+  height: 1px;
+  background-color: rgba(224, 204, 187, 0.15);
+  position: relative;
+  overflow: hidden;
+  margin-right: 2.6666666667vw;
+}
+
+@media (min-width: 601px) {
+  .bar_track {
+    margin-right: 1.0416666667vw;
+  }
+}
+
+.bar_fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #e0ccbb;
+  background-color: var(--color-sand, #e0ccbb);
+  transform-origin: left center;
+  transform: scaleX(0);
+  will-change: transform;
+}
+
+.percent {
+  font-family: Lausanne-300, sans-serif;
+  font-family: var(--font-f-lausanne-300, sans-serif);
+  font-size: 3.2vw;
+  color: rgba(224, 204, 187, 0.8);
+  font-variant-numeric: tabular-nums;
+  min-width: 8vw;
+  text-align: right;
+}
+
+@media (min-width: 601px) {
+  .percent {
+    font-size: 0.8333333333vw;
+    min-width: 2.5vw;
+  }
+}

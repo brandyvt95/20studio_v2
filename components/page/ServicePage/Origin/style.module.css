@@ -1,0 +1,232 @@
+.origin {
+  background: #070707;
+  background: var(--color-story, #070707);
+  color: #e0ccbb;
+  color: var(--color-sand, #e0ccbb);
+  position: relative;
+  padding: 0 0 106.6666666667vw;
+  overflow: hidden;
+}
+
+@media (min-width: 601px) {
+  .origin {
+    padding: 0 0 69.4444444444vw;
+  }
+}
+
+.container {
+  margin: 0 8vw;
+  position: relative;
+  z-index: 3;
+}
+
+@media (min-width: 601px) {
+  .container {
+    display: grid;
+    grid-column-gap: 2.2222222222vw;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 0 8.3333333333vw;
+  }
+}
+
+.label {
+  grid-column: 1;
+  margin-bottom: 9.3333333333vw;
+  display: inline-flex;
+  align-items: center;
+  color: #e0ccbb;
+  color: var(--color-sand, #e0ccbb);
+  font-family: Lausanne-300, sans-serif;
+  font-family: var(--font-f-lausanne-300, sans-serif);
+  font-size: 3.7333333333vw;
+  font-size: var(--font-s-label, 3.7333333333vw);
+  line-height: 3.7333333333vw;
+  line-height: var(--font-lh-label, 3.7333333333vw);
+}
+
+@media (min-width: 601px) {
+  .label {
+    font-size: 0.9722222222vw;
+    font-size: var(--font-s-label, 0.9722222222vw);
+    line-height: 0.9722222222vw;
+    line-height: var(--font-lh-label, 0.9722222222vw);
+    margin-bottom: 0;
+  }
+}
+
+.label_icon {
+  width: 2.6666666667vw;
+  height: 2.6666666667vw;
+  margin-right: 1.8666666667vw;
+  fill: currentColor;
+}
+
+@media (min-width: 601px) {
+  .label_icon {
+    width: 0.6944444444vw;
+    height: 0.6944444444vw;
+    margin-right: 0.6944444444vw;
+  }
+}
+
+.label_text {
+  display: inline-block;
+}
+
+.block:nth-child(2) {
+  margin-bottom: 21.3333333333vw;
+}
+
+@media (min-width: 601px) {
+  .block:nth-child(2) {
+    grid-column: 3 / 8;
+    margin-bottom: 0;
+  }
+}
+
+.block:nth-child(3) {
+  margin-top: 5.5555555556vw;
+}
+
+@media (min-width: 601px) {
+  .block:nth-child(3) {
+    grid-column: 7 / 13;
+  }
+}
+
+.title {
+  display: flex;
+  font-family: Lausanne-300, sans-serif;
+  font-family: var(--font-f-lausanne-300, sans-serif);
+  position: relative;
+  font-size: 20vw;
+  letter-spacing: -0.4vw;
+  line-height: 17.3333333333vw;
+  margin-bottom: 5.3333333333vw;
+}
+
+@media (min-width: 601px) {
+  .title {
+    font-size: 17.4305555556vw;
+    height: 15.625vw;
+    letter-spacing: -0.7986111111vw;
+    line-height: 15.4861111111vw;
+    margin-bottom: 5.5555555556vw;
+  }
+}
+
+.block:nth-child(2) .title {
+  text-indent: -1.3333333333vw;
+}
+
+@media (min-width: 601px) {
+  .block:nth-child(2) .title {
+    text-indent: -1.1805555556vw;
+  }
+}
+
+.title small,
+.phonetic {
+  align-self: flex-end;
+  color: hsla(28, 37%, 81%, 0.6);
+  color: var(--color-sand-06, rgba(224, 204, 187, 0.6));
+  font-size: 3.7333333333vw;
+  letter-spacing: 0.0266666667vw;
+  line-height: 9.3333333333vw;
+}
+
+@media (min-width: 601px) {
+  .title small,
+  .phonetic {
+    font-size: 0.8333333333vw;
+    letter-spacing: 0.0138888889vw;
+    line-height: 0.8333333333vw;
+    margin-bottom: 3.125vw;
+    text-indent: 0;
+  }
+}
+
+.title_mask {
+  height: 17.8666666667vw;
+  line-height: 14.4vw;
+  overflow: hidden;
+}
+
+@media (min-width: 601px) {
+  .title_mask {
+    height: 15.8333333333vw;
+    line-height: 12.5vw;
+  }
+}
+
+.title_line {
+  padding-right: 4vw;
+  display: block;
+}
+
+@media (min-width: 601px) {
+  .title_line {
+    padding-right: 1.0416666667vw;
+  }
+}
+
+.body {
+  color: hsla(28, 37%, 81%, 0.8);
+  color: var(--color-sand-08, rgba(224, 204, 187, 0.8));
+  font-family: Lausanne-300, sans-serif;
+  font-family: var(--font-f-lausanne-300, sans-serif);
+  font-size: 3.7333333333vw;
+  font-size: var(--font-s-p, 3.7333333333vw);
+  letter-spacing: 0.0266666667vw;
+  letter-spacing: var(--font-ls-p, 0.0266666667vw);
+  line-height: 5.6vw;
+  line-height: var(--font-lh-p, 5.6vw);
+  width: 75.2vw;
+}
+
+@media (min-width: 601px) {
+  .body {
+    font-size: 1.1111111111vw;
+    letter-spacing: 0.0069444444vw;
+    line-height: 1.6666666667vw;
+    width: 19.2361111111vw;
+  }
+}
+
+.background {
+  position: absolute;
+  bottom: 0;
+  height: 100vw;
+  overflow: hidden;
+  width: 100vw;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (min-width: 601px) {
+  .background {
+    bottom: 3.4722222222vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+  }
+}
+
+.background:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: radial-gradient(ellipse cover, rgba(7, 7, 7, 0) 0%, rgba(7, 7, 7, 0) 40%, #070707 72%, #070707 100%);
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

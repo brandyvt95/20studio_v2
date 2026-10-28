@@ -86,6 +86,11 @@ onMounted(async () => {
   unwatchToggleNavbar = watch(
     () => stateUiGlobal.toggleNavbar,
     (newValue) => {
+      // On mobile devices, always keep the menu button visible since horizontal nav is hidden
+      if (typeof window !== 'undefined' && window.innerWidth <= 600) {
+        toggleDisplay.reverse()
+        return
+      }
 
       if (newValue) {
         console.log("toggle on")

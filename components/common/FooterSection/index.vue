@@ -1,16 +1,13 @@
 <template>
-  <footer>
-    <template v-if="isRenderFooter">
-      <component v-if="isRenderFooter" :is="isShowRedirectStyle ? RedirectProject : Basic" v-bind="isShowRedirectStyle
-        ? { content: nextItem }
-        : { 
-          content:jsonData.data_global.data.FooterSection,
-          info_navbar: jsonData.info_navbar.data.NavbarItem, 
-          info_company: jsonData.info_company.data
-          }" />
-
-    </template>
-  </footer>
+  <template v-if="isRenderFooter">
+    <component :is="isShowRedirectStyle ? RedirectProject : Basic" v-bind="isShowRedirectStyle
+      ? { content: nextItem }
+      : { 
+        content:jsonData.data_global.data.FooterSection,
+        info_navbar: jsonData.info_navbar.data.NavbarItem, 
+        info_company: jsonData.info_company.data
+        }" />
+  </template>
 </template>
 
 <script setup>
